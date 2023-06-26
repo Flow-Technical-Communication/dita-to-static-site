@@ -1,0 +1,70 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: ''
+index: '../toc.html'
+src: 'en/to_additional_elements.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a><ul class="nav nav-list"><li><a href="../en/co_light_fullon_dita.html">About DITA light and full-on DITA</a></li><li class="active"><a href="../en/to_additional_elements.html#topic-1">User interface elements</a><ul class="nav nav-list"><li><a href="../en/to_additional_elements.html#conceptId">Prolog information</a></li><li><a href="../en/to_additional_elements.html#unique_1248113265">Introductory topic information</a></li></ul></li></ul></li><li><a href="../en/to_images.html">DITA graphics</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">DITA links</a></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a></li><li><a href="../en/to_publishing.html">DITA publishing</a></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1"><article class="nested0" aria-labelledby="ariaid-title1" id="topic-1">
+   <h1 class="title topictitle1" id="ariaid-title1">User interface elements</h1>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_light_fullon.html">DITA light and full-on DITA</a></div></div></nav><article class="topic concept nested1" aria-labelledby="ariaid-title2" id="conceptId">
+   <h2 class="title topictitle2" id="ariaid-title2">Prolog information</h2>
+   
+   <div class="body conbody">
+      <p class="p">The <code class="keyword markupname xmlelement">&lt;prolog&gt;</code> element contains information about the topic as a whole:</p>
+      <ul class="ul" id="conceptId__ul_p1s_qtl_r4b">
+         <li class="li">Author: <code class="keyword markupname xmlelement">&lt;author&gt;</code>
+         </li>
+         <li class="li">Audience: <code class="keyword markupname xmlelement">&lt;audience&gt;</code>
+         </li>
+         <li class="li">Publisher: <code class="keyword markupname xmlelement">&lt;publisher&gt;</code>
+         </li>
+         <li class="li">Source: <code class="keyword markupname xmlelement">&lt;source&gt;</code>
+         </li>
+         <li class="li">Product information: <code class="keyword markupname xmlelement">&lt;brand&gt;</code>, <code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code>, <code class="keyword markupname xmlelement">&lt;prodname&gt;</code>, <code class="keyword markupname xmlelement">&lt;prognum&gt;</code>, <code class="keyword markupname xmlelement">&lt;series&gt;</code>, <code class="keyword markupname xmlelement">&lt;vrm&gt;</code>, <code class="keyword markupname xmlelement">&lt;vrmlist&gt;</code> and <code class="keyword markupname xmlelement">&lt;featnum&gt;</code>
+         </li>
+         <li class="li">Classification: <code class="keyword markupname xmlelement">&lt;category&gt;</code> and <code class="keyword markupname xmlelement">&lt;component&gt;</code>
+         </li>
+         <li class="li">Copyright information: <code class="keyword markupname xmlelement">&lt;copyright&gt;</code>, <code class="keyword markupname xmlelement">&lt;copyrholder&gt;</code> and <code class="keyword markupname xmlelement">&lt;copyryear&gt;</code>
+         </li>
+         <li class="li">Critical tracking dates: <code class="keyword markupname xmlelement">&lt;created&gt;</code>, <code class="keyword markupname xmlelement">&lt;revised&gt;</code> and <code class="keyword markupname xmlelement">&lt;critdates&gt;</code>
+         </li>
+         <li class="li">Permissions for use/management of the content: <code class="keyword markupname xmlelement">&lt;permissions&gt;</code>
+         </li>
+         <li class="li">Key words and index terms related to the topic: <code class="keyword markupname xmlelement">&lt;keywords&gt;</code>
+         </li>
+         <li class="li">Extensive metadata about the content of the document: <code class="keyword markupname xmlelement">&lt;metadata&gt;</code> and <code class="keyword markupname xmlelement">&lt;othermeta&gt;</code>
+         </li>
+         <li class="li">A resource-id that allows a topic to be associated with external resources such as linking to programming components as contextual help: <code class="keyword markupname xmlelement">&lt;resourceid&gt;</code>
+         </li>
+      </ul>
+      <p class="p">Much of these elements will not be displayed with the topic in the output, but separate, for example in PDF introduction pages or page information.</p>
+   </div>
+</article><article class="topic concept nested1" aria-labelledby="ariaid-title3" id="unique_1248113265">
+   <h2 class="title topictitle2" id="ariaid-title3">Introductory topic information</h2>
+   
+   <div class="body conbody">
+      <section class="section" id="unique_1248113265__section_vcp_qgr_jpb"><h3 class="title sectiontitle">Abstracts</h3>
+         
+         <div class="p">DITA provides an element to include abstracts. The <code class="keyword markupname xmlelement">&lt;abstract&gt;</code> element contains the initial content of a topic: <ul class="ul" id="unique_1248113265__ul_bgk_gbw_3pb">
+               <li class="li">Paragraphs providing a summary of the contents of the topic</li>
+               <li class="li">One or more <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> elements providing link previews or summaries</li>
+            </ul>
+         </div>
+      </section>
+      <section class="section" id="unique_1248113265__section_lyn_sgr_jpb"><h3 class="title sectiontitle">Short descriptions</h3>
+         
+         <div class="p">The <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> is placed between the topic title and the topic body. It is used for: <ul class="ul" id="unique_1248113265__ul_il4_xr2_r4b">
+               <li class="li">Representation of the purpose or theme of the topic</li>
+               <li class="li">Link preview</li>
+               <li class="li">Searching</li>
+            </ul> The element is optional, but useful and thus recommended.</div>
+      </section>
+      <div class="example">The next example illustrates the difference between an abstract and a short description. An abstract is more comprehensive, while the content of a short description is more variable:<figure class="fig fignone" id="unique_1248113265__fig_dbx_ygr_jpb">
+            <img class="image" id="unique_1248113265__image_kb4_bhr_jpb" src="../_media/graphics/difference_abstract_desc.png">
+         </figure>
+      </div>
+   </div>
+   <nav role="navigation" class="related-links"><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_context.html">Introductory task information</a></li></ul></div></nav>
+</article></article></article></main>

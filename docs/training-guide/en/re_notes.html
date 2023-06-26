@@ -1,0 +1,47 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'Notes'
+index: '../toc.html'
+src: 'en/re_notes.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a><ul class="nav nav-list"><li><a href="../en/to_dita_elements_task_topics.html">Task topic elements</a><ul class="nav nav-list"><li><a href="../en/co_title_task.html">Task title</a></li><li><a href="../en/co_context.html">Introductory task information</a></li><li><a href="../en/co_steps_step_cmd.html">Ordered and unordered steps</a></li><li><a href="../en/co_step_cmd.html">Writing the steps: step   </a></li><li><a href="../en/co_substeps_choices_choicetable.html">Substeps and choices</a></li><li><a href="../en/re_stepxmp_stepresult.html">Step examples, step results</a></li><li class="active"><a href="../en/re_notes.html">Notes</a></li><li><a href="../en/re_result_postrequisites.html">Examples, results and post requisites</a></li></ul></li></ul></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_images.html">DITA graphics</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">DITA links</a></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a></li><li><a href="../en/to_publishing.html">DITA publishing</a></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">Notes</h1>
+	
+	<div class="body conbody">
+		<section class="section" id="re_stepxmp_stepresult-Copy__section_zxr_gmj_vsb"> <p class="p" id="re_stepxmp_stepresult-Copy__p_gyr_gmj_vsb">If you want to add a remark, such as a warning or a tip, use the <code class="keyword markupname xmlelement">&lt;note&gt;</code> element.</p> <figure class="fig fignone" id="re_stepxmp_stepresult-Copy__fig_brs_spw_cn">
+			<img class="image fmdpi:150" id="re_stepxmp_stepresult-Copy__image_qln_yk3_gn" src="../_media/graphics/ta_caution.png">
+			</figure> <p class="p" id="re_stepxmp_stepresult-Copy__p_hyr_gmj_vsb">When you insert a <code class="keyword markupname xmlelement">&lt;note&gt;</code> element, use the <code class="keyword markupname xmlatt">@type</code> attribute to specify which type of note it is. Based on this attribute, a different label can be inserted in front of the note when you publish your topic. The most common types of notes are:</p> <table class="table frame-all" id="re_stepxmp_stepresult-Copy__table_j54_ltw_cn"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+					<tr class="row">
+						<th class="entry" id="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__1">Type</th>
+						<th class="entry" id="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__2">Description</th>
+					</tr>
+				</thead><tbody class="tbody">
+					<tr class="row">
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__1">Note</td>
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__2">General information (not a hazard statement) to which you want to call attention</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__1">Notice</td>
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__2">A potential hazardous situation which, if not avoided, may result in property damage or in an undesirable result or state</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__1">Caution</td>
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__2">A potentially hazardous situation which, if not avoided, may result in minor or moderate injury</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__1">Warning</td>
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__2">A potentially hazardous situation which, if not avoided, could result in death or serious injury</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__1">Danger</td>
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__2">An imminently hazardous situation which, if not avoided, will result in death or serious injury</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__1">Tip</td>
+						<td class="entry" headers="re_stepxmp_stepresult-Copy__table_j54_ltw_cn__entry__2">A helpful piece of advice</td>
+					</tr>
+				</tbody></table> <div class="note tip note_tip" id="re_stepxmp_stepresult-Copy__note_iyr_gmj_vsb"><span class="note__title">Tip:</span> The differences between notices, cautions, warnings and dangers are defined in the ANSI Z535 and ISO 3864 standards. These slight differences, however, are not always meaningful to the user. If your documentation does not have to comply with ANSI Z535 or ISO 3864, you do not have to apply the different labels as strictly. For example, you can use <code class="ph codeph" id="re_stepxmp_stepresult-Copy__codeph_jyr_gmj_vsb">@type="caution"</code> to call attention to all sorts of hazardous situations.</div> </section>
+	</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_dita_elements_task_topics.html">Task topic elements</a></div></div></nav></article></main>

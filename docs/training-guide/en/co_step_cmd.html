@@ -1,0 +1,40 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'Writing the steps: step 
+'
+index: '../toc.html'
+src: 'en/co_step_cmd.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a><ul class="nav nav-list"><li><a href="../en/to_dita_elements_task_topics.html">Task topic elements</a><ul class="nav nav-list"><li><a href="../en/co_title_task.html">Task title</a></li><li><a href="../en/co_context.html">Introductory task information</a></li><li><a href="../en/co_steps_step_cmd.html">Ordered and unordered steps</a></li><li class="active"><a href="../en/co_step_cmd.html">Writing the steps: step   </a></li><li><a href="../en/co_substeps_choices_choicetable.html">Substeps and choices</a></li><li><a href="../en/re_stepxmp_stepresult.html">Step examples, step results</a></li><li><a href="../en/re_notes.html">Notes</a></li><li><a href="../en/re_result_postrequisites.html">Examples, results and post requisites</a></li></ul></li></ul></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_images.html">DITA graphics</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">DITA links</a></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a></li><li><a href="../en/to_publishing.html">DITA publishing</a></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">Writing the steps: <code class="keyword markupname xmlelement">&lt;step &gt;</code>
+</h1>
+
+<div class="body conbody">
+<section class="section"><h2 class="title sectiontitle">
+<code class="keyword markupname xmlelement">&lt;step&gt;</code> and <code class="keyword markupname xmlelement">&lt;cmd&gt;</code>
+</h2>
+
+<p class="p">Whether you use ordered or unordered steps in your task, you always have to insert a <code class="keyword markupname xmlelement">&lt;step&gt;</code> element for each step. In each <code class="keyword markupname xmlelement">&lt;step&gt;</code> element, you have to include a <code class="keyword markupname xmlelement">&lt;cmd&gt;</code> element with the actual command of that step.</p>
+<figure class="fig fignone" id="concept_chq_ylr_cn__fig_zst_1nr_cn">
+<img class="image fmdpi:150" id="concept_chq_ylr_cn__image_yqm_w13_gn" src="../_media/graphics/ta_step_cmd.png">
+</figure>
+</section>
+<section class="section">
+<p class="p">When writing steps and commands, take into account the following guidelines:</p>
+<ul class="ul" id="concept_chq_ylr_cn__ul_k23_cnr_cn">
+<li class="li">Use imperative sentences in all your steps. Instead of "You can turn on the light by flipping the switch", for example, write "Turn on the light by flipping the switch" or "Flip the switch to turn on the light".</li>
+<li class="li">Write one step per significant action and combine simple steps. You can, for example, combine "Choose <span class="ph uicontrol">File</span>" and "Choose <span class="ph uicontrol">New</span>" to "Choose <span class="ph menucascade"><span class="ph uicontrol">File</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">New</span></span>.</li>
+<li class="li">Do not include too many steps in your task (Miller's law). If a task requires more then nine or ten steps, divide it into two or more separate task topics.</li>
+</ul>
+</section>
+<section class="section" id="concept_chq_ylr_cn__section_lw1_gh5_r4b"><h2 class="title sectiontitle">
+<code class="keyword markupname xmlelement">&lt;stepsection&gt;</code>
+</h2>
+
+<div class="p">The <code class="keyword markupname xmlelement">&lt;stepsection&gt;</code> element provides expository text before a step element. Although the element is specialized from <code class="keyword markupname xmlelement">&lt;li&gt;</code> and has the same content model as a list item, it is not intended to represent a step in a task.<div class="note note note_note"><span class="note__title">Note:</span> DITA applications which render <code class="keyword markupname xmlelement">&lt;stepsection&gt;</code> elements among the <code class="keyword markupname xmlelement">&lt;step&gt;</code> elements must provide a way to number the steps without numbering the <code class="keyword markupname xmlelement">&lt;stepsection&gt;</code> elements (although this does not need to be the only or default presentation).</div>
+</div>
+</section>
+</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_dita_elements_task_topics.html">Task topic elements</a></div></div></nav></article></main>

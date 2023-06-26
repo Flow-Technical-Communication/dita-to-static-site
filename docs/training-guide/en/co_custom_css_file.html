@@ -1,0 +1,33 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'What is a CSS file?'
+index: '../toc.html'
+src: 'en/co_custom_css_file.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">What is a CSS file?</h1>
+   <div class="body conbody">
+      <p class="p">The .css file defines the layout (fonts, font size, background color, …) of the webhelp, for example:</p>
+      <pre class="pre codeblock"><code>body {
+	font-family: 'Montserrat,Arial,Helvetica,sans-serif';
+}
+
+.wh_logo img {
+	max-width: 200px;
+	padding: 0 20px 0 0;
+	max-height: 75px;
+}
+
+main .uicontrol {
+	color: #07AA51;
+}
+
+.title .uicontrol {
+	font-weight: inherit;
+}</code></pre>
+      <div class="note attention note_attention"><span class="note__title">Attention:</span> The .css file is referenced in the template description file. When changing the name of the .css file, remember to adjust the code in the template description file.</div>
+      <p class="p">This file is the final CSS to be applied, so it will override all other existing CSS files.</p>
+   </div>
+</article></main>
