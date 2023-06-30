@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline links</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a><ul class="nav nav-list"><li><a href="../to_about_creating_links/">About links</a><ul class="nav nav-list"><li><a href="../co_why_create_links/">Why create links?</a></li><li><a href="../co_types_links/">Different types of links</a></li><li class="active"><a href="../co_what_are_inline_links/">Inline links</a></li><li><a href="../co_what_are_hierarchical_links/">Hierarchical links</a></li><li><a href="../co_including_reltable/">Relationship tables</a></li><li><a href="../re_guidelines_creating_links/">Guidelines for creating links</a></li><li><a href="../co_collection_type/">What does collection-type do?</a></li><li><a href="../co_role_of_IDs/">What is the role of IDs?</a></li></ul></li><li><a href="../to_creating_inline_links/#topic-10">Creating inline links</a></li><li><a href="../to_creating_related_links/">Creating related links</a></li><li><a href="../to_managing_links/#untitled2">Managing links</a></li></ul></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Inline links</h1>
+   
+   <div class="body conbody">
+      <p class="p">Inline links are links that you add within the text of your topic, rather than directly to the DITA map structure or in the relationship table. They are cross-references which are displayed by the <code class="keyword markupname xmlelement">&lt;xref&gt;</code> element. The <code class="keyword markupname xmlelement">&lt;xref&gt;</code> element can be used to:</p>
+      <ul class="ul" id="co_what_are_inline_links__ul_ld5_fky_q4b">
+         <li class="li">
+            <code class="keyword markupname xmlelement">&lt;xref (cross references)&gt;</code>: insert a reference to content of a DITA document</li>
+         <li class="li">
+            <code class="keyword markupname xmlelement">&lt;xref (webpages)&gt;</code>: insert a reference to a web page</li>
+      </ul>
+      <p class="p">Inline links can be difficult to maintain and too many of them can distract or confuse users. Make sure to only use links when it is relevant to do so, otherwise the links:</p>
+      <ul class="ul" id="co_what_are_inline_links__ul_qyn_w4d_fn">
+         <li class="li">Can be disruptive: they break the flow of reading because they direct users to other topics before they have finished reading the information in the current topic.</li>
+         <li class="li">Create dependencies between topics that are difficult to maintain and restrict the extent to which you can re-use the topics.</li>
+         <li class="li">Can complicate navigation: using too many links can be a sign that you haven't organized your structure well. It might be necessary to reevaluate or even rewrite your topic and/or structure.</li>
+         <li class="li">Weigh content: links should be used to direct users to something important and relevant. The more you use links, the more they lose their value.</li>
+      </ul>
+      <div class="example">
+         <figure class="fig fignone" id="co_what_are_inline_links__fig_jb3_rnc_jn">
+            <img class="image fmdpi:150" id="co_what_are_inline_links__image_s3w_znc_jn" src="../../_media/graphics/inline_reference.PNG">
+         </figure>
+      </div>
+   </div>
+   <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_about_creating_links/">About links</a></div></div><div class="linklist reltasks"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_creating_inline_links/#taskId5">To link another topic</a></li><li class="linklist"><a class="link" href="to_creating_inline_links/#taskId6">To link an element</a></li><li class="linklist"><a class="link" href="to_creating_inline_links/#taskId7">To link a web page</a></li></ul></div></nav>
+</article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>

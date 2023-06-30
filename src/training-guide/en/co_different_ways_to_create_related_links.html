@@ -1,0 +1,65 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'Different ways to create related links'
+index: '../toc/'
+src: 'en/co_different_ways_to_create_related_links.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a><ul class="nav nav-list"><li><a href="../to_about_creating_links/">About links</a></li><li><a href="../to_creating_inline_links/#topic-10">Creating inline links</a></li><li><a href="../to_creating_related_links/">Creating related links</a><ul class="nav nav-list"><li class="active"><a href="../co_different_ways_to_create_related_links/">Different ways to create related links</a></li><li><a href="../ta_insert_reference_in_relatedlinks/">To create a related links list</a></li><li><a href="../ta_to_create_a_reltable/">To create a relationship table</a></li><li><a href="../co_linking_attribute/">What does @linking do?</a></li></ul></li><li><a href="../to_managing_links/#untitled2">Managing links</a></li></ul></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Different ways to create related links</h1>
+   
+   <div class="body conbody">
+      <p class="p">There are two ways of creating related links: the <code class="keyword markupname xmlelement">&lt;related-links&gt;</code> element and the <code class="keyword markupname xmlelement">&lt;reltable&gt;</code>.</p>
+      <section class="section"><h2 class="title sectiontitle">
+            <code class="keyword markupname xmlelement">&lt;related-links&gt;</code>
+         </h2>
+         
+         <p class="p">Unlike the inline links, the <code class="keyword markupname xmlelement">&lt;related-link&gt;</code> element is not part of the text, but is added as a list at the end of a topic. In the <code class="keyword markupname xmlelement">&lt;related-links&gt;</code> element you can group <code class="keyword markupname xmlelement">&lt;xref&gt;</code> elements to other topics. The related-links section is technically metadata, and is structured within the topic but outside the body elements.</p>
+         <figure class="fig fignone" id="conceptId__fig_axs_21v_3n">
+            <img class="image fmdpi:100" id="conceptId__image_c3d_h1v_3n" src="../../_media/graphics/related_links.PNG">
+         </figure>
+         <div class="p">To add structure to your related links, you can embed your cross-references in the elements <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> or <code class="keyword markupname xmlelement">&lt;linkpool&gt;</code>. <ul class="ul" id="conceptId__ul_kzn_h4v_sn">
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> is used when the order of your links is important. In the output, they will retain the order you've given them, but they will not have a header.</li>
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;linkpool&gt;</code> will group your links according to their information type (such as under the headings 'Related Concepts', 'Related Tasks', 'Related References' and 'Related Information').</li>
+            </ul>
+         </div>
+         <div class="p">Furthermore, you can add<ul class="ul" id="conceptId__ul_aqh_l51_bpb">
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;linktext&gt;</code>: provides the literal label or line of text for a link. In most cases, the text of a link can be resolved during processing by cross reference with the target resource. Use the <code class="keyword markupname xmlelement">&lt;linktext&gt;</code> element only when the target cannot be reached, such as when it is a peer or external link, or when the target is local but not in DITA format. When used inside a topic, it is used as the text for the specified link; when used within a map, it is used as the text for generated links that point to the specified topic.</li>
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;linkinfo&gt;</code>: allows you to place a descriptive paragraph after the links that are contained in a <code class="keyword markupname xmlelement">&lt;linklist&gt;</code> element.</li>
+            </ul>
+         </div>
+         <p class="p">Using related links is not always advised, as it causes similar issues as inline linking. The links are difficult to maintain: you need to remember in which topics you put them and they decrease the re-use potential of your topics. When a topic requires cross-references to other topics where those cross-references will always be valid in the context of the topic, they should be contained within a related-links section after the topic body. In all other cases, cross-references should be defined in the relationship table of the ditamap.</p>
+      </section>
+      <div class="example">
+         <div class="p">An example of a linklist:<figure class="fig fignone" id="conceptId__fig_tnx_vmb_ln">
+               <img class="image fmdpi:100" id="conceptId__image_r1s_wmb_ln" src="../../_media/graphics/linklist.PNG">
+            </figure>
+         </div>
+         <div class="p">An example of a linkpool:<figure class="fig fignone" id="conceptId__fig_kqc_vmb_ln">
+               <img class="image fmdpi:100" id="conceptId__image_tpy_wmb_ln" src="../../_media/graphics/linkpool.PNG">
+            </figure>
+         </div>
+      </div>
+      <section class="section"><h2 class="title sectiontitle">
+            <code class="keyword markupname xmlelement">&lt;reltable&gt;</code>
+         </h2>
+         
+         <div class="p">You can also create links by using a relationship table. Instead of adding individual references to the <code class="keyword markupname xmlelement">&lt;related-links&gt;</code> element in a topic, you centralize the relevant links in one location, the relationship table. This way you further increase the ease of use and navigation of your information. <figure class="fig fignone" id="conceptId__fig_fy4_lk3_jn">
+               <img class="image fmdpi:250" id="conceptId__image_ont_kbv_3n" src="../../_media/graphics/relationship_table.PNG">
+            </figure>
+         </div>
+         <div class="p">Using such a table presents the following advantages: <ul class="ul" id="conceptId__ul_jsq_522_fn">
+               <li class="li">Centralization: as opposed to inline links which can be found in individual topics, relationship tables can only be placed in DITA map files. This means they are easy to find when you need to adjust something.</li>
+               <li class="li">Reduced maintenance: as the links can all be found in one location, this makes it easier to adjust what you need in one go, rather than having to hunt through topics to find the link you need.</li>
+               <li class="li">Improved re-usability: relationship tables make topics less dependent on other files than inline links do. This means there will be less trouble when you try to re-use the linked topics.</li>
+            </ul>
+         </div>
+         <div class="note tip note_tip"><span class="note__title">Tip:</span> When you are working with particularly large documents, DITA maps can become heavy and full of topic references. As such, adding a relationship table to this can make it even more difficult to navigate. In this case, it can be useful to centralize the relationship table even more by adding it to a new DITA map nested within the main map. It should only contain the relationship table(s) and no other references outside of that table.</div>
+      </section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_creating_related_links/">Creating related links</a></div></div></nav></article></main>

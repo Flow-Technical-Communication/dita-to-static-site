@@ -1,0 +1,56 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'Ordered and unordered steps'
+index: '../toc/'
+src: 'en/co_steps_step_cmd.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a><ul class="nav nav-list"><li><a href="../to_dita_elements_task_topics/">Task topic elements</a><ul class="nav nav-list"><li><a href="../co_title_task/">Task title</a></li><li><a href="../co_context/">Introductory task information</a></li><li class="active"><a href="../co_steps_step_cmd/">Ordered and unordered steps</a></li><li><a href="../co_step_cmd/">Writing the steps: step   </a></li><li><a href="../co_substeps_choices_choicetable/">Substeps and choices</a></li><li><a href="../re_stepxmp_stepresult/">Step examples, step results</a></li><li><a href="../re_notes/">Notes</a></li><li><a href="../re_result_postrequisites/">Examples, results and post requisites</a></li></ul></li></ul></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1 mmpdf:section:landscapeSectionA3" id="ariaid-title1">Ordered and unordered steps</h1>
+
+<div class="body conbody">
+<section class="section">DITA distinguishes procedures with ordered steps and procedures with unordered steps. To indicate which type of procedure you are describing in a particular task, you have to insert the <code class="keyword markupname xmlelement">&lt;steps&gt;</code> or <code class="keyword markupname xmlelement">&lt;steps-unordered&gt;</code> element in your task topic. Each task topic has to include one of both elements.</section>
+<section class="section"><h2 class="title sectiontitle"><code class="keyword markupname xmlelement">&lt;steps&gt;</code>
+</h2>
+
+<p class="p">You use the <code class="keyword markupname xmlelement">&lt;steps&gt;</code> element for procedures with steps that have to be executed in a particular order (ordered steps). To reflect that order, the steps in a <code class="keyword markupname xmlelement">&lt;steps&gt;</code> element are usually rendered in the output as a numbered list. Try to use ordered steps as much as possible: they guide users better then unordered steps.</p>
+<figure class="fig fignone" id="conceptId__fig_k1t_zkr_cn">
+<img class="image fmdpi:150" id="conceptId__image_uqd_nyh_gn" src="../../_media/graphics/ta_steps.png">
+</figure>
+</section>
+<section class="section"><h2 class="title sectiontitle">
+<code class="keyword markupname xmlelement">&lt;steps-unordered&gt;</code>
+</h2>
+
+<p class="p">The <code class="keyword markupname xmlelement">&lt;steps-unordered&gt;</code> element is created for procedures with unordered steps that can be executed in a random order or for which the order may vary from one situation to another (unordered steps). By default, unordered steps are rendered in the output as a bulleted list. Avoid using unordered steps where possible. In most cases, you can use ordered steps. If you need a bulleted list, use the element <code class="keyword markupname xmlelement">&lt;ul&gt;</code> (unordered list).</p>
+<figure class="fig fignone" id="conceptId__fig_fqx_xlr_cn">
+<img class="image fmdpi:150" id="conceptId__image_brs_5zh_gn" src="../../_media/graphics/ta_steps_unordered.png">
+</figure>
+</section>
+<section class="section" id="conceptId__section_cyp_cnr_jpb"><h2 class="title sectiontitle">
+<code class="keyword markupname xmlelement">&lt;step&gt;</code> and <code class="keyword markupname xmlelement">&lt;cmd&gt;</code>
+</h2>
+
+<p class="p">Whether you use ordered or unordered steps in your task, you always have to insert a <code class="keyword markupname xmlelement">&lt;step&gt;</code> element for each step. In each <code class="keyword markupname xmlelement">&lt;step&gt;</code> element, you have to include a <code class="keyword markupname xmlelement">&lt;cmd&gt;</code> element with the actual command of that step.</p>
+<figure class="fig fignone" id="conceptId__fig_zst_1nr_cn">
+<img class="image fmdpi:150" id="conceptId__image_yqm_w13_gn" src="../../_media/graphics/ta_step_cmd.png">
+</figure>
+</section>
+<section class="section" id="conceptId__section_dyp_cnr_jpb">
+<p class="p">When writing steps and commands, take into account the following guidelines:</p>
+<ul class="ul" id="conceptId__ul_k23_cnr_cn">
+<li class="li">Use imperative sentences in all your steps. Instead of "You can turn on the light by flipping the switch", for example, write "Turn on the light by flipping the switch" or "Flip the switch to turn on the light".</li>
+<li class="li">Write one step per significant action and combine simple steps. You can, for example, combine "Choose <span class="ph uicontrol">File</span>" and "Choose <span class="ph uicontrol">New</span>" to "Choose <span class="ph menucascade"><span class="ph uicontrol">File</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">New</span></span>.</li>
+<li class="li">Do not include too many steps in your task (Miller's law). If a task requires more then nine or ten steps, divide it into two or more separate task topics.</li>
+</ul>
+</section>
+<section class="section" id="conceptId__section_lw1_gh5_r4b"><h2 class="title sectiontitle">
+<code class="keyword markupname xmlelement">&lt;stepsection&gt;</code>
+</h2>
+
+<div class="p">The <code class="keyword markupname xmlelement">&lt;stepsection&gt;</code> element provides expository text before a step element. Although the element is specialized from <code class="keyword markupname xmlelement">&lt;li&gt;</code> and has the same content model as a list item, it is not intended to represent a step in a task.<div class="note note note_note"><span class="note__title">Note:</span> DITA applications which render <code class="keyword markupname xmlelement">&lt;stepsection&gt;</code> elements among the <code class="keyword markupname xmlelement">&lt;step&gt;</code> elements must provide a way to number the steps without numbering the <code class="keyword markupname xmlelement">&lt;stepsection&gt;</code> elements (although this does not need to be the only or default presentation).</div>
+</div>
+</section>
+</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_dita_elements_task_topics/">Task topic elements</a></div></div></nav></article></main>
