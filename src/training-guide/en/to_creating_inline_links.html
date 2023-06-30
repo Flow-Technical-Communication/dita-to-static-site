@@ -1,0 +1,75 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: ''
+index: '../toc/'
+src: 'en/to_creating_inline_links.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a><ul class="nav nav-list"><li><a href="../to_about_creating_links/">About links</a></li><li class="active"><a href="../to_creating_inline_links/#topic-10">Creating inline links</a><ul class="nav nav-list"><li><a href="../to_creating_inline_links/#taskId5">To link another topic</a></li><li><a href="../to_creating_inline_links/#taskId6">To link an element</a></li><li><a href="../to_creating_inline_links/#taskId7">To link a web page</a></li></ul></li><li><a href="../to_creating_related_links/">Creating related links</a></li><li><a href="../to_managing_links/#untitled2">Managing links</a></li></ul></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1"><article class="nested0" aria-labelledby="ariaid-title1" id="topic-10">
+   <h1 class="title topictitle1" id="ariaid-title1">Creating inline links</h1>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_creating_links/">DITA links</a></div></div></nav><article class="topic task nested1" aria-labelledby="ariaid-title2" lang="en-us" id="taskId5">
+   <h2 class="title topictitle2" id="ariaid-title2">To link another topic</h2>
+   
+   <div class="body taskbody">
+      <section><ol class="ol steps"><li class="li step stepexpand">
+            <span class="ph cmd">(Optional) Generate an ID for the topic you want to link: right-click the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> and choose <span class="ph uicontrol">Generate IDs</span>.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Insert an <code class="keyword markupname xmlelement">&lt;xref (cross reference)&gt;</code> element into your text.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">In the <span class="keyword wintitle">Cross Reference (xref)</span> dialog window, navigate to the desired topic.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Select the topic in the list.</span>
+            <div class="itemgroup info">
+               <div class="note tip note_tip"><span class="note__title">Tip:</span> If you have generated many IDs for elements in that topic, choose <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> in the drop-down menu <span class="keyword wintitle">Show elements of type</span> to filter the list.</div>
+            </div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Insert and close</span>.</span>
+            <div class="itemgroup info">
+               <div class="note tip note_tip"><span class="note__title">Tip:</span> If you have more references to add, press <span class="ph uicontrol">Insert</span> instead. The window remains open and you can insert another reference.</div>
+            </div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">(Optional) Replace the name of the topic with different text by positioning your cursor just before the final <code class="keyword markupname xmlelement">&lt;xref&gt;</code> tag and typing in a new name.</span>
+            <div class="itemgroup info">
+               <div class="note note note_note"><span class="note__title">Note:</span> This does not change the original topic title.</div>
+            </div>
+         </li></ol></section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="linklist relconcepts" lang="en-us"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_what_are_inline_links/">Inline links</a></li><li class="linklist"><a class="link" href="co_role_of_IDs/">What is the role of IDs?</a></li><li class="linklist"><a class="link" href="co_why_create_links/">Why create links?</a></li></ul></div><div class="linklist reltasks" lang="en-us"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_creating_inline_links/#taskId6">To link an element</a></li><li class="linklist"><a class="link" href="to_creating_inline_links/#taskId7">To link a web page</a></li></ul></div></nav>
+</article><article class="topic task nested1" aria-labelledby="ariaid-title3" lang="en-us" id="taskId6">
+   <h2 class="title topictitle2" id="ariaid-title3">To link an element</h2>
+   
+   <div class="body taskbody">
+      <section><ol class="ol steps"><li class="li step stepexpand">
+            <span class="ph cmd">Generate an ID for the element you want to link: right-click the <code class="keyword markupname xmlelement">&lt;element&gt;</code> and choose <span class="ph uicontrol">Generate IDs</span>.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Insert an <code class="keyword markupname xmlelement">&lt;xref (cross reference)&gt;</code> element into your text.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">In the <span class="keyword wintitle">Cross Reference (xref)</span> dialog window, navigate to the topic that contains the element you want to reference.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Select the correct element in the list.</span>
+            <div class="itemgroup info">You can identify the correct element in the list by checking its Element ID or by using the preview tab at the bottom of the window.<div class="note tip note_tip"><span class="note__title">Tip:</span> If you have generated many IDs for elements in that topic, choose your <code class="keyword markupname xmlelement">&lt;element&gt;</code> in the drop-down menu <span class="keyword wintitle">Show elements of type</span> to filter the list.</div>
+            </div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Press <span class="ph uicontrol">Insert and close</span>.</span>
+            <div class="itemgroup info">
+               <div class="note tip note_tip"><span class="note__title">Tip:</span> If you have more references to add, you press <span class="ph uicontrol">Insert</span> instead. The window remains open and you can insert another reference.</div>
+            </div>
+         </li></ol></section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="linklist relconcepts" lang="en-us"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_what_are_inline_links/">Inline links</a></li><li class="linklist"><a class="link" href="co_role_of_IDs/">What is the role of IDs?</a></li><li class="linklist"><a class="link" href="co_why_create_links/">Why create links?</a></li></ul></div><div class="linklist reltasks" lang="en-us"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_creating_inline_links/#taskId5">To link another topic</a></li><li class="linklist"><a class="link" href="to_creating_inline_links/#taskId7">To link a web page</a></li></ul></div></nav>
+</article><article class="topic task nested1" aria-labelledby="ariaid-title4" lang="en-us" id="taskId7">
+   <h2 class="title topictitle2" id="ariaid-title4">To link a web page</h2>
+   
+   <div class="body taskbody">
+      <section><ol class="ol steps"><li class="li step stepexpand">
+            <span class="ph cmd">Insert an <code class="keyword markupname xmlelement">&lt;xref (web link)&gt;</code> element into your text.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">In the <span class="keyword wintitle">Web Link</span> window, enter the URL of the website you wish to link and press <span class="ph uicontrol">OK</span>.</span>
+            <div class="itemgroup info">
+               <div class="note notice note_notice"><span class="note__title">Notice:</span> Fill out the URL as complete as possible. For example, use <kbd class="ph userinput">http://</kbd> and <kbd class="ph userinput">www.</kbd> (if applicable). Otherwise Oxygen will deem the URL invalid.</div>
+            </div>
+         </li></ol></section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="linklist relconcepts" lang="en-us"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_what_are_inline_links/">Inline links</a></li><li class="linklist"><a class="link" href="co_role_of_IDs/">What is the role of IDs?</a></li><li class="linklist"><a class="link" href="co_why_create_links/">Why create links?</a></li></ul></div><div class="linklist reltasks" lang="en-us"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_creating_inline_links/#taskId5">To link another topic</a></li><li class="linklist"><a class="link" href="to_creating_inline_links/#taskId6">To link an element</a></li></ul></div></nav>
+</article></article></article></main>

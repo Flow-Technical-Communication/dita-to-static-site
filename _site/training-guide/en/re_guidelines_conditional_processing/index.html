@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidelines for conditional processing</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a><ul class="nav nav-list"><li><a href="../to_about_conditional_processing/">About conditional processing</a><ul class="nav nav-list"><li><a href="../co_what_is_conditional_processing/">What is conditional processing?</a></li><li><a href="../co_why_use_conditional_processing/">What is the purpose and advantage of conditional processing?</a></li><li><a href="../co_how_does_conditional_processing_work/">How does conditional processing work?</a></li><li><a href="../re_overview_conditional_attributes/">Conditional attributes</a></li><li class="active"><a href="../re_guidelines_conditional_processing/">Guidelines for conditional processing</a></li><li><a href="../co_including_a_ditaval/">Which ditaval elements are available?</a></li></ul></li><li><a href="../to_assigning_conditional_attributes_and_vlues/">Assigning conditional attributes and values</a></li><li><a href="../to_working_with_ditavals/">Working with ditavals</a></li></ul></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">Guidelines for conditional processing</h1>
+	
+	<div class="body refbody">
+		<section class="section"><h2 class="title sectiontitle">Define values clearly</h2>  <p class="p">When you plan your conditional processing scheme, make sure you have defined all the values before starting the actual writing process. This will make it clear between different writers which attributes should be applied in which situations. If the values are not clearly defined, each writer might start making his own conditional attribute for the same type of content. This situation where separate sets of attributes need to be maintained is called 'condition sprawl' and leads to an unnecessary complication of the attribute system.</p> <div class="note important note_important"><span class="note__title">Important:</span> When defining your values, keep in mind that they are case-sensitive. Therefore 'windows' and 'Windows' will be seen as two separate values. This means that certain information might not get flagged or filtered out correctly.</div> </section>
+		<div class="example"> <p class="p">Without a conditional processing scheme, your writers each make up a different value to apply to Windows-only content of your documentation: 'windows', 'win_only' and 'win'. You can choose to maintain all three of these values and adjust your DITAVAL accordingly, or you can find all values and change them to one unique value.</p> </div>
+		<section class="section"><h2 class="title sectiontitle">Make efficient use of otherprops</h2>  <p class="p">The <code class="keyword markupname xmlatt">@otherprops</code> attribute can be used to store any other metadata information that does not fit into the standard conditional attributes (audience, platform, and product). To extend the functionality of the <code class="keyword markupname xmlatt">@otherprops</code> attribute, a naming convention can be used that a processor can interpret.</p> </section>
+		<div class="example"> <p class="p">For example, in order to broaden your attribute options, you define the following values for the <code class="keyword markupname xmlatt">@otherprops</code> attribute: 'Market(Australia)' and 'Publication(Symmetry). This allows you to use the same attribute for a number of functions. Your processor can now differentiate between "Market" and "Publication".</p> </div>
+		<section class="section"><h2 class="title sectiontitle">Correctly apply conditional attributes in topics</h2>  <p class="p">Avoid applying conditions to phrase level elements such as <code class="keyword markupname xmlelement">&lt;ph&gt;</code>, <code class="keyword markupname xmlelement">&lt;uicontrol&gt;</code>, <code class="keyword markupname xmlelement">&lt;filepath&gt;</code> and <code class="keyword markupname xmlelement">&lt;userinput&gt;</code>, as filtering out this kind of information can create nonsensical sentences. Instead, apply the condition to the entire sentence and add a similar sentence with a different condition for a different audience, platform etc.</p> </section>
+		<section class="section"> <div class="note tip note_tip"><span class="note__title">Tip:</span> Assign conditional values to your attributes as you write each topic, rather than after you've written dozens or more. Assigning them as you write is faster than trying to hunt down topics that still need conditional attributes at the end.</div> </section>
+		<section class="section"><h2 class="title sectiontitle">Conditional processing versus content referencing</h2>  <p class="p">Choose wisely between conditional processing and context referencing. Sometimes it can be easier to adjust one central conref than to create and maintain a system of conditional processing attributes. Each method has its own advantages:</p> <table class="table frame-all" id="reference_t4r_dmm_bn__table_cx3_nlg_nn"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+					<tr class="row">
+						<th class="entry" id="reference_t4r_dmm_bn__table_cx3_nlg_nn__entry__1">Conditional processing</th>
+						<th class="entry" id="reference_t4r_dmm_bn__table_cx3_nlg_nn__entry__2">Context reference</th>
+					</tr>
+				</thead><tbody class="tbody">
+					<tr class="row">
+						<td class="entry" headers="reference_t4r_dmm_bn__table_cx3_nlg_nn__entry__1">All variations are immediately visible to the author.</td>
+						<td class="entry" headers="reference_t4r_dmm_bn__table_cx3_nlg_nn__entry__2">Topics are easier for an author to read.</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="reference_t4r_dmm_bn__table_cx3_nlg_nn__entry__1">A review version of the document can be produced that shows all variations at once.</td>
+						<td class="entry" headers="reference_t4r_dmm_bn__table_cx3_nlg_nn__entry__2">Does not rely on metadata.</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="reference_t4r_dmm_bn__table_cx3_nlg_nn__entry__1">Perfectly suited for limited content changes, for instance, alternative installation steps per model.</td>
+						<td class="entry" headers="reference_t4r_dmm_bn__table_cx3_nlg_nn__entry__2">Can cope better with large numbers of conditions.</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="reference_t4r_dmm_bn__table_cx3_nlg_nn__entry__1"></td>
+						<td class="entry" headers="reference_t4r_dmm_bn__table_cx3_nlg_nn__entry__2">Easier to maintain if new variations are introduced as only the conref source file needs to be updated.</td>
+					</tr>
+				</tbody></table> </section>
+		<section class="section"><h2 class="title sectiontitle">Correctly apply conditional attributes in DITA maps</h2>  <p class="p">If you want to create different output for your DITA map, the easiest method is to make a new DITA map with a different topic structure. Re-using (and consequently also not re-using) some topics is easier to maintain than setting up and maintaining a system of conditional processing attributes. In some cases, however, it is more practical to use conditional processing at the level of DITA maps.</p> <p class="p">In DITA maps, you can apply the conditional attributes to the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements in both the hierarchy and in the relationship table. This way you can exclude topics or links from your output.</p> <div class="note notice note_notice" id="reference_t4r_dmm_bn__note_hlx_pbq_spb"><span class="note__title">Notice:</span> Conditions on the highest level within a DITA map can cause problems when generating your book in Adobe FrameMaker (FM). FM reads the condition on a topic and will want to exclude it, but it still reads the topic as being present in its book structure. FM will try to solve this inconsistency by replacing the topic with an empty file containing only a title. You can then just delete this file.</div> </section>
+		<section class="section"><h2 class="title sectiontitle">Don't over-use content flagging</h2>  <p class="p">Avoid over-using the option of flagging content: flags are meant to quickly guide a person to the correct information, but too many flags can be distracting and can force the reader to read through a lot of unnecessary information. If you have many flagged items in one topic consider creating different topics, for instance, when you are writing how to install a particular application on several operating systems. Rather than flagging the separate methods for each OS, instead consider writing a new topic for each OS and filtering them with attributes.</p> <p class="p">To help you decide between flagging or creating separate topics, consider these guidelines:</p> <table class="table frame-all" id="reference_t4r_dmm_bn__table_p1d_cdh_5n"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+					<tr class="row">
+						<th class="entry" id="reference_t4r_dmm_bn__table_p1d_cdh_5n__entry__1">If</th>
+						<th class="entry" id="reference_t4r_dmm_bn__table_p1d_cdh_5n__entry__2">Then</th>
+					</tr>
+				</thead><tbody class="tbody">
+					<tr class="row">
+						<td class="entry" headers="reference_t4r_dmm_bn__table_p1d_cdh_5n__entry__1">You only have two or three differences in a nine-step task topic</td>
+						<td class="entry" headers="reference_t4r_dmm_bn__table_p1d_cdh_5n__entry__2">Create one topic and use flagging to highlight the differences.</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="reference_t4r_dmm_bn__table_p1d_cdh_5n__entry__1">You have more than four differences in a nine-step task topic</td>
+						<td class="entry" headers="reference_t4r_dmm_bn__table_p1d_cdh_5n__entry__2">Create one topic for each operating system.</td>
+					</tr>
+				</tbody></table> </section>
+	</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_about_conditional_processing/">About conditional processing</a></div></div></nav></article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>

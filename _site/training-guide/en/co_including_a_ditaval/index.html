@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which ditaval elements are available?</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a><ul class="nav nav-list"><li><a href="../to_about_conditional_processing/">About conditional processing</a><ul class="nav nav-list"><li><a href="../co_what_is_conditional_processing/">What is conditional processing?</a></li><li><a href="../co_why_use_conditional_processing/">What is the purpose and advantage of conditional processing?</a></li><li><a href="../co_how_does_conditional_processing_work/">How does conditional processing work?</a></li><li><a href="../re_overview_conditional_attributes/">Conditional attributes</a></li><li><a href="../re_guidelines_conditional_processing/">Guidelines for conditional processing</a></li><li class="active"><a href="../co_including_a_ditaval/">Which ditaval elements are available?</a></li></ul></li><li><a href="../to_assigning_conditional_attributes_and_vlues/">Assigning conditional attributes and values</a></li><li><a href="../to_working_with_ditavals/">Working with ditavals</a></li></ul></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Which ditaval elements are available?</h1>
+   
+   <div class="body conbody">
+      <p class="p">The root element of a DITAVAL file is the <code class="keyword markupname xmlelement">&lt;val&gt;</code> element. Furthermore, the following elements can be included in a DITAVAL:</p>
+      <section class="section" id="co_including_a_ditaval__section_p2b_fsh_bpb"><h2 class="title sectiontitle">
+            <code class="keyword markupname xmlelement">&lt;style-conflict&gt;</code>
+         </h2>
+         
+         <p class="p">When two flagging methods are applied on the same element, usually the most deeply nested flagging method applies. However, when the flagging methods are applied on the same level, the <code class="keyword markupname xmlelement">&lt;style-conflict&gt;</code> element can help determine how to resolve the conflict, using the following attributes:</p>
+         <table class="table" id="co_including_a_ditaval__table_fzz_hth_bpb"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+                  <tr class="row">
+                     <th class="entry" id="co_including_a_ditaval__table_fzz_hth_bpb__entry__1">Flagging method</th>
+                     <th class="entry" id="co_including_a_ditaval__table_fzz_hth_bpb__entry__2">Conflict behavior</th>
+                  </tr>
+               </thead><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry" headers="co_including_a_ditaval__table_fzz_hth_bpb__entry__1">Startflag/endflag</td>
+                     <td class="entry" headers="co_including_a_ditaval__table_fzz_hth_bpb__entry__2">Add all flags that apply.</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry" headers="co_including_a_ditaval__table_fzz_hth_bpb__entry__1">Color</td>
+                     <td class="entry" headers="co_including_a_ditaval__table_fzz_hth_bpb__entry__2">Follow the <code class="keyword markupname xmlatt">@foreground-conflict-color</code> attribute.</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry" headers="co_including_a_ditaval__table_fzz_hth_bpb__entry__1">Backcolor</td>
+                     <td class="entry" headers="co_including_a_ditaval__table_fzz_hth_bpb__entry__2">Follow the <code class="keyword markupname xmlatt">@background-conflict-color</code> attribute.</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry" headers="co_including_a_ditaval__table_fzz_hth_bpb__entry__1">Style</td>
+                     <td class="entry" headers="co_including_a_ditaval__table_fzz_hth_bpb__entry__2">Add all font styles that apply.</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry" headers="co_including_a_ditaval__table_fzz_hth_bpb__entry__1">Changebar</td>
+                     <td class="entry" headers="co_including_a_ditaval__table_fzz_hth_bpb__entry__2">Add all change bars that apply.</td>
+                  </tr>
+               </tbody></table>
+      </section>
+      <section class="section" id="co_including_a_ditaval__section_jlk_gsh_bpb"><h2 class="title sectiontitle">
+            <code class="keyword markupname xmlelement">&lt;prop&gt;</code>
+         </h2>
+         
+         <p class="p">A <code class="keyword markupname xmlelement">&lt;prop&gt;</code> element identifies an attribute, accompanying values and actions.</p>
+         <p class="p">The attribute must be a conditional processing attribute:</p>
+         <ul class="ul" id="co_including_a_ditaval__ul_opt_r31_lpb">
+            <li class="li">
+               <code class="keyword markupname xmlatt">@platform</code>
+            </li>
+            <li class="li">
+               <code class="keyword markupname xmlatt">@product</code>
+            </li>
+            <li class="li">
+               <code class="keyword markupname xmlatt">@audience</code>
+            </li>
+            <li class="li">
+               <code class="keyword markupname xmlatt">@props</code>
+            </li>
+            <li class="li">
+               <code class="keyword markupname xmlatt">@otherprops</code>
+            </li>
+            <li class="li">Specialization of <code class="keyword markupname xmlelement">&lt;props&gt;</code>
+            </li>
+         </ul>
+         <p class="p" id="co_including_a_ditaval__p_rqf_qvw_smb">The actions must be one of the following:</p>
+         <table class="table" id="co_including_a_ditaval__table_x4m_zb1_lpb"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+                  <tr class="row">
+                     <th class="entry" id="co_including_a_ditaval__table_x4m_zb1_lpb__entry__1">Element</th>
+                     <th class="entry" id="co_including_a_ditaval__table_x4m_zb1_lpb__entry__2">Description</th>
+                  </tr>
+               </thead><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry" headers="co_including_a_ditaval__table_x4m_zb1_lpb__entry__1">Exclude</td>
+                     <td class="entry" headers="co_including_a_ditaval__table_x4m_zb1_lpb__entry__2">Excludes content from output, for example: <code class="ph codeph">&lt;prop att="audience" val="expert" action="exclude"&gt;</code>. </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry" headers="co_including_a_ditaval__table_x4m_zb1_lpb__entry__1">Include</td>
+                     <td class="entry" headers="co_including_a_ditaval__table_x4m_zb1_lpb__entry__2">Includes content from output, for example: <code class="ph codeph">&lt;prop att="audience" val="expert" action="include"&gt;</code>.</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry" headers="co_including_a_ditaval__table_x4m_zb1_lpb__entry__1">Passthrough</td>
+                     <td class="entry" headers="co_including_a_ditaval__table_x4m_zb1_lpb__entry__2">Includes content in output, and preserves the attribute value as part of the output for further processing, for example: <code class="ph codeph">&lt;prop att="audience" val="expert" action="passthrough"&gt;</code>.</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry" headers="co_including_a_ditaval__table_x4m_zb1_lpb__entry__1">Flag</td>
+                     <td class="entry" headers="co_including_a_ditaval__table_x4m_zb1_lpb__entry__2">Includes the content in the output and preserves the attribute value as part of the output stream for further processing within the (dynamic) output, for example: <code class="ph codeph">&lt;prop att="audience" val="expert" action="flag"&gt;</code>
+                        <p class="p" id="co_including_a_ditaval__p_mrq_dfr_vjb">In other words, the conditional processing (or filtering) does not take place during the publishing phase of the DITA content. Instead, the various types of content and their corresponding attribute values are passed on to the output itself, which is where the filtering will take place.</p>
+                        <div class="note note note_note" id="co_including_a_ditaval__note_jpx_c1w_vjb"><span class="note__title">Note:</span> 
+                           <p class="p" id="co_including_a_ditaval__p_axx_4nv_spb">Take for example a search engine with filtering options. A customer of Booking.com will be able to efficiently search through the many possible accommodations that the site offers by using "filters," which are essentially attribute values that have been attributed to the various types of content:</p>
+                           <figure class="fig fignone" id="co_including_a_ditaval__fig_pv3_gbw_vjb">
+                              <img class="image" id="co_including_a_ditaval__image_hgt_42w_vjb" src="../../_media/graphics/booking.com_filter_example_1.png">
+                           </figure>
+                        </div>
+                        
+                     </td>
+                  </tr>
+               </tbody></table>
+      </section>
+      <section class="section" id="co_including_a_ditaval__section_hry_3sh_bpb"><h2 class="title sectiontitle">
+            <code class="keyword markupname xmlelement">&lt;revprop&gt;</code>
+         </h2>
+         
+         <p class="p">The <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> element is used to flag a value in the <code class="keyword markupname xmlatt">@rev</code> attribute.</p>
+      </section>
+      <section class="section" id="co_including_a_ditaval__section_exl_jsh_bpb"><h2 class="title sectiontitle">
+            <code class="keyword markupname xmlelement">&lt;startflag&gt;</code>
+         </h2>
+         
+         <p class="p">The <code class="keyword markupname xmlelement">&lt;startflag&gt;</code> element is placed in the <code class="keyword markupname xmlelement">&lt;prop&gt;</code> or <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> element and identifies the beginning of flagged content with an image or <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> element.</p>
+      </section>
+      <section class="section" id="co_including_a_ditaval__section_ih1_ksh_bpb"><h2 class="title sectiontitle">
+            <code class="keyword markupname xmlelement">&lt;endflag&gt;</code>
+         </h2>
+         
+         <p class="p">The <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> element is placed in the <code class="keyword markupname xmlelement">&lt;prop&gt;</code> or <code class="keyword markupname xmlelement">&lt;revprop&gt;</code> element and identifies the end of flagged content, with an image of <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> element.</p>
+      </section>
+      <section class="section" id="co_including_a_ditaval__section_tnp_ksh_bpb"><h2 class="title sectiontitle">
+            <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code>
+         </h2>
+         
+         <p class="p">The <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> element is placed in the <code class="keyword markupname xmlelement">&lt;startflag&gt;</code> or <code class="keyword markupname xmlelement">&lt;endflag&gt;</code> and provides alternate text for an image when the <code class="keyword markupname xmlatt">@imagref</code> attribute sets an image to be used for flagging.</p>
+         <p class="p">The following code illustrates a DITAVAL file:</p>
+         <pre class="pre codeblock"><code>&lt;val&gt;
+&lt;style-conflict backcolor="red"/&gt;
+&lt;prop action="flag" att="product" backcolor="blue"
+      color="yellow" style="underline" val="MyProd"&gt;
+   &lt;startflag imageref="startflag.jpg"&gt;
+     &lt;alt-text&gt;This is the start of my product info&lt;/alt-text&gt;
+   &lt;/startflag&gt;
+   &lt;endflag imageref="endflag.jpg"&gt;
+    &lt;alt-text&gt;This is the end of my product info&lt;/alt-text&gt;
+   &lt;/endflag&gt;
+&lt;/prop&gt;
+&lt;revprop action="flag" val="1.2"/&gt;
+&lt;/val&gt;</code></pre>
+      </section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_about_conditional_processing/">About conditional processing</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_what_is_conditional_processing/">What is conditional processing?</a></li></ul></div><div class="linklist reltasks"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="ta_create_ditaval/">To create a ditaval</a></li></ul></div><div class="linklist relref"><strong>Related reference</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="re_guidelines_conditional_processing/">Guidelines for conditional processing</a></li></ul></div></nav>
+</article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'Guidelines for working with graphics'
+index: '../toc/'
+src: 'en/re_guidelines_images.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a><ul class="nav nav-list"><li><a href="../co_pixel_vector/">What are vector graphics and pixel images?</a></li><li class="active"><a href="../re_guidelines_images/">Guidelines for working with graphics</a><ul class="nav nav-list"><li><a href="../ta_assigning_a_dpi_value_to_an_image/">To assign a DPI value to an image</a></li></ul></li><li><a href="../ta_inserting_images/">Inserting media objects in a topic</a></li></ul></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Guidelines for working with graphics</h1>
+   <div class="body refbody">
+      <section class="section" id="reference_wdt_vxg_bn__section_vqj_ylx_4mb"><h2 class="title sectiontitle">Storage</h2>
+         
+         <p class="p" id="reference_wdt_vxg_bn__p_wqj_ylx_4mb">All images should be stored in a graphics folder in the same folder as your DITA map.</p>
+      </section>
+      <section class="section" id="reference_wdt_vxg_bn__section_pgx_ylx_4mb"><h2 class="title sectiontitle">Fig element</h2>
+         
+         <p class="p" id="reference_wdt_vxg_bn__p_qgx_ylx_4mb">You can add both inline images and images which appear on the next line. To place the image on the next line, wrap the image in a <code class="keyword markupname xmlelement">&lt;fig&gt;</code> element.</p>
+      </section>
+      <section class="section" id="reference_wdt_vxg_bn__section_prm_zlx_4mb"><h2 class="title sectiontitle">Images in different outputs</h2>
+         
+         <p class="p" id="reference_wdt_vxg_bn__p_qyp_jjy_4mb">In most projects, images will be different sizes. Images adapt to the screen when you create a webhelp, but for PDF, this will not be the case.</p>
+         <p class="p" id="reference_wdt_vxg_bn__p_ryp_jjy_4mb">Therefore, if you choose a PDF output, use <a class="xref" href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="external noopener">DPI settings</a> to scale the images. If the images are all more or less the same size, you can use one DPI value. When that is not the case, every single image has to be assigned a value. The values below might give you a sense of where to start:</p>
+         <ul class="ul">
+            <li class="li">fmdpi:124: for very small images (such as icons)</li>
+            <li class="li">fmdpi:160: for images which are shown in their original size in oXygen (when there is no information on the original size on the image)<figure class="fig fignone">
+                  <img class="image" src="../../_media/graphics/original_size.png">
+               </figure>
+            </li>
+            <li class="li">fmdpi:200: up to 1200 px</li>
+            <li class="li">fmdpi:280: for images between 1200-1500 px</li>
+            <li class="li">fmdpi:300: for images over 1500+ px</li>
+         </ul>
+      </section>
+   </div>
+   <nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../ta_assigning_a_dpi_value_to_an_image/">To assign a DPI value to an image</a></strong><br></li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_images/">DITA graphics</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_fig_image/">Figures and images</a></li></ul></div><div class="linklist relinfo"><strong>Related information</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="ta_inserting_images/">Inserting media objects in a topic</a></li></ul></div></nav>
+</article></main>

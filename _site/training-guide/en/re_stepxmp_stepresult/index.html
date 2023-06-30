@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step examples, step results</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a><ul class="nav nav-list"><li><a href="../to_dita_elements_task_topics/">Task topic elements</a><ul class="nav nav-list"><li><a href="../co_title_task/">Task title</a></li><li><a href="../co_context/">Introductory task information</a></li><li><a href="../co_steps_step_cmd/">Ordered and unordered steps</a></li><li><a href="../co_step_cmd/">Writing the steps: step   </a></li><li><a href="../co_substeps_choices_choicetable/">Substeps and choices</a></li><li class="active"><a href="../re_stepxmp_stepresult/">Step examples, step results</a></li><li><a href="../re_notes/">Notes</a></li><li><a href="../re_result_postrequisites/">Examples, results and post requisites</a></li></ul></li></ul></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">Step examples, step results</h1>
+	
+	<div class="body conbody">
+		<section class="section">DITA provides a series of elements that allow you to add extra info to your steps. The most common and useful ones are <code class="keyword markupname xmlelement">&lt;stepxmp&gt;</code>, <code class="keyword markupname xmlelement">&lt;stepresult&gt;</code>, <code class="keyword markupname xmlelement">&lt;info&gt;</code> and <code class="keyword markupname xmlelement">&lt;note&gt;</code>.</section>
+		<section class="section"><h2 class="title sectiontitle"> <code class="keyword markupname xmlelement">&lt;stepxmp&gt;</code> </h2>  <p class="p">If you want to provide an example of what to do in a particular (sub)step, use the <code class="keyword markupname xmlelement">&lt;stepxmp&gt;</code> element. An example helps users understand how to complete the step.</p> <figure class="fig fignone" id="conceptId__fig_ks4_htr_cn">
+			<img class="image fmdpi:150" id="conceptId__image_xx2_qj3_gn" src="../../_media/graphics/ta_stepxmp.png">
+			</figure> </section>
+		<section class="section"><h2 class="title sectiontitle"> <code class="keyword markupname xmlelement">&lt;stepresult&gt;</code> </h2>  <div class="p">If you want to describe the outcome of a particular action, use the <code class="keyword markupname xmlelement">&lt;stepresult&gt;</code> element. By adding a result, you can assure users that they are still on the right track. This is especially useful when the result of a step is somewhat strange or worrying.<figure class="fig fignone" id="conceptId__fig_mfd_25r_cn">
+			<img class="image fmdpi:150" id="conceptId__image_sqn_vj3_gn" src="../../_media/graphics/ta_stepresult.png">
+			</figure> </div> <div class="note caution note_caution"><span class="note__title">CAUTION:</span> Do not add a <code class="keyword markupname xmlelement">&lt;stepresult&gt;</code> to each step and do not use it to point out obvious results. For example, in software documentation do not use it to indicate that a particular dialog is displayed: users see the dialog on their screen when they are executing the task. If you think the users might get confused about where they are in the interface, you can always start the next step by pointing out which dialog they have to use (for example "In the <span class="keyword wintitle">Save as</span> dialog, enter a name for your file and click <span class="ph uicontrol">Save</span>"). </div> </section>
+		<section class="section"><h2 class="title sectiontitle"> <code class="keyword markupname xmlelement">&lt;info&gt;</code> </h2>  <div class="p">If you want to add extra information to a step that does not fit in the <code class="keyword markupname xmlelement">&lt;stepxmp&gt;</code> or <code class="keyword markupname xmlelement">&lt;stepresult&gt;</code> element, you can use the <code class="keyword markupname xmlelement">&lt;info&gt;</code> element. Be careful, however, not to include long conceptual information or extra instructions in the <code class="keyword markupname xmlelement">&lt;info&gt;</code> element. All instructions have to be written in a <code class="keyword markupname xmlelement">&lt;cmd&gt;</code> element.<figure class="fig fignone" id="conceptId__fig_jqh_g4w_cn">
+			<img class="image fmdpi:150" id="conceptId__image_tph_kk3_gn" src="../../_media/graphics/ta_note.png">
+			</figure> </div> <div class="note tip note_tip"><span class="note__title">Tip:</span> Use the <code class="keyword markupname xmlelement">&lt;info&gt;</code> element as a container element for other elements. This is especially useful for elements that cannot be directly inserted into a <code class="keyword markupname xmlelement">&lt;step&gt;</code> element (<code class="keyword markupname xmlelement">&lt;note&gt;</code>, <code class="keyword markupname xmlelement">&lt;fig&gt;</code>, <code class="keyword markupname xmlelement">&lt;image&gt;</code>, ...).</div> </section>
+		<section class="section" id="conceptId__section_ykj_pl5_r4b"><h2 class="title sectiontitle"> <code class="keyword markupname xmlelement">&lt;tutorialinfo&gt;</code> </h2>  <p class="p">The <code class="keyword markupname xmlelement">&lt;tutorialinfo&gt;</code> element contains additional information that is useful when the task is part of a tutorial.</p> </section>
+	</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_dita_elements_task_topics/">Task topic elements</a></div></div></nav></article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>

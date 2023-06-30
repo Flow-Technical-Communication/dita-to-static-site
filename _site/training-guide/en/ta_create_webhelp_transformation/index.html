@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To create a transformation scenario</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">To create a transformation scenario</h1>
+   
+   <div class="body taskbody">
+      <section class="section context">
+         <p class="p">To create a custom webhelp transformation, you can simply finetune the Oxygen webhelp template:</p>
+      </section>
+      <section><ol class="ol steps"><li class="li step stepexpand">
+            <span class="ph cmd">Open the ditamap you want to add a custom webhelp transformation scenario to.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Select <img class="image" id="ta_create_webhelp_transformation__image_ovn_lwd_fpb" src="../../_media/graphics/configure_transformation_scenario.PNG">.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Select a DITA Map Webhelp Responsive transformation scenario under <span class="ph uicontrol">Project</span>.</span>
+            <div class="itemgroup info">
+               <div class="note note note_note"><span class="note__title">Note:</span> If there are no DITA Map Webhelp Responsive transformation scenarios available yet under <span class="ph uicontrol">Project</span>, simply duplicate the DITA Map Webhelp Responsive transformation scenario under <span class="ph uicontrol">DITA Map</span>.</div>
+            </div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Select <span class="ph uicontrol">Edit</span>.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">For webhelp transformation scenarios, select a template under <span class="ph uicontrol">Templates</span>.</span>
+            <div class="itemgroup info">
+               <div class="note note note_note"><span class="note__title">Note:</span> The templates <span class="ph uicontrol">Oxygen [tiles]</span> and <span class="ph uicontrol">Oxygen [tree]</span> are most used by Flow.</div>
+            </div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Change the values of the parameters under <span class="ph uicontrol">Parameters</span>.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Optionally, filter the ditamap on the <span class="ph uicontrol">Filter</span> tab:</span>
+            <ul class="ul choices" id="ta_create_webhelp_transformation__choices_yps_515_mpb">
+               <li class="li choice">Enter a ditaval file.</li>
+               <li class="li choice">Enter a profiling condition set.</li>
+               <li class="li choice">Manually exclude elements with defined profiling attributes.</li>
+            </ul>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Select <span class="ph uicontrol">Save template as</span>.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Enter a name and description.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Check the box next to <span class="ph uicontrol">Include HTML Page Layout Files</span>.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Enter a location next to <span class="ph uicontrol">Save as</span> to save the template.</span>
+            <div class="itemgroup info">
+               <div class="note note note_note"><span class="note__title">Note:</span> In accordance with the folder structure Flow uses, save your template in <span class="ph menucascade"><span class="ph uicontrol">_custom_framework</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">webhelp_responsive</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">&lt;projectname&gt;</span></span>.</div>
+            </div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Unzip the folder.</span>
+         </li></ol></section>
+      <section class="section result" id="ta_create_webhelp_transformation__result_bhy_szd_fpb">You can now edit the transformation scenario by editing the files in the folder you created.</section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="linklist reltasks"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="ta_change_parameters_webhelp_transformation/">To change the parameters of a transformation scenario</a></li></ul></div></nav>
+</article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>

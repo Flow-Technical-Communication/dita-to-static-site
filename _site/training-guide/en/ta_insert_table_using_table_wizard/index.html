@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To insert a table using the table wizard</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a><ul class="nav nav-list"><li><a href="../co_table_elements/">Table components</a></li><li class="active"><a href="../ta_insert_table_using_table_wizard/">To insert a table using the table wizard</a></li><li><a href="../ta_inserting_rows_columns/">To insert rows and columns</a></li><li><a href="../ta_insert_delete_columns/">To delete rows and columns</a></li><li><a href="../ta_handlingTheFirstColumnOfATableAsHeader/">Handling the first column of a table as header</a></li></ul></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">To insert a table using the table wizard</h1>
+   
+   <div class="body taskbody">
+      <section class="section context">Instead of inserting a <code class="keyword markupname xmlelement">&lt;table&gt;</code> or <code class="keyword markupname xmlelement">&lt;simpletable&gt;</code> element and creating your table from scratch, you can use the <span class="keyword">table wizard</span> to insert a table in your topic. Proceed as follows:</section>
+      <section><ol class="ol steps"><li class="li step stepexpand">
+            <span class="ph cmd">Place you cursor where you want to insert the table and do one of the following:</span>
+            <ul class="ul choices" id="taskId__choices_ths_myh_2n">
+               <li class="li choice">Click <img class="image fmdpi:100" id="taskId__image_tgb_vyh_2n" src="../../_media/graphics/button_insert_table.png"> in the Main toolbar.</li>
+               <li class="li choice">Press <span class="ph uicontrol">Enter</span> and click <span class="ph uicontrol">table</span>.</li>
+            </ul>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">In the <span class="keyword wintitle">Insert table</span> dialog, define all the properties of your table:</span>
+            <div class="itemgroup info">
+               <table class="table frame-all" id="taskId__table_hj1_sxy_tn"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+                        <tr class="row">
+                           <th class="entry" id="taskId__table_hj1_sxy_tn__entry__1">Property</th>
+                           <th class="entry" id="taskId__table_hj1_sxy_tn__entry__2">Description</th>
+                        </tr>
+                     </thead><tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__1">
+                              <span class="ph uicontrol">Model</span>
+                           </td>
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__2"> Select <span class="ph uicontrol">CALS</span> for a common table and <span class="ph uicontrol">Simple</span> for a simple table</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__1">
+                              <span class="ph uicontrol">Title</span>
+                           </td>
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__2">Check this box if you want to add a title to your table. This is not possible for simple tables.</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__1">
+                              <span class="ph uicontrol">Table size</span>
+                           </td>
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__2">Indicate how many rows and columns your table has to include. You can always add and remove rows or columns later.</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__1">
+                              <span class="ph uicontrol">Generate table header</span>
+                           </td>
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__2">Check this box if you want to include a header row in your table. </td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__1">
+                              <span class="ph uicontrol">Column widths</span>
+                           </td>
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__2">Select how the column widths are determined:<ul class="ul">
+                                 <li class="li">
+                                    <span class="ph uicontrol">proportional</span>: The width of columns is specified in relative units of measure. The value of the shares is totaled and rendered as a percent, for example 16.7%, 33.3%, and 66.7%. If you change the width by dragging a column in Author mode, the values are automatically changed accordingly. By default, when you insert, drag and drop, or copy/paste a column, the value is <code class="ph codeph">1*</code>.</li>
+                                 <li class="li">
+                                    <span class="ph uicontrol">dynamic</span>: If you choose this option, the columns are created without a specified width. Entering content into a cell changes the rendered width dynamically. If you change the width by dragging a column in Author mode, a dialog box will be displayed that asks you if you want to switch to proportional or fixed column widths.</li>
+                                 <li class="li">
+                                    <span class="ph uicontrol">fixed</span>: Columns will be displayed in the width you manually assign to them. This is the least suitable option if you are working with "responsive" output.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__1">
+                              <span class="ph uicontrol">Frame</span>
+                           </td>
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__2">Select where a border should appear in the table. The allowed values are as follows:<ul class="ul">
+                                 <li class="li">
+                                    <span class="ph uicontrol">none</span>: No border will be added.</li>
+                                 <li class="li">
+                                    <span class="ph uicontrol">all</span>: A border will be added to all frames.</li>
+                                 <li class="li">
+                                    <span class="ph uicontrol">top</span>: A border will be added to the top frame.</li>
+                                 <li class="li">
+                                    <span class="ph uicontrol">topbot</span>: A border will be added to the top and bottom frames.</li>
+                                 <li class="li">
+                                    <span class="ph uicontrol">bottom</span>: A border will be added to the bottom frame.</li>
+                                 <li class="li">
+                                    <span class="ph uicontrol">sides</span>: A border will be added to the side frames.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__1">
+                              <span class="ph uicontrol">Row separator</span>
+                           </td>
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__2">
+                              <ul class="ul">
+                                 <li class="li">
+                                    <span class="ph uicontrol">0</span>: No visible separators</li>
+                                 <li class="li">
+                                    <span class="ph uicontrol">1</span>: Visible separators</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__1">
+                              <span class="ph uicontrol">Column separator</span>
+                           </td>
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__2">
+                              <ul class="ul">
+                                 <li class="li">
+                                    <span class="ph uicontrol">0</span>: No visible separators</li>
+                                 <li class="li">
+                                    <span class="ph uicontrol">1</span>: Visible separators</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__1">
+                              <span class="ph uicontrol">Alignment</span>
+                           </td>
+                           <td class="entry" headers="taskId__table_hj1_sxy_tn__entry__2">Select how to align the table in the output.</td>
+                        </tr>
+                     </tbody></table>
+            </div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Insert</span>.</span>
+         </li></ol></section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_working_with_tables/">DITA tables</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_tables/">General, simple and property tables</a></li><li class="linklist"><a class="link" href="co_table_elements/">Table components</a></li></ul></div></nav>
+</article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>

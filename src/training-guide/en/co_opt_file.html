@@ -1,0 +1,73 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'What is a template descriptor file?'
+index: '../toc/'
+src: 'en/co_opt_file.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">What is a template descriptor file?</h1>
+   <div class="body conbody">
+      <p class="p">The template descriptor file defines the metadata associated with the template, as well as the resources included in the template (CSS files, JS files, images and transformation parameters):</p>
+      <pre class="pre codeblock"><code>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;publishing-template&gt;
+  &lt;name&gt;your_project&lt;/name&gt;
+  &lt;description&gt;your_project webhelp reponsive customization&lt;/description&gt;
+  &lt;webhelp&gt;
+    &lt;preview-image file="image/your_project-logo.png"/&gt;
+    &lt;html-page-layout-files&gt;
+      &lt;page-layout-file page="search" file="page-templates/wt_search/"/&gt;
+      ...
+    &lt;/html-page-layout-files&gt;
+
+    &lt;parameters&gt;
+      &lt;parameter name="webhelp.show.main.page.tiles" value="yes"/&gt;
+      ....
+    &lt;/parameters&gt;
+    &lt;html-fragments&gt;
+      &lt;fragment file="webhelp-fragment/webhelp.fragment.footer.xhtml" placeholder="webhelp.fragment.footer"/&gt;
+      ...
+    &lt;/html-fragments&gt;
+    &lt;resources&gt;
+      &lt;css file="your_project.css"/&gt;
+      &lt;fileset&gt;
+        &lt;include name="image/**/*"/&gt;
+       ...
+      &lt;/fileset&gt;
+    &lt;/resources&gt;
+    &lt;online-preview-url&gt;https://www.oxygenxml.com/samples/DITA-WebHelp-Responsive/tiles/aquamarine/&lt;/online-preview-url&gt;
+    &lt;tags&gt;
+      &lt;tag type="layout"&gt;tiles&lt;/tag&gt;
+      ...
+    &lt;/tags&gt;
+  &lt;/webhelp&gt;
+&lt;/publishing-template&gt;
+</code></pre>
+      <div class="note attention note_attention"><span class="note__title">Attention:</span> The template descriptor file must have the .opt extension and must be located in the template's root folder.</div>
+      <p class="p">The .opt file contains the following elements:</p>
+      <ul class="ul" id="co_opt_file__ul_p4w_f52_fpb">
+         <li class="li">
+            <code class="ph codeph">&lt;name&gt;</code>: name of your project</li>
+         <li class="li">
+            <code class="ph codeph">&lt;description&gt;</code>: description of your project</li>
+         <li class="li">
+            <code class="ph codeph">&lt;preview-image&gt;</code>: image displayed in the <span class="ph uicontrol">templates</span> tab of the <span class="ph uicontrol">Edit DITA scenario</span> window</li>
+         <li class="li">
+            <code class="ph codeph">&lt;html-page-layout-files&gt;</code>: files defining the layout of the webhelp pages<div class="note note note_note"><span class="note__title">Note:</span> These files are stored in the <span class="ph uicontrol">page-templates</span> folder.</div>
+         </li>
+         <li class="li">
+            <code class="ph codeph">&lt;parameters&gt;</code>: parameters of the webhelp transformation scenario (see <a class="xref" href="ta_change_parameters_webhelp_transformation/">To change the parameters of a transformation scenario</a>)</li>
+         <li class="li">
+            <code class="ph codeph">&lt;html-fragments&gt;</code>: files defining fragments of the webhelp<div class="note note note_note"><span class="note__title">Note:</span> These files are stored in the <span class="ph uicontrol">webhelp-fragment</span> folder.</div>
+         </li>
+         <li class="li">
+            <code class="ph codeph">&lt;resources&gt;</code>: resources of the webhelp, including the custom .css file<div class="note note note_note"><span class="note__title">Note:</span> When renaming the .css file, you have to adjust the code in the .opt file as well.</div>
+         </li>
+         <li class="li">
+            <code class="ph codeph">&lt;online-preview-url&gt;</code>: url of the online preview</li>
+         <li class="li">
+            <code class="ph codeph">&lt;tags&gt;</code>: tags used to filter in the <span class="ph uicontrol">Edit DITA scenario</span> window</li>
+      </ul>
+   </div>
+</article></main>

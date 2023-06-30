@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To apply a ditaval or a profiling condition set during publishing</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a><ul class="nav nav-list"><li><a href="../to_about_conditional_processing/">About conditional processing</a></li><li><a href="../to_assigning_conditional_attributes_and_vlues/">Assigning conditional attributes and values</a></li><li><a href="../to_working_with_ditavals/">Working with ditavals</a><ul class="nav nav-list"><li><a href="../co_what_are_ditavals/">What are ditaval filters?</a></li><li><a href="../ta_create_ditaval/">To create a ditaval</a></li><li class="active"><a href="../ta_apply_ditaval/">To apply a ditaval or a profiling condition set during publishing</a></li><li><a href="../co_ditaval_filtering_logic/">Ditaval filtering logic</a></li></ul></li></ul></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">To apply a ditaval or a profiling condition set during publishing</h1>
+	
+	<div class="body taskbody">
+		<section class="section context">These instructions show how to apply a DITAVAL or a profiling condition set using the built-in Open Toolkit transformation options of Oxygen. If you are using a DITA2PDF system, a different method should be used.</section>
+		<section><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Click <span class="ph uicontrol">Configure Transformation Scenario(s)</span> <img class="image fmdpi:144" id="taskId__image_pd1_vs2_kn" src="../../_media/graphics/configure_transformation_scenario.PNG">.</span>
+				<ul class="ul choices" id="taskId__choices_tfz_xs2_kn">
+					<li class="li choice">If you want to publish a single file, click this button in the <span class="ph uicontrol">Main toolbar</span>.</li>
+					<li class="li choice">If you want to publish your entire DITA map, click this button at the top of your <span class="ph uicontrol">DITA Maps Manager</span>.</li>
+				</ul>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="keyword wintitle">Configure Transformation Scenario(s)</span> window, select the transformation scenario that best fits your needs and click <span class="ph uicontrol">Duplicate</span>.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="keyword wintitle">Edit DITA scenario</span> window, do the following:</span>
+				<ol type="a" class="ol substeps" id="taskId__substeps_o5m_514_gn">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Enter a unique name for your new scenario, so you can easily remember which DITAVAL file is associated with it.</span>
+					</li>
+					<li class="li substep substepexpand">
+						<span class="ph cmd">In the <span class="ph uicontrol">Filters</span> tab, select <span class="ph uicontrol">Use DITAVAL file</span>.</span>
+						<div class="itemgroup info"> <div class="note notice note_notice" id="taskId__note_jml_zxr_qqb"><span class="note__title">Notice:</span>  <p class="p"> <strong class="ph b">Do not</strong> use an absolute path to your DITAVAL file (for example <span class="ph filepath">/_ditaval/flow.ditaval</span>); use the <var class="keyword varname">${pd}</var> variable to insert a relative path instead, for example <span class="ph filepath">${pd}/_ditaval/flow.ditaval </span>. An absolute path to the DITAVAL filter may not work for your colleagues.</p> </div> <div class="note tip note_tip" id="taskId__note_vwl_whj_qqb"><span class="note__title">Tip:</span> You can also use a <span class="xref">profiling condition set</span> in <span class="ph">Oxygen XML</span>. </div> </div>
+					</li>
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Browse to the correct file.</span>
+					</li>
+				</ol>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Click <span class="ph uicontrol">OK</span>.</span>
+				<div class="itemgroup stepresult">Your new transformation scenario appears in the second list.</div>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Select and deselect the necessary transformation scenarios.</span>
+				<div class="itemgroup info"> <div class="note notice note_notice"><span class="note__title">Notice:</span> The original transformation scenario will automatically remain selected. Don't forget to deselect it if you only want to apply your newly created scenario.</div> </div>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Click <span class="ph uicontrol">Apply associated</span> to run the transformation scenario you just created.</span>
+				<div class="itemgroup stepresult">Oxygen now publishes your document. Depending on the size of your documentation, this may take a while.</div>
+			</li></ol></section>
+	</div>
+	<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_working_with_ditavals/">Working with ditavals</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_what_is_conditional_processing/">What is conditional processing?</a></li></ul></div><div class="linklist reltasks"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="ta_create_ditaval/">To create a ditaval</a></li></ul></div></nav>
+</article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>

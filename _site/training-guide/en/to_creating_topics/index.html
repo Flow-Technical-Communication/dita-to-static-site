@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a><ul class="nav nav-list"><li><a href="../to_about_topics_and_information_types/#topic_mmy_41n_5n">About DITA topics and information types</a></li><li><a href="../to_guidelines_topics/#topic-1">Guidelines for topic-based authoring</a></li><li><a href="../to_creating_new_topic_general/">Working with DITA topics</a><ul class="nav nav-list"><li class="active"><a href="../to_creating_topics/#topic-1">Creating new topics</a><ul class="nav nav-list"><li><a href="../to_creating_topics/#task_z3r_qpp_spb">To create a new topic</a></li><li><a href="../to_creating_topics/#co_editing_mode">What is an editing mode?</a></li><li><a href="../to_creating_topics/#taskId">To select an editing mode</a></li></ul></li><li><a href="../to_inserting_deleting_elements/#topic_mhg_qhp_cn">Inserting and deleting elements</a></li><li><a href="../to_wrapping_unwrapping/#topic-1">Wrapping and unwrapping text</a></li><li><a href="../to_splitting_merging/#topic-1">Splitting and joining elements</a></li><li><a href="../to_refacturing_elements/#topic-1">Renaming elements</a></li><li><a href="../to_creating_topic_templates/#topic-1">Creating topic templates</a></li></ul></li></ul></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1"><article class="nested0" aria-labelledby="ariaid-title1" id="topic-1">
+   <h1 class="title topictitle1" id="ariaid-title1">Creating new topics</h1>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_creating_new_topic_general/">Working with DITA topics</a></div></div></nav><article class="topic task nested1" aria-labelledby="ariaid-title2" lang="en-us" id="task_z3r_qpp_spb">
+   <h2 class="title topictitle2" id="ariaid-title2">To create a new topic</h2>
+   <div class="body taskbody">
+      <section id="task_z3r_qpp_spb__steps_ajr_qpp_spb"><ol class="ol steps" id="task_z3r_qpp_spb__steps_ajr_qpp_spb"><li class="li step stepexpand" id="task_z3r_qpp_spb__step_bjr_qpp_spb">
+            <span class="ph cmd" id="task_z3r_qpp_spb__cmd_cjr_qpp_spb">Choose <span class="ph menucascade" id="task_z3r_qpp_spb__menucascade_djr_qpp_spb"><span class="ph uicontrol" id="task_z3r_qpp_spb__uicontrol_ejr_qpp_spb">File</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol" id="task_z3r_qpp_spb__uicontrol_fjr_qpp_spb">New</span></span>.</span>
+         </li><li class="li step stepexpand" id="task_z3r_qpp_spb__step_gjr_qpp_spb">
+            <span class="ph cmd" id="task_z3r_qpp_spb__cmd_hjr_qpp_spb">Go to <span class="ph menucascade" id="task_z3r_qpp_spb__menucascade_ijr_qpp_spb"><span class="ph uicontrol" id="task_z3r_qpp_spb__uicontrol_jjr_qpp_spb">Framework templates</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol" id="task_z3r_qpp_spb__uicontrol_kjr_qpp_spb">DITA for Flow</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol" id="task_z3r_qpp_spb__uicontrol_ljr_qpp_spb">topic_templates</span></span>.</span>
+         </li><li class="li step stepexpand" id="task_z3r_qpp_spb__step_mjr_qpp_spb">
+            <span class="ph cmd" id="task_z3r_qpp_spb__cmd_njr_qpp_spb">Select the information type of the topic that you want to create.</span>
+         </li><li class="li step stepexpand" id="task_z3r_qpp_spb__step_ojr_qpp_spb">
+            <span class="ph cmd" id="task_z3r_qpp_spb__cmd_pjr_qpp_spb">Choose a name for the topic.</span>
+            <div class="itemgroup info">
+               <div class="note note note_note" id="task_z3r_qpp_spb__note_qjr_qpp_spb"><span class="note__title">Note:</span> Keep in mind the <a class="xref" href="to_guidelines_topics/#reference_mkx_1mg_bn">Guidelines for file naming</a>.</div>
+            </div>
+         </li><li class="li step stepexpand" id="task_z3r_qpp_spb__step_rjr_qpp_spb">
+            <span class="ph cmd" id="task_z3r_qpp_spb__cmd_sjr_qpp_spb">Save your topic in the correct language folder ('en', 'nl', 'fr', …).</span>
+            <div class="itemgroup info">
+               <div class="note note note_note" id="task_z3r_qpp_spb__note_tjr_qpp_spb"><span class="note__title">Note:</span> Keep in mind the correct structure of your DITA folder (<a class="xref" href="co_flow_custom_framework/">How is the Flow custom framework built?</a>).</div>
+            </div>
+         </li><li class="li step stepexpand" id="task_z3r_qpp_spb__step_ujr_qpp_spb">
+            <span class="ph cmd" id="task_z3r_qpp_spb__cmd_vjr_qpp_spb">Click <span class="ph uicontrol" id="task_z3r_qpp_spb__uicontrol_wjr_qpp_spb">Create</span>.</span>
+            <div class="itemgroup stepresult">Oxygen opens a .dita file of the selected information type. It already contains some elements that are specific for that information type.</div>
+         </li></ol></section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="linklist relconcepts" lang="en-us"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_about_topics_and_information_types/#conceptId2">What is a topic?</a></li></ul></div></nav>
+</article><article class="topic concept nested1" aria-labelledby="ariaid-title3" lang="en-US" id="co_editing_mode">
+   <h2 class="title topictitle2" id="ariaid-title3">What is an editing mode?</h2>
+   <div class="body conbody">
+      <p class="p">Once you have created a DITA topic in oXygen, you can look at and edit that topic in different editing modes. Each editing mode shows the topic in a specific way:</p>
+      <table class="table frame-all" id="co_editing_mode__table_ibm_j45_5n"><caption></caption><colgroup><col style="width:33.33333333333333%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+               <tr class="row">
+                  <th class="entry" id="co_editing_mode__table_ibm_j45_5n__entry__1">Editing mode</th>
+                  <th class="entry" id="co_editing_mode__table_ibm_j45_5n__entry__2">Description</th>
+               </tr>
+            </thead><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" headers="co_editing_mode__table_ibm_j45_5n__entry__1">Text editing mode</td>
+                  <td class="entry" headers="co_editing_mode__table_ibm_j45_5n__entry__2">Shows the XML source of the topic.</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry" headers="co_editing_mode__table_ibm_j45_5n__entry__1">Grid editing mode </td>
+                  <td class="entry" headers="co_editing_mode__table_ibm_j45_5n__entry__2">Shows the topic as a structured grid of nested tables.</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry" headers="co_editing_mode__table_ibm_j45_5n__entry__1">Author editing mode</td>
+                  <td class="entry" headers="co_editing_mode__table_ibm_j45_5n__entry__2">Shows the topic in a WYSIWYG like editor.</td>
+               </tr>
+            </tbody></table>
+      <p class="p">To edit topics, it is easiest to use the Author editing mode. It can be interesting, however, to check how a particular element looks in the XML source of your topic with the Text editing mode.</p>
+   </div>
+   <nav role="navigation" class="related-links"><div class="linklist relconcepts" lang="en-US"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_about_topics_and_information_types/#conceptId2">What is a topic?</a></li></ul></div><div class="linklist reltasks" lang="en-US"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_creating_topics/#taskId">To select an editing mode</a></li></ul></div></nav>
+</article><article class="topic task nested1" aria-labelledby="ariaid-title4" id="taskId">
+   <h2 class="title topictitle2" id="ariaid-title4">To select an editing mode</h2>
+   
+   <div class="body taskbody">
+      <section><ol class="ol steps"><li class="li step stepexpand">
+            <span class="ph cmd">Open the file you want to view in a specific editing mode.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Click the <span class="ph uicontrol">Text</span>, <span class="ph uicontrol">Grid</span> or <span class="ph uicontrol">Author</span> button at the bottom of the <span class="ph uicontrol">Editor area</span>.</span>
+            <div class="itemgroup info">
+               <figure class="fig fignone" id="taskId__fig_i1c_flk_cn">
+                  <img class="image fmdpi:200" id="taskId__image_srw_kmh_gn" src="../../_media/graphics/editing_views.png">
+               </figure>
+            </div>
+         </li></ol></section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_about_topics_and_information_types/#conceptId2">What is a topic?</a></li><li class="linklist"><a class="link" href="to_creating_topics/#co_editing_mode">What is an editing mode?</a></li></ul></div></nav>
+</article></article></article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>

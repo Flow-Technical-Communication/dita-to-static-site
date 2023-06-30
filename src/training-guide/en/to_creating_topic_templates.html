@@ -1,0 +1,55 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: ''
+index: '../toc/'
+src: 'en/to_creating_topic_templates.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a><ul class="nav nav-list"><li><a href="../to_about_topics_and_information_types/#topic_mmy_41n_5n">About DITA topics and information types</a></li><li><a href="../to_guidelines_topics/#topic-1">Guidelines for topic-based authoring</a></li><li><a href="../to_creating_new_topic_general/">Working with DITA topics</a><ul class="nav nav-list"><li><a href="../to_creating_topics/#topic-1">Creating new topics</a></li><li><a href="../to_inserting_deleting_elements/#topic_mhg_qhp_cn">Inserting and deleting elements</a></li><li><a href="../to_wrapping_unwrapping/#topic-1">Wrapping and unwrapping text</a></li><li><a href="../to_splitting_merging/#topic-1">Splitting and joining elements</a></li><li><a href="../to_refacturing_elements/#topic-1">Renaming elements</a></li><li class="active"><a href="../to_creating_topic_templates/#topic-1">Creating topic templates</a><ul class="nav nav-list"><li><a href="../to_creating_topic_templates/#conceptId">What is a topic template? </a></li><li><a href="../to_creating_topic_templates/#taskId">To create a topic template</a></li></ul></li></ul></li></ul></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1"><article class="nested0" aria-labelledby="ariaid-title1" id="topic-1">
+   <h1 class="title topictitle1" id="ariaid-title1">Creating topic templates</h1>
+   
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_creating_new_topic_general/">Working with DITA topics</a></div></div></nav><article class="topic concept nested1" aria-labelledby="ariaid-title2" lang="en-us" id="conceptId">
+   <h2 class="title topictitle2" id="ariaid-title2">What is a topic template? </h2>
+   
+   <div class="body conbody">
+      <section class="section">
+         <p class="p">A topic template is a predefined topic layout that you can use as a starting point to create new topics. The template already contains the main elements that you will need in your topic, so you do not have to insert them each time you create a similar topic.</p>
+      </section>
+      <div class="example">For example, when you create a new topic in Oxygen you have to select the topic template you want to use. By default, Oxygen provides a template for the main DITA information types (Task, Concept, Reference) and some specialized information types (such as Composite and Glossentry). After you have selected a template, Oxygen opens an untitled topic, including the elements that are relevant for the information type you selected.<div class="p">The specialized information types have the following functions:<ul class="ul" id="conceptId__ul_yf2_1qg_n4b">
+               <li class="li">Composite: The composite topic is a now obsolete tool for collecting multiple topics and nesting them within a single topic file. Using a ditamap is a superior method for collecting topics together, and should always be used in preference to a composite topic. <div class="note note note_note"><span class="note__title">Note:</span> Composite still has some use as a container for re-use information, because it allows you to organize snippets of conref source information into a single topic.</div>
+               </li>
+               <li class="li">Glossentry: The glossentry topic is a specialized form of concept, developed to improve glossary and terminology management.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <nav role="navigation" class="related-links"><div class="linklist relconcepts" lang="en-us"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_about_topics_and_information_types/#conceptId2">What is a topic?</a></li></ul></div><div class="linklist reltasks" lang="en-us"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_creating_topic_templates/#taskId">To create a topic template</a></li></ul></div></nav>
+</article><article class="topic task nested1" aria-labelledby="ariaid-title3" lang="en-us" id="taskId">
+   <h2 class="title topictitle2" id="ariaid-title3">To create a topic template</h2>
+   <div class="body taskbody">
+      <section class="section context">
+         <p class="p">If a lot of your topics have a similar structure or if the default topic templates do not suit you, you can create your own topic template(s). Proceed as follows:</p>
+      </section>
+      <section><ol class="ol steps"><li class="li step stepexpand">
+            <span class="ph cmd">Create a new topic. While doing so, select the default topic template for the correct information type.</span>
+            <div class="itemgroup stepxmp">If you want to create a new template for a task topic, use the default task topic template as a starting point.</div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Name the new template.</span>
+            <div class="itemgroup stepresult">This name will be displayed in the new document wizard.</div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Save the new template in a folder <span class="ph uicontrol">_custom_framework</span>.</span>
+            <div class="itemgroup info">
+               <div class="note note note_note"><span class="note__title">Note:</span> This sub-folder is part of the general Flow structure of DITA folders (<a class="xref" href="co_flow_custom_framework/">How is the Flow custom framework built?</a>): <span class="ph menucascade"><span class="ph uicontrol">_custom_framework</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">topic_templates</span></span>.</div>
+            </div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Delete and insert elements to create the topic layout that you want.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Choose <span class="ph menucascade"><span class="ph uicontrol">File</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Save</span></span>.</span>
+            <div class="itemgroup info">
+               <div class="note note note_note"><span class="note__title">Note:</span>  If you have not yet referenced the location of your templates folder for the specific document type in Oxygen, follow the steps in <a class="xref" href="ta_reference_template_location/">To reference the location of the templates folder</a>.</div>
+            </div>
+         </li></ol></section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="linklist relconcepts" lang="en-us"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_about_topics_and_information_types/#conceptId2">What is a topic?</a></li><li class="linklist"><a class="link" href="to_creating_topic_templates/#conceptId">What is a topic template?</a></li></ul></div></nav>
+</article></article></article></main>

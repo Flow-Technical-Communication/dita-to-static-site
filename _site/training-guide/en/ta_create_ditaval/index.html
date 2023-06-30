@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To create a ditaval</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a><ul class="nav nav-list"><li><a href="../to_about_conditional_processing/">About conditional processing</a></li><li><a href="../to_assigning_conditional_attributes_and_vlues/">Assigning conditional attributes and values</a></li><li><a href="../to_working_with_ditavals/">Working with ditavals</a><ul class="nav nav-list"><li><a href="../co_what_are_ditavals/">What are ditaval filters?</a></li><li class="active"><a href="../ta_create_ditaval/">To create a ditaval</a></li><li><a href="../ta_apply_ditaval/">To apply a ditaval or a profiling condition set during publishing</a></li><li><a href="../co_ditaval_filtering_logic/">Ditaval filtering logic</a></li></ul></li></ul></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">To create a ditaval</h1>
+	
+	<div class="body taskbody">
+		<section><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph menucascade"><span class="ph uicontrol">File</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">New</span></span>.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="keyword wintitle">New</span> dialog window, go to <span class="ph menucascade"><span class="ph uicontrol">Framework templates</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">DITA</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Filter</span></span>.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Enter a name and choose the "_ditaval" folder to save the file.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Click <span class="ph uicontrol">Create</span>.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">(Optional) In the <span class="ph uicontrol">Text view</span>, create <code class="ph codeph">&lt;val&gt;&lt;/val&gt;</code> tags, if they are not yet present.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">(Optional) Create <code class="ph codeph">&lt;prop action="" att="" val=""&gt;&lt;/prop&gt;</code> tags, if they are not yet present:</span>
+				<ol type="a" class="ol substeps" id="taskId9__substeps_ifl_4gh_5n">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Type <kbd class="ph userinput">&lt;</kbd> and choose <span class="ph uicontrol">prop</span> from the list that appears.</span>
+						<div class="itemgroup stepresult"> <div class="note note note_note"><span class="note__title">Note:</span> An <code class="ph codeph">action=""</code> tag should already be present.</div> </div>
+					</li>
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Place a space behind the quotation marks and choose <span class="ph uicontrol">att</span> from the list that appears.</span>
+					</li>
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Place a space behind the quotation marks and choose <span class="ph uicontrol">val</span> from the list that appears.</span>
+					</li>
+				</ol>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Fill in the string for your value:</span>
+				<div class="itemgroup info"> <div class="note tip note_tip"><span class="note__title">Tip:</span> You can copy-paste one empty string and fill it in according to your needs, so you do not have to create a new string for every value.</div> </div>
+				<ol type="a" class="ol substeps" id="taskId9__substeps_vjb_grn_gn">
+					<li class="li substep">
+						<span class="ph cmd">Enter the attribute name between the quotation marks of <code class="ph codeph">att=""</code>.</span>
+					</li>
+					<li class="li substep">
+						<span class="ph cmd">Enter the matching value between the quotation marks of <code class="ph codeph">val=""</code>.</span>
+					</li>
+					<li class="li substep">
+						<span class="ph cmd">Specify the associated action that needs to happen between the quotation marks of <code class="ph codeph">action=""</code>. You can fill out <kbd class="ph userinput">include</kbd>, <kbd class="ph userinput">exclude</kbd> or <kbd class="ph userinput">flag</kbd>.</span>
+					</li>
+				</ol>
+				<div class="itemgroup info"> <div class="note note note_note"><span class="note__title">Note:</span> You do not need to write a string to include every value. Values which are not in the DITAVAL file are automatically included.</div> </div>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">If you have set an action to <kbd class="ph userinput">flag</kbd>, specify the kind of flagging you want in a new line underneath it:</span>
+				<ol type="a" class="ol substeps" id="taskId9__substeps_yjh_msn_gn">
+					<li class="li substep substepexpand">
+						<span class="ph cmd">Create the tags <code class="ph codeph">&lt;startflag&gt;&lt;/startflag&gt;</code>.</span>
+					</li>
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want a particular image to introduce the flagged element, enter <code class="ph codeph">imageref=""</code> inside the first tag and specify an image between the quotation marks.</span>
+						<div class="itemgroup stepxmp"> <code class="ph codeph">&lt;startflag imageref="logo.jpg"&gt;&lt;/startflag&gt;</code> </div>
+					</li>
+					<li class="li substep substepexpand">
+						<span class="ph cmd">If you want alternate text added to the flagged element, enter a <code class="ph codeph">&lt;alt-text&gt;&lt;/alt-text&gt;</code> element between the <code class="ph codeph">&lt;startflag&gt;&lt;/startflag&gt;</code> tags and fill out the alternate text between the two tags of the element.</span>
+						<div class="itemgroup stepxmp"> <code class="ph codeph">&lt;alt-text&gt;Windows_content&lt;/alt-text&gt;</code> </div>
+					</li>
+				</ol>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Save your file under a recognizable name.</span>
+				<div class="itemgroup info"> <div class="note tip note_tip"><span class="note__title">Tip:</span> You can use a renamed copy of this file for each product type for which you need to publish unique documentation. This way you only have to change the necessary values and actions, rather than having to create a new DITAVAL file per product.</div> </div>
+			</li></ol></section>
+		<section class="example"> <figure class="fig fignone" id="taskId9__fig_ij3_zrh_nn">
+			<img class="image fmdpi:200" id="taskId9__image_ebj_zrh_nn" src="../../_media/graphics/ditaval.PNG">
+			</figure> </section>
+	</div>
+	<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_working_with_ditavals/">Working with ditavals</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_what_is_conditional_processing/">What is conditional processing?</a></li><li class="linklist"><a class="link" href="co_including_a_ditaval/">Which ditaval elements are available?</a></li><li class="linklist"><a class="link" href="co_ditaval_filtering_logic/">Ditaval filtering logic</a></li></ul></div></nav>
+</article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>

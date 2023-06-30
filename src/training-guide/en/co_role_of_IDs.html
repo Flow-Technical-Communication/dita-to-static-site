@@ -1,0 +1,24 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'What is the role of IDs?'
+index: '../toc/'
+src: 'en/co_role_of_IDs.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a><ul class="nav nav-list"><li><a href="../to_about_creating_links/">About links</a><ul class="nav nav-list"><li><a href="../co_why_create_links/">Why create links?</a></li><li><a href="../co_types_links/">Different types of links</a></li><li><a href="../co_what_are_inline_links/">Inline links</a></li><li><a href="../co_what_are_hierarchical_links/">Hierarchical links</a></li><li><a href="../co_including_reltable/">Relationship tables</a></li><li><a href="../re_guidelines_creating_links/">Guidelines for creating links</a></li><li><a href="../co_collection_type/">What does collection-type do?</a></li><li class="active"><a href="../co_role_of_IDs/">What is the role of IDs?</a></li></ul></li><li><a href="../to_creating_inline_links/#topic-10">Creating inline links</a></li><li><a href="../to_creating_related_links/">Creating related links</a></li><li><a href="../to_managing_links/#untitled2">Managing links</a></li></ul></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">What is the role of IDs?</h1>
+   
+   <div class="body conbody">
+      <p class="p">When you want to link to an item, the program you use needs to be able to identify the item in question. It does this by checking its unique ID. However, in DITA, not all elements have an ID except in the case of the root elements (<code class="keyword markupname xmlelement">&lt;topic&gt;</code>, <code class="keyword markupname xmlelement">&lt;concept&gt;</code>, <code class="keyword markupname xmlelement">&lt;task&gt;</code> and <code class="keyword markupname xmlelement">&lt;reference&gt;</code>). The rest of the element IDs are optional.</p>
+      <p class="p">When you want to link to an item that isn't a root element, you need to give it an ID first. You can do this by adding a random number to its <code class="keyword markupname xmlatt">@id</code> attribute, or, more easily, you can have Oxygen automatically generate one. Oxygen allows you to right-click any element and choose <span class="ph uicontrol">Generate IDs</span>.</p>
+      <div class="note note note_note"><span class="note__title">Note:</span> IDs are also important when re-using content.</div>
+      <div class="example">
+         <p class="p">The generated element ID of a <code class="keyword markupname xmlelement">&lt;note&gt;</code> element:</p>
+         <figure class="fig fignone" id="conceptId12__fig_v2v_w4c_jn">
+            <img class="image fmdpi:100" id="conceptId12__image_xhp_1pc_jn" src="../../_media/graphics/element_id.PNG">
+         </figure>
+      </div>
+   </div>
+   <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_about_creating_links/">About links</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_what_are_inline_links/">Inline links</a></li><li class="linklist"><a class="link" href="co_types_links/">Different types of links</a></li></ul></div><div class="linklist relref"><strong>Related reference</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="re_guidelines_creating_links/">Guidelines for creating links</a></li></ul></div></nav>
+</article></main>

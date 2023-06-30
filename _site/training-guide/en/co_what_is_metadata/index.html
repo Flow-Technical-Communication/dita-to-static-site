@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is metadata?</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a><ul class="nav nav-list"><li><a href="../to_about_ditamaps_bookmaps/">About DITA maps and bookmaps</a><ul class="nav nav-list"><li><a href="../co_what_is_a_ditamap/">What is a DITA map?</a></li><li><a href="../co_why_use_ditamaps/">Why use DITA maps?</a></li><li><a href="../co_main_components_ditamap/">What are the main components of a DITA map?</a></li><li><a href="../co_what_is_a_bookmap/">What is a bookmap?</a></li><li><a href="../co_why_use_bookmaps/">Why use bookmaps?</a></li><li><a href="../co_bookmap_main_components/">What are the main components of a bookmap?</a></li><li><a href="../co_map_views/">Which map views are available?</a></li><li class="active"><a href="../co_what_is_metadata/">What is metadata?</a></li><li><a href="../co_including_metadata/">Bookmap metadata</a></li><li><a href="../re_guidelines_ditamaps/">Guidelines for creating DITA maps and bookmaps</a></li></ul></li><li><a href="../to_working_with_ditamaps/">Working with DITA maps</a></li><li><a href="../to_working_with_bookmaps/">Working with DITA bookmaps</a></li></ul></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">What is metadata?</h1>
+   
+   <div lang="en-us" class="body conbody">
+      <p class="p">Metadata is information you can add to a DITA map (or a topic) that gives more information about the content. By correctly creating and applying metadata, you can make it easier to search through information which is relevant to your company or organization. This way, you can add digital identifying criteria to your documents, which help you organize your resources in a digital information architecture. As it is generally information that is more useful to the author than to the reader, the reader does not get to see it. Metadata can include information such as creation date, author, semantics of the textual components, and copyright ownership.</p>
+      <section class="section"><h2 class="title sectiontitle">Data vs. metadata</h2>
+         
+         <p class="p">An important distinction should be made between data and metadata. Data is synonymous with content, so the information you write in your topics will be data. Metadata, on the other hand, is information about the content, such as the name of the author, when the files were created, who the copyright holder is etc.</p>
+         <p class="p">This distinction becomes important when you look at the types of files you will use in DITA. Topics can contain content but DITA maps should never contain content. As such, topics can have data as well as metadata, whereas DITA maps should only ever have metadata.</p>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Overriding metadata</h2>
+         
+         <p class="p">You can create metadata in both topics and maps. The metadata in a topic applies to all the elements within the entire topic. Similarly, the metadata of a DITA map applies to the entire map. As such, it will override the metadata of its topics.</p>
+         <p class="p">There are ways to prevent this and ensure the metadata in a topic takes precedence. You can, for instance, adjust the <code class="keyword markupname xmlatt">@lockmeta</code> attribute on the <code class="keyword markupname xmlelement">&lt;topicmeta&gt;</code> element to control whether map-specified values override values in the referenced topic.</p>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Types of topic metadata</h2>
+         
+         <p class="p" id="concept_ocw_khd_fn__p_xdk_szq_tjb">Metadata of documents are not set in stone. As the owner of a document, you can add and delete metadata as you wish. But it is essential, when saving documents in an organization or company, that there is one administrator who created well-thought-out rules.</p>
+         <table class="table frame-all" id="concept_ocw_khd_fn__table_fsb_fxm_3n"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+                  <tr class="row">
+                     <th class="entry" id="concept_ocw_khd_fn__table_fsb_fxm_3n__entry__1">Type</th>
+                     <th class="entry" id="concept_ocw_khd_fn__table_fsb_fxm_3n__entry__2">Purpose</th>
+                  </tr>
+               </thead><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry" headers="concept_ocw_khd_fn__table_fsb_fxm_3n__entry__1">
+                        <code class="keyword markupname xmlelement">&lt;critdates&gt;</code>
+                     </td>
+                     <td class="entry" headers="concept_ocw_khd_fn__table_fsb_fxm_3n__entry__2">Contains the creation and revising date of the topic or map.</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry" headers="concept_ocw_khd_fn__table_fsb_fxm_3n__entry__1">
+                        <code class="keyword markupname xmlelement">&lt;author&gt;</code>
+                     </td>
+                     <td class="entry" headers="concept_ocw_khd_fn__table_fsb_fxm_3n__entry__2">Contains the name and other information of the topic's author.</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry" headers="concept_ocw_khd_fn__table_fsb_fxm_3n__entry__1">
+                        <code class="keyword markupname xmlelement">&lt;copyright&gt;</code>
+                     </td>
+                     <td class="entry" headers="concept_ocw_khd_fn__table_fsb_fxm_3n__entry__2">Contains the year (<code class="keyword markupname xmlelement">&lt;copyryear&gt;</code>) and the owner of the copyright (<code class="keyword markupname xmlelement">&lt;copyrholder&gt;</code>)</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry" headers="concept_ocw_khd_fn__table_fsb_fxm_3n__entry__1">
+                        <code class="keyword markupname xmlelement">&lt;prodinfo&gt;</code>
+                     </td>
+                     <td class="entry" headers="concept_ocw_khd_fn__table_fsb_fxm_3n__entry__2">Contains the product name, version, release date, brand, series, platform etc.</td>
+                  </tr>
+               </tbody></table>
+      </section>
+      <div class="example">If you’re working in Photoshop, Lightroom or other graphic editors, it is not uncommon to add metadata that apply to the size of the picture or the location where the picture was taken.<ul class="ul" id="concept_ocw_khd_fn__ul_q5q_h1r_tjb">
+            <li class="li">How large is the picture?</li>
+            <li class="li">Which colors are being used?</li>
+            <li class="li">Where has the picture been taken?</li>
+         </ul>But you can even go further: Which mood does this picture provoke? The possibilities with metadata are infinite.</div>
+      <section class="section" id="concept_ocw_khd_fn__section_a1k_k1r_tjb"><h2 class="title sectiontitle">International standards for metadata</h2>
+         
+         <p class="p" id="concept_ocw_khd_fn__p_b1k_k1r_tjb">The possibilities may be endless, but they are bound by international standards. The most important of these are the American National Standards Institute (ANSI) and the International Organization for Standardization (ISO). The most exalted metadata standard is ISO/IEC 11179 Metadata Registries (MDR).</p>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Example</h2>
+         
+         <figure class="fig fignone" id="concept_ocw_khd_fn__fig_i5s_xjb_jn">
+            <img class="image fmdpi:300" id="concept_ocw_khd_fn__image_vd4_hlx_z4b" src="../../_media/graphics/metadata_example.png">
+         </figure>
+      </section>
+      <section class="section" id="concept_ocw_khd_fn__section_t5s_n1r_tjb"><h2 class="title sectiontitle">Sources</h2>
+         
+         <div class="p" id="concept_ocw_khd_fn__p_u5s_n1r_tjb">
+            <ul class="ul" id="concept_ocw_khd_fn__ul_wsy_41r_tjb">
+               <li class="li">
+                  <a class="xref" href="http://oxforddictionaries.com/" target="_blank" rel="external noopener">http://oxforddictionaries.com/</a>
+               </li>
+               <li class="li">
+                  <a class="xref" href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=39438" target="_blank" rel="external noopener">http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=39438</a>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="section" id="concept_ocw_khd_fn__section_ms5_wzl_mpb">
+         
+      </section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_about_ditamaps_bookmaps/">About DITA maps and bookmaps</a></div></div><div class="linklist reltasks"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="ta_to_add_metadata_to_a_ditamap/">To add metadata to a DITA map</a></li><li class="linklist"><a class="link" href="ta_to_add_metadata_to_a_bookmap/">To add metadata to a DITA bookmap</a></li></ul></div></nav>
+</article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>

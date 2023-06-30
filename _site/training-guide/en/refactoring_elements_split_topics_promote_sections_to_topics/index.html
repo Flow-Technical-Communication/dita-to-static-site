@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refactoring elements &amp;gt; split topics (promote sections to topics)</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/training-guide/">Training guide</a>
+          </li>
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+    <div id="content" class="container">
+    <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a><ul class="nav nav-list"><li><a href="../setting_some_oxygenxml_preferences/">Setting some Oxygen XML preferences</a></li><li><a href="../refactoring_elements_renaming_elements/">Refactoring elements &gt; renaming elements</a></li><li class="active"><a href="../refactoring_elements_split_topics_promote_sections_to_topics/">Refactoring elements &gt; split topics (promote sections to topics)</a></li><li><a href="../renaming_dita_files_master_files_support/">Renaming DITA files (Master files support)</a></li><li><a href="../working_with_oxygenxml_projects/">Working with OxygenXML projects</a></li><li><a href="../ta_using_shortcut_keys/">To use shortcut keys</a></li></ul></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">Refactoring elements &gt; split topics (promote sections to topics)</h1>
+	
+	<div class="body taskbody">
+		<section class="section context"> <p class="p">You may have written a topic which consists of multiple sections, but for some reason, you want to split that topic up into multiple child topics and thus "promote" each section title to a topic title. You may want to do this, for example:</p>
+			<ul class="ul" id="refactoring_elements_split_topics_promote_sections_to_topics__ul_ey2_bmy_5vb">
+				<li class="li">Because the topic is too long and you just remembered the chunking principle of structured authoring</li>
+				<li class="li">Because you want to reuse the content of one of more sections in another DITA map</li>
+			</ul> </section>
+		<section><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">In your DITA map, right-click the topic (topicref) which you want to split.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Choose <span class="ph menucascade"><span class="ph uicontrol">Refactoring</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Convert sections to new topics</span></span>.</span>
+				<div class="itemgroup info">
+					<figure class="fig fignone" id="refactoring_elements_split_topics_promote_sections_to_topics__fig_o3b_fky_5vb">
+						<img class="image" id="refactoring_elements_split_topics_promote_sections_to_topics__image_vhf_fky_5vb" src="../../_media/graphics/split_topics.png">
+					</figure>
+				</div>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="keyword wintitle">XML Refactoring</span> dialog, select <span class="ph uicontrol">Selected references</span>.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Click <span class="ph uicontrol">Finish</span>.</span>
+			</li></ol></section>
+		<section class="section result" id="refactoring_elements_split_topics_promote_sections_to_topics__result_wbw_3ky_5vb">Your selected topic will be split in 3 or more files:<ul class="ul" id="refactoring_elements_split_topics_promote_sections_to_topics__ul_lvg_2ly_5vb">
+			<li class="li">A "parent" topic <span class="ph calloutkey">a</span>, which only consists of the title and an empty <code class="keyword markupname xmlelement">&lt;*body&gt;</code> element</li>
+			<li class="li">Two or more "child" topics <span class="ph calloutkey">b</span> (depending on the number of sections), in which your previous section titles have now been promoted to topic titles.</li>
+			</ul><figure class="fig fignone" id="refactoring_elements_split_topics_promote_sections_to_topics__fig_asn_lly_5vb"><figcaption><span class="fig--title-label">Figure 1. </span><img class="image" id="refactoring_elements_split_topics_promote_sections_to_topics__image_db3_mly_5vb" src="../../_media/graphics/split_topics_result.png"></figcaption>
+			
+			</figure></section>
+		<section class="section postreq" id="refactoring_elements_split_topics_promote_sections_to_topics__postreq_zcx_ply_5vb">Remove the empty <code class="keyword markupname xmlelement">&lt;*body&gt;</code> in the parent topic to avoid a blank space below the title in your PDF file. </section>
+	</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../oxygenxml_specific_features/">OxygenXML-specific features</a></div></div></nav></article></main>
+
+    </div>
+    </div>
+    </main>
+  </body>
+</html>
