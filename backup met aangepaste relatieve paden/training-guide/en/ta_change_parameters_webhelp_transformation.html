@@ -1,0 +1,37 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'To change the parameters of a transformation scenario'
+index: '../toc/'
+src: 'en/ta_change_parameters_webhelp_transformation.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">To change the parameters of a transformation scenario</h1>
+	<div class="body taskbody">
+		<section class="section context">You can change the transformation parameters in the template descriptor file (see <a class="xref" href="co_opt_file/">What is a template descriptor file?</a>) by simply adding the <code class="ph codeph">&lt;parameters&gt;</code> element within the <code class="ph codeph">&lt;webhelp&gt;</code> element:<pre class="pre codeblock"><code>&lt;parameters&gt;
+  &lt;parameter name="webhelp.show.main.page.tiles" value="yes"/&gt;
+&lt;/parameters&gt;</code></pre>This method is preferred, because all scenario's based on this template will be adjusted. However, you can also adjust the transformation parameters while editing the transformation:</section>
+		<section><ol class="ol steps"><li class="li step stepexpand">
+				<span class="ph cmd">Select <img class="image" id="ta_change_parameters_webhelp_transformation__image_ovn_lwd_fpb" src="../../_media/graphics/configure_transformation_scenario.PNG">.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Select a transformation scenario under <span class="ph uicontrol">Project</span>.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Select <span class="ph uicontrol">Edit</span>.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Select the <span class="ph uicontrol">Parameters</span> tab.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">In the first field, enter the name of your custom .css file (see <a class="xref" href="co_custom_css_file/">What is a CSS file?</a>).</span>
+				<div class="itemgroup info"> <div class="note note note_note"><span class="note__title">Note:</span> Click <img class="image" id="ta_change_parameters_webhelp_transformation__image_vcx_nq2_fpb" src="../../_media/graphics/browse.png"> to browse for you .css file.</div> </div>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">In the <span class="ph uicontrol">Type filter text</span> field, you can filter for a parameter you want to adjust.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Select the <span class="ph uicontrol">Value</span> field for a parameter and select a new value in the <span class="ph uicontrol">Value</span> dropdown list.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Select <span class="ph uicontrol">Ok</span> in the <span class="ph uicontrol">Edit parameter</span> field.</span>
+			</li><li class="li step stepexpand">
+				<span class="ph cmd">Select <span class="ph uicontrol">Ok</span> in the <span class="ph uicontrol">Edit DITA scenario</span> field.</span>
+			</li></ol></section>
+		<section class="example">For example, the parameter <span class="ph uicontrol">args.figurelink.style</span> specifies how cross references to figures are styled in the output. In the dropdownlist, you can choose to display cross references as the title of the figure, the number of the figure or both.</section>
+	</div>
+</article></main>

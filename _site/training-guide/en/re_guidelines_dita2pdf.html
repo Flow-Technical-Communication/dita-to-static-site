@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidelines for using DITA2PDF</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+        <article>
+    <div id="content" class="container">
+            <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_images.html">DITA graphics</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">DITA links</a></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a></li><li><a href="../en/to_publishing.html">DITA publishing</a><ul class="nav nav-list"><li><a href="../en/co_multichannel_publishing.html">What is multi-channel publishing?</a></li><li><a href="../en/to_dita_ot.html">DITA Open Toolkit (DITA-OT)</a></li><li><a href="../en/to_dita_2_pdf.html">DITA2PDF</a><ul class="nav nav-list"><li><a href="../en/co_what_is_dita2pdf.html">What is DITA2PDF?</a></li><li><a href="../en/co_what_does_dita2pdf_do.html">What does DITA2PDF do?</a></li><li class="active"><a href="../en/re_guidelines_dita2pdf.html">Guidelines for using DITA2PDF</a></li><li><a href="../en/ta_generate_book_from_map.html">To generate a book from a DITA map</a></li><li><a href="../en/ta_generate_pdf_from_bookfile.html">To generate a PDF from a bookfile</a></li></ul></li></ul></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Guidelines for using DITA2PDF</h1>
+   
+   <div class="body refbody">
+      <section class="section"><h2 class="title sectiontitle">Specify a folder per template</h2>
+         
+         <div class="p">If your documentation will be used for different outputs and templates, it can be easy to lose track of all of your files. As the ditafmx-bookbuild.ini file always needs to have the same name, you cannot add product names to it in order to distinguish between variants. Therefore it is recommended you make a pdf_[product name] folder per product. In this folder you then add:<ul class="ul" id="reference_gyk_lhz_4n__ul_gvg_p4g_pn">
+               <li class="li">[product].ditaval: A unique DITAVAL file suited to filter and flag the information for this product.</li>
+               <li class="li">PDF_templates: A folder with the Adobe FrameMaker templates you have created for this product.</li>
+               <li class="li">ditafmx-bookbuild.ini: A unique bookbuild file which specifies the requirements for this product.</li>
+            </ul>
+         </div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Applying a template</h2>
+         
+         <p class="p">In order to apply a template when a bookfile is generated, you create unique FrameMaker template files which you store in their own folder. Next, add a string to your ditafmx-bookbuild.ini file under [General] in which you specify which folder contains the templates. The correct template will be applied when the bookfile is generated.</p>
+      </section>
+      <div class="example">For example, you created your own FrameMaker templates and saved them in a folder named "PDF_templates". In your ditafmx-bookbuild.ini file, under [General] you add <code class="ph codeph">BookTemplatesDir=PDF_templates</code>. The DITA-FMx will use the templates in that folder when it generates your bookfile.</div>
+      <section class="section"><h2 class="title sectiontitle">Applying a DITAVAL</h2>
+         
+         <p class="p">You can customize the ditafmx-bookbuild.ini file to apply the correct template, but you can also use it to apply DITAVAL filtering. Instead of specifying a DITAVAL in your transformation scenario, specify it in your ditafmx-bookbuild.ini file: add two strings under [BookBuildOverrides].</p>
+      </section>
+      <div class="example">For example, you want to filter Word 2003 references from your generated FrameMaker bookfile. You create the appropriate DITAVAL file and add it to your PDF output folder which also contains the folder with your templates. In your ditafmx-bookbuild.ini, you add under [BookBuildOverrides]:<pre class="pre codeblock"><code>ApplyDitaval=1
+DitavalName=./examples.ditaval</code></pre>
+      </div>
+      <section class="section"><h2 class="title sectiontitle">Resizing tables</h2>
+         
+         <p class="p">The display of your tables in Oxygen will rarely match what you want in the output. To ensure tables look the same each time you generate a bookfile from your DITA files: resize your tables manually in FrameMaker and then adjust them in Oxygen. Then you select and right-click a column and choose <span class="ph uicontrol">Resize columns</span>. Copy the value you find next to <span class="ph uicontrol">To Width</span> and paste it into your corresponding Oxygen topic in the <code class="keyword markupname xmlelement">&lt;colspecs&gt;</code> element of the corresponding column.</p>
+         <div class="note caution note_caution"><span class="note__title">CAUTION:</span> It is advised to use natural numbers (for example 1, 2, 3...) rather than numbers containing a decimal point to avoid transformation errors.</div>
+      </section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_dita_2_pdf.html">DITA2PDF</a></div></div></nav></article></main>
+
+    </div>
+    </div>
+    </article>
+    </article>
+    </main>
+  </body>
+</html>

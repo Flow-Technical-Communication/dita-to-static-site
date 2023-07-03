@@ -1,0 +1,40 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'Guidelines for using DITA2PDF'
+index: '../toc/'
+src: 'en/re_guidelines_dita2pdf.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a></li><li><a href="../to_publishing/">DITA publishing</a><ul class="nav nav-list"><li><a href="../co_multichannel_publishing/">What is multi-channel publishing?</a></li><li><a href="../to_dita_ot/">DITA Open Toolkit (DITA-OT)</a></li><li><a href="../to_dita_2_pdf/">DITA2PDF</a><ul class="nav nav-list"><li><a href="../co_what_is_dita2pdf/">What is DITA2PDF?</a></li><li><a href="../co_what_does_dita2pdf_do/">What does DITA2PDF do?</a></li><li class="active"><a href="../re_guidelines_dita2pdf/">Guidelines for using DITA2PDF</a></li><li><a href="../ta_generate_book_from_map/">To generate a book from a DITA map</a></li><li><a href="../ta_generate_pdf_from_bookfile/">To generate a PDF from a bookfile</a></li></ul></li></ul></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Guidelines for using DITA2PDF</h1>
+   
+   <div class="body refbody">
+      <section class="section"><h2 class="title sectiontitle">Specify a folder per template</h2>
+         
+         <div class="p">If your documentation will be used for different outputs and templates, it can be easy to lose track of all of your files. As the ditafmx-bookbuild.ini file always needs to have the same name, you cannot add product names to it in order to distinguish between variants. Therefore it is recommended you make a pdf_[product name] folder per product. In this folder you then add:<ul class="ul" id="reference_gyk_lhz_4n__ul_gvg_p4g_pn">
+               <li class="li">[product].ditaval: A unique DITAVAL file suited to filter and flag the information for this product.</li>
+               <li class="li">PDF_templates: A folder with the Adobe FrameMaker templates you have created for this product.</li>
+               <li class="li">ditafmx-bookbuild.ini: A unique bookbuild file which specifies the requirements for this product.</li>
+            </ul>
+         </div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">Applying a template</h2>
+         
+         <p class="p">In order to apply a template when a bookfile is generated, you create unique FrameMaker template files which you store in their own folder. Next, add a string to your ditafmx-bookbuild.ini file under [General] in which you specify which folder contains the templates. The correct template will be applied when the bookfile is generated.</p>
+      </section>
+      <div class="example">For example, you created your own FrameMaker templates and saved them in a folder named "PDF_templates". In your ditafmx-bookbuild.ini file, under [General] you add <code class="ph codeph">BookTemplatesDir=PDF_templates</code>. The DITA-FMx will use the templates in that folder when it generates your bookfile.</div>
+      <section class="section"><h2 class="title sectiontitle">Applying a DITAVAL</h2>
+         
+         <p class="p">You can customize the ditafmx-bookbuild.ini file to apply the correct template, but you can also use it to apply DITAVAL filtering. Instead of specifying a DITAVAL in your transformation scenario, specify it in your ditafmx-bookbuild.ini file: add two strings under [BookBuildOverrides].</p>
+      </section>
+      <div class="example">For example, you want to filter Word 2003 references from your generated FrameMaker bookfile. You create the appropriate DITAVAL file and add it to your PDF output folder which also contains the folder with your templates. In your ditafmx-bookbuild.ini, you add under [BookBuildOverrides]:<pre class="pre codeblock"><code>ApplyDitaval=1
+DitavalName=./examples.ditaval</code></pre>
+      </div>
+      <section class="section"><h2 class="title sectiontitle">Resizing tables</h2>
+         
+         <p class="p">The display of your tables in Oxygen will rarely match what you want in the output. To ensure tables look the same each time you generate a bookfile from your DITA files: resize your tables manually in FrameMaker and then adjust them in Oxygen. Then you select and right-click a column and choose <span class="ph uicontrol">Resize columns</span>. Copy the value you find next to <span class="ph uicontrol">To Width</span> and paste it into your corresponding Oxygen topic in the <code class="keyword markupname xmlelement">&lt;colspecs&gt;</code> element of the corresponding column.</p>
+         <div class="note caution note_caution"><span class="note__title">CAUTION:</span> It is advised to use natural numbers (for example 1, 2, 3...) rather than numbers containing a decimal point to avoid transformation errors.</div>
+      </section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_dita_2_pdf/">DITA2PDF</a></div></div></nav></article></main>

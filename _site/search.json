@@ -1,466 +1,510 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+        <article>
+    <div id="content" class="container">
+            <div class="row">
+        
 [{
-    "url" : "/training-guide/",
-    "title" : "Training guide"
-  },{
-    "url" : "/training-guide/en/working_with_oxygenxml_projects/",
+    "url" : "/training-guide/en/working_with_oxygenxml_projects.html",
     "title" : "Working with OxygenXML projects"
   },{
-    "url" : "/training-guide/en/to_wrapping_unwrapping/",
+    "url" : "/training-guide/en/to_wrapping_unwrapping.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_working_with_tables/",
+    "url" : "/training-guide/en/to_working_with_tables.html",
     "title" : "DITA tables"
   },{
-    "url" : "/training-guide/en/to_working_with_ditavals/",
+    "url" : "/training-guide/en/to_working_with_ditavals.html",
     "title" : "Working with ditavals"
   },{
-    "url" : "/training-guide/en/to_working_with_ditamaps/",
+    "url" : "/training-guide/en/to_working_with_ditamaps.html",
     "title" : "Working with DITA maps"
   },{
-    "url" : "/training-guide/en/to_working_with_conref_library/",
+    "url" : "/training-guide/en/to_working_with_conref_library.html",
     "title" : "Working with a conref library"
   },{
-    "url" : "/training-guide/en/to_working_with_bookmaps/",
+    "url" : "/training-guide/en/to_working_with_bookmaps.html",
     "title" : "Working with DITA bookmaps"
   },{
-    "url" : "/training-guide/en/to_topics_information_types/",
+    "url" : "/training-guide/en/to_topics_information_types.html",
     "title" : "DITA topics and information types"
   },{
-    "url" : "/training-guide/en/to_task_topics/",
+    "url" : "/training-guide/en/to_task_topics.html",
     "title" : "Task topics"
   },{
-    "url" : "/training-guide/en/to_splitting_merging/",
+    "url" : "/training-guide/en/to_splitting_merging.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_reusing_content/",
+    "url" : "/training-guide/en/to_reusing_content.html",
     "title" : "DITA content reuse"
   },{
-    "url" : "/training-guide/en/to_reference_topics/",
-    "title" : "Reference topics"
-  },{
-    "url" : "/training-guide/en/to_refer_to_a_figure_in_dita/",
+    "url" : "/training-guide/en/to_refer_to_a_figure_in_dita.html",
     "title" : "To refer to a figure in text"
   },{
-    "url" : "/training-guide/en/to_refacturing_elements/",
+    "url" : "/training-guide/en/to_reference_topics.html",
+    "title" : "Reference topics"
+  },{
+    "url" : "/training-guide/en/to_refacturing_elements.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_publishing/",
+    "url" : "/training-guide/en/to_publishing.html",
     "title" : "DITA publishing"
   },{
-    "url" : "/training-guide/en/to_managing_links/",
+    "url" : "/training-guide/en/to_managing_links.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_light_fullon/",
+    "url" : "/training-guide/en/to_light_fullon.html",
     "title" : "DITA light and full-on DITA"
   },{
-    "url" : "/training-guide/en/to_inserting_deleting_elements/",
-    "title" : ""
-  },{
-    "url" : "/training-guide/en/to_insert_a_conref/",
+    "url" : "/training-guide/en/to_insert_a_conref.html",
     "title" : "To insert a conref"
   },{
-    "url" : "/training-guide/en/to_images/",
+    "url" : "/training-guide/en/to_inserting_deleting_elements.html",
+    "title" : ""
+  },{
+    "url" : "/training-guide/en/to_images.html",
     "title" : "DITA graphics"
   },{
-    "url" : "/training-guide/en/to_guidelines_topics/",
+    "url" : "/training-guide/en/to_guidelines_topics.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_elements_reference_topics/",
+    "url" : "/training-guide/en/to_elements_reference_topics.html",
     "title" : "Reference topic elements"
   },{
-    "url" : "/training-guide/en/to_elements_concept_topics/",
+    "url" : "/training-guide/en/to_elements_concept_topics.html",
     "title" : "Concept topic elements"
   },{
-    "url" : "/training-guide/en/to_ditamaps_bookmaps/",
-    "title" : "DITA maps and bookmaps"
-  },{
-    "url" : "/training-guide/en/to_dita_ot/",
+    "url" : "/training-guide/en/to_dita_ot.html",
     "title" : "DITA Open Toolkit (DITA-OT)"
   },{
-    "url" : "/training-guide/en/to_dita_elements_task_topics/",
+    "url" : "/training-guide/en/to_dita_elements_task_topics.html",
     "title" : "Task topic elements"
   },{
-    "url" : "/training-guide/en/to_dita_2_pdf/",
+    "url" : "/training-guide/en/to_dita_2_pdf.html",
     "title" : "DITA2PDF"
   },{
-    "url" : "/training-guide/en/to_creating_topics/",
+    "url" : "/training-guide/en/to_ditamaps_bookmaps.html",
+    "title" : "DITA maps and bookmaps"
+  },{
+    "url" : "/training-guide/en/to_creating_topic_templates.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_creating_topic_templates/",
+    "url" : "/training-guide/en/to_creating_topics.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_creating_task_topic/",
+    "url" : "/training-guide/en/to_creating_task_topic.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_creating_related_links/",
+    "url" : "/training-guide/en/to_creating_related_links.html",
     "title" : "Creating related links"
   },{
-    "url" : "/training-guide/en/to_creating_new_topic_general/",
+    "url" : "/training-guide/en/to_creating_new_topic_general.html",
     "title" : "Working with DITA topics"
   },{
-    "url" : "/training-guide/en/to_creating_links/",
+    "url" : "/training-guide/en/to_creating_links.html",
     "title" : "DITA links"
   },{
-    "url" : "/training-guide/en/to_creating_inline_links/",
+    "url" : "/training-guide/en/to_creating_inline_links.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_creating_concept_topic/",
+    "url" : "/training-guide/en/to_creating_concept_topic.html",
     "title" : "Concept topics"
   },{
-    "url" : "/training-guide/en/to_conditional_processing/",
+    "url" : "/training-guide/en/to_conditional_processing.html",
     "title" : "DITA conditional processing"
   },{
-    "url" : "/training-guide/en/to_assigning_conditional_attributes_and_vlues/",
+    "url" : "/training-guide/en/to_assigning_conditional_attributes_and_vlues.html",
     "title" : "Assigning conditional attributes and values"
   },{
-    "url" : "/training-guide/en/to_additional_elements/",
+    "url" : "/training-guide/en/to_additional_elements.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_about_topics_and_information_types/",
+    "url" : "/training-guide/en/to_about_topics_and_information_types.html",
     "title" : ""
   },{
-    "url" : "/training-guide/en/to_about_reusing_content/",
+    "url" : "/training-guide/en/to_about_reusing_content.html",
     "title" : "About content reuse"
   },{
-    "url" : "/training-guide/en/to_about_ditamaps_bookmaps/",
+    "url" : "/training-guide/en/to_about_ditamaps_bookmaps.html",
     "title" : "About DITA maps and bookmaps"
   },{
-    "url" : "/training-guide/en/to_about_creating_links/",
+    "url" : "/training-guide/en/to_about_creating_links.html",
     "title" : "About links"
   },{
-    "url" : "/training-guide/en/to_about_conditional_processing/",
+    "url" : "/training-guide/en/to_about_conditional_processing.html",
     "title" : "About conditional processing"
   },{
-    "url" : "/training-guide/en/ta_via_reusable_components/",
+    "url" : "/training-guide/en/ta_via_reusable_components.html",
     "title" : "To insert a conref via Reusable Components"
   },{
-    "url" : "/training-guide/en/ta_using_shortcut_keys/",
+    "url" : "/training-guide/en/ta_using_shortcut_keys.html",
     "title" : "To use shortcut keys"
   },{
-    "url" : "/training-guide/en/ta_using_reusable_components/",
+    "url" : "/training-guide/en/ta_using_reusable_components.html",
     "title" : "To insert images using the Reusable Components pane"
   },{
-    "url" : "/training-guide/en/ta_using_dita_elements/",
+    "url" : "/training-guide/en/ta_using_dita_elements.html",
     "title" : "To insert images using DITA elements"
   },{
-    "url" : "/training-guide/en/ta_to_move_a_topic_in_a_ditamap/",
+    "url" : "/training-guide/en/ta_to_move_a_topic_in_a_ditamap.html",
     "title" : "To move a topic in a DITA map"
   },{
-    "url" : "/training-guide/en/ta_to_delete_a_topic_from_a_ditamap/",
+    "url" : "/training-guide/en/ta_to_delete_a_topic_from_a_ditamap.html",
     "title" : "To delete a topic from a DITA map"
   },{
-    "url" : "/training-guide/en/ta_to_create_a_reltable/",
+    "url" : "/training-guide/en/ta_to_create_a_reltable.html",
     "title" : "To create a relationship table"
   },{
-    "url" : "/training-guide/en/ta_to_create_a_ditamap/",
+    "url" : "/training-guide/en/ta_to_create_a_ditamap.html",
     "title" : "To create a new DITA map"
   },{
-    "url" : "/training-guide/en/ta_to_create_a_bookmap/",
+    "url" : "/training-guide/en/ta_to_create_a_bookmap.html",
     "title" : "To create a new DITA bookmap"
   },{
-    "url" : "/training-guide/en/ta_to_add_non_dita_content_to_a_ditamap/",
+    "url" : "/training-guide/en/ta_to_add_non_dita_content_to_a_ditamap.html",
     "title" : "To add non-DITA content to a DITA map"
   },{
-    "url" : "/training-guide/en/ta_to_add_metadata_to_a_ditamap/",
+    "url" : "/training-guide/en/ta_to_add_metadata_to_a_ditamap.html",
     "title" : "To add metadata to a DITA map"
   },{
-    "url" : "/training-guide/en/ta_to_add_metadata_to_a_bookmap/",
+    "url" : "/training-guide/en/ta_to_add_metadata_to_a_bookmap.html",
     "title" : "To add metadata to a DITA bookmap"
   },{
-    "url" : "/training-guide/en/ta_to_add_an_appendix_to_a_bookmap/",
-    "title" : "To add an appendix to a DITA bookmap"
-  },{
-    "url" : "/training-guide/en/ta_to_add_a_topic_to_a_ditamap/",
+    "url" : "/training-guide/en/ta_to_add_a_topic_to_a_ditamap.html",
     "title" : "To add a topic to a DITA map"
   },{
-    "url" : "/training-guide/en/ta_to_add_a_toc_to_a_bookmap/",
+    "url" : "/training-guide/en/ta_to_add_a_toc_to_a_bookmap.html",
     "title" : "To add a table of contents to a DITA bookmap"
   },{
-    "url" : "/training-guide/en/ta_to_add_a_ditamap_to_a_ditamap/",
+    "url" : "/training-guide/en/ta_to_add_a_ditamap_to_a_ditamap.html",
     "title" : "To add a DITA map to a DITA map"
   },{
-    "url" : "/training-guide/en/ta_to_add_a_ditamap_to_a_bookmap/",
+    "url" : "/training-guide/en/ta_to_add_a_ditamap_to_a_bookmap.html",
     "title" : "To add a DITA map to a DITA bookmap"
   },{
-    "url" : "/training-guide/en/ta_reference_template_location/",
+    "url" : "/training-guide/en/ta_to_add_an_appendix_to_a_bookmap.html",
+    "title" : "To add an appendix to a DITA bookmap"
+  },{
+    "url" : "/training-guide/en/ta_reference_template_location.html",
     "title" : "To reference the location of the templates folder"
   },{
-    "url" : "/training-guide/en/ta_inserting_rows_columns/",
-    "title" : "To insert rows and columns"
-  },{
-    "url" : "/training-guide/en/ta_inserting_images/",
-    "title" : "Inserting media objects in a topic"
-  },{
-    "url" : "/training-guide/en/ta_insert_table_using_table_wizard/",
+    "url" : "/training-guide/en/ta_insert_table_using_table_wizard.html",
     "title" : "To insert a table using the table wizard"
   },{
-    "url" : "/training-guide/en/ta_insert_reference_in_relatedlinks/",
+    "url" : "/training-guide/en/ta_insert_reference_in_relatedlinks.html",
     "title" : "To create a related links list"
   },{
-    "url" : "/training-guide/en/ta_insert_delete_columns/",
+    "url" : "/training-guide/en/ta_insert_delete_columns.html",
     "title" : "To delete rows and columns"
   },{
-    "url" : "/training-guide/en/ta_insert_a_conref/",
+    "url" : "/training-guide/en/ta_insert_a_conref.html",
     "title" : "To insert a conref via the menu"
   },{
-    "url" : "/training-guide/en/ta_importing_the_miramo_generate_scenario/",
+    "url" : "/training-guide/en/ta_inserting_rows_columns.html",
+    "title" : "To insert rows and columns"
+  },{
+    "url" : "/training-guide/en/ta_inserting_images.html",
+    "title" : "Inserting media objects in a topic"
+  },{
+    "url" : "/training-guide/en/ta_importing_the_miramo_generate_scenario.html",
     "title" : "To import the MiramoPDF customization transformation scenario"
   },{
-    "url" : "/training-guide/en/ta_handlingTheFirstColumnOfATableAsHeader/",
+    "url" : "/training-guide/en/ta_handlingTheFirstColumnOfATableAsHeader.html",
     "title" : "Handling the first column of a table as header"
   },{
-    "url" : "/training-guide/en/ta_generate_pdf_from_bookfile/",
+    "url" : "/training-guide/en/ta_generate_pdf_from_bookfile.html",
     "title" : "To generate a PDF from a bookfile"
   },{
-    "url" : "/training-guide/en/ta_generate_book_from_map/",
+    "url" : "/training-guide/en/ta_generate_book_from_map.html",
     "title" : "To generate a book from a DITA map"
   },{
-    "url" : "/training-guide/en/ta_exporting_dita_maps/",
+    "url" : "/training-guide/en/ta_exporting_dita_maps.html",
     "title" : "Exporting a DITA map"
   },{
-    "url" : "/training-guide/en/ta_dragging_images/",
+    "url" : "/training-guide/en/ta_dragging_images.html",
     "title" : "To insert images by dragging"
   },{
-    "url" : "/training-guide/en/ta_create_webhelp_transformation/",
+    "url" : "/training-guide/en/ta_create_webhelp_transformation.html",
     "title" : "To create a transformation scenario"
   },{
-    "url" : "/training-guide/en/ta_create_ditaval/",
+    "url" : "/training-guide/en/ta_create_ditaval.html",
     "title" : "To create a ditaval"
   },{
-    "url" : "/training-guide/en/ta_create_conref_library/",
+    "url" : "/training-guide/en/ta_create_conref_library.html",
     "title" : "To create a conref library"
   },{
-    "url" : "/training-guide/en/ta_check_where_conref_is_used/",
+    "url" : "/training-guide/en/ta_check_where_conref_is_used.html",
     "title" : "To check where a conref is used"
   },{
-    "url" : "/training-guide/en/ta_change_parameters_webhelp_transformation/",
+    "url" : "/training-guide/en/ta_change_parameters_webhelp_transformation.html",
     "title" : "To change the parameters of a transformation scenario"
   },{
-    "url" : "/training-guide/en/ta_assigning_conditional_attributes_to_topics_in_ditamap/",
+    "url" : "/training-guide/en/ta_assigning_conditional_attributes_to_topics_in_ditamap.html",
     "title" : "To assign conditions to an entire topic"
   },{
-    "url" : "/training-guide/en/ta_assigning_conditional_attributes_to_topicrefs_in_reltable/",
+    "url" : "/training-guide/en/ta_assigning_conditional_attributes_to_topicrefs_in_reltable.html",
     "title" : "To assign conditions to a topic reference"
   },{
-    "url" : "/training-guide/en/ta_assigning_conditional_attributes_to_parts_of_topics/",
+    "url" : "/training-guide/en/ta_assigning_conditional_attributes_to_parts_of_topics.html",
     "title" : "To assign conditions to a part of a topic"
   },{
-    "url" : "/training-guide/en/ta_assigning_a_dpi_value_to_an_image/",
+    "url" : "/training-guide/en/ta_assigning_a_dpi_value_to_an_image.html",
     "title" : "To assign a DPI value to an image"
   },{
-    "url" : "/training-guide/en/ta_apply_ditaval/",
+    "url" : "/training-guide/en/ta_apply_ditaval.html",
     "title" : "To apply a ditaval or a profiling condition set during publishing"
   },{
-    "url" : "/training-guide/en/setting_some_oxygenxml_preferences/",
+    "url" : "/training-guide/en/setting_some_oxygenxml_preferences.html",
     "title" : "Setting some Oxygen XML preferences"
   },{
-    "url" : "/training-guide/en/renaming_dita_files_master_files_support/",
-    "title" : "Renaming DITA files (Master files support)"
-  },{
-    "url" : "/training-guide/en/refactoring_elements_split_topics_promote_sections_to_topics/",
-    "title" : "Refactoring elements &amp;gt; split topics (promote sections to topics)"
-  },{
-    "url" : "/training-guide/en/refactoring_elements_renaming_elements/",
-    "title" : "Refactoring elements &amp;gt; renaming elements"
-  },{
-    "url" : "/training-guide/en/re_stepxmp_stepresult/",
+    "url" : "/training-guide/en/re_stepxmp_stepresult.html",
     "title" : "Step examples, step results"
   },{
-    "url" : "/training-guide/en/re_result_postrequisites/",
+    "url" : "/training-guide/en/re_result_postrequisites.html",
     "title" : "Examples, results and post requisites"
   },{
-    "url" : "/training-guide/en/re_overview_conditional_attributes/",
+    "url" : "/training-guide/en/re_overview_conditional_attributes.html",
     "title" : "Conditional attributes"
   },{
-    "url" : "/training-guide/en/re_output_formats_dita_ot/",
+    "url" : "/training-guide/en/re_output_formats_dita_ot.html",
     "title" : "Output formats of the DITA OT"
   },{
-    "url" : "/training-guide/en/re_notes/",
+    "url" : "/training-guide/en/re_notes.html",
     "title" : "Notes"
   },{
-    "url" : "/training-guide/en/re_guidelines_images/",
+    "url" : "/training-guide/en/re_guidelines_images.html",
     "title" : "Guidelines for working with graphics"
   },{
-    "url" : "/training-guide/en/re_guidelines_ditamaps/",
+    "url" : "/training-guide/en/re_guidelines_ditamaps.html",
     "title" : "Guidelines for creating DITA maps and bookmaps"
   },{
-    "url" : "/training-guide/en/re_guidelines_dita2pdf/",
+    "url" : "/training-guide/en/re_guidelines_dita2pdf.html",
     "title" : "Guidelines for using DITA2PDF"
   },{
-    "url" : "/training-guide/en/re_guidelines_creating_links/",
+    "url" : "/training-guide/en/re_guidelines_creating_links.html",
     "title" : "Guidelines for creating links"
   },{
-    "url" : "/training-guide/en/re_guidelines_content_reference/",
+    "url" : "/training-guide/en/re_guidelines_content_reference.html",
     "title" : "Guidelines for using content references"
   },{
-    "url" : "/training-guide/en/re_guidelines_conditional_processing/",
+    "url" : "/training-guide/en/re_guidelines_conditional_processing.html",
     "title" : "Guidelines for conditional processing"
   },{
-    "url" : "/training-guide/en/oxygenxml_specific_features/",
+    "url" : "/training-guide/en/renaming_dita_files_master_files_support.html",
+    "title" : "Renaming DITA files (Master files support)"
+  },{
+    "url" : "/training-guide/en/refactoring_elements_split_topics_promote_sections_to_topics.html",
+    "title" : "Refactoring elements &amp;gt; split topics (promote sections to topics)"
+  },{
+    "url" : "/training-guide/en/refactoring_elements_renaming_elements.html",
+    "title" : "Refactoring elements &amp;gt; renaming elements"
+  },{
+    "url" : "/training-guide/en/oxygenxml_specific_features.html",
     "title" : "OxygenXML-specific features"
   },{
-    "url" : "/training-guide/en/co_why_use_ditamaps/",
+    "url" : "/training-guide/en/co_why_use_ditamaps.html",
     "title" : "Why use DITA maps?"
   },{
-    "url" : "/training-guide/en/co_why_use_conditional_processing/",
+    "url" : "/training-guide/en/co_why_use_conditional_processing.html",
     "title" : "What is the purpose and advantage of conditional processing?"
   },{
-    "url" : "/training-guide/en/co_why_use_bookmaps/",
+    "url" : "/training-guide/en/co_why_use_bookmaps.html",
     "title" : "Why use bookmaps?"
   },{
-    "url" : "/training-guide/en/co_why_reuse_content/",
+    "url" : "/training-guide/en/co_why_reuse_content.html",
     "title" : "What is content reuse?"
   },{
-    "url" : "/training-guide/en/co_why_create_links/",
+    "url" : "/training-guide/en/co_why_create_links.html",
     "title" : "Why create links?"
   },{
-    "url" : "/training-guide/en/co_what_is_the_dita_ot/",
+    "url" : "/training-guide/en/co_what_is_the_dita_ot.html",
     "title" : "What is the DITA OT?"
   },{
-    "url" : "/training-guide/en/co_what_is_metadata/",
+    "url" : "/training-guide/en/co_what_is_metadata.html",
     "title" : "What is metadata?"
   },{
-    "url" : "/training-guide/en/co_what_is_dita2pdf/",
+    "url" : "/training-guide/en/co_what_is_dita2pdf.html",
     "title" : "What is DITA2PDF?"
   },{
-    "url" : "/training-guide/en/co_what_is_conditional_processing/",
+    "url" : "/training-guide/en/co_what_is_conditional_processing.html",
     "title" : "What is conditional processing?"
   },{
-    "url" : "/training-guide/en/co_what_is_a_ditamap/",
+    "url" : "/training-guide/en/co_what_is_a_ditamap.html",
     "title" : "What is a DITA map?"
   },{
-    "url" : "/training-guide/en/co_what_is_a_bookmap/",
+    "url" : "/training-guide/en/co_what_is_a_bookmap.html",
     "title" : "What is a bookmap?"
   },{
-    "url" : "/training-guide/en/co_what_does_the_dita_ot_do/",
+    "url" : "/training-guide/en/co_what_does_the_dita_ot_do.html",
     "title" : "What does the DITA OT do?"
   },{
-    "url" : "/training-guide/en/co_what_does_dita2pdf_do/",
+    "url" : "/training-guide/en/co_what_does_dita2pdf_do.html",
     "title" : "What does DITA2PDF do?"
   },{
-    "url" : "/training-guide/en/co_what_are_inline_links/",
+    "url" : "/training-guide/en/co_what_are_inline_links.html",
     "title" : "Inline links"
   },{
-    "url" : "/training-guide/en/co_what_are_hierarchical_links/",
+    "url" : "/training-guide/en/co_what_are_hierarchical_links.html",
     "title" : "Hierarchical links"
   },{
-    "url" : "/training-guide/en/co_what_are_ditavals/",
+    "url" : "/training-guide/en/co_what_are_ditavals.html",
     "title" : "What are ditaval filters?"
   },{
-    "url" : "/training-guide/en/co_ul_ol_sl_dl/",
+    "url" : "/training-guide/en/co_ul_ol_sl_dl.html",
     "title" : "General lists"
   },{
-    "url" : "/training-guide/en/co_types_links/",
+    "url" : "/training-guide/en/co_types_links.html",
     "title" : "Different types of links"
   },{
-    "url" : "/training-guide/en/co_title_task/",
+    "url" : "/training-guide/en/co_title_task.html",
     "title" : "Task title"
   },{
-    "url" : "/training-guide/en/co_title_reference/",
+    "url" : "/training-guide/en/co_title_reference.html",
     "title" : "Reference title"
   },{
-    "url" : "/training-guide/en/co_title_concept/",
+    "url" : "/training-guide/en/co_title_concept.html",
     "title" : "Concept title"
   },{
-    "url" : "/training-guide/en/co_tables/",
-    "title" : "General, simple and property tables"
-  },{
-    "url" : "/training-guide/en/co_table_elements/",
+    "url" : "/training-guide/en/co_table_elements.html",
     "title" : "Table components"
   },{
-    "url" : "/training-guide/en/co_substeps_choices_choicetable/",
+    "url" : "/training-guide/en/co_tables.html",
+    "title" : "General, simple and property tables"
+  },{
+    "url" : "/training-guide/en/co_substeps_choices_choicetable.html",
     "title" : "Substeps and choices"
   },{
-    "url" : "/training-guide/en/co_steps_step_cmd/",
-    "title" : "Ordered and unordered steps"
-  },{
-    "url" : "/training-guide/en/co_step_cmd/",
+    "url" : "/training-guide/en/co_step_cmd.html",
     "title" : "Writing the steps: step  "
   },{
-    "url" : "/training-guide/en/co_role_of_IDs/",
+    "url" : "/training-guide/en/co_steps_step_cmd.html",
+    "title" : "Ordered and unordered steps"
+  },{
+    "url" : "/training-guide/en/co_role_of_IDs.html",
     "title" : "What is the role of IDs?"
   },{
-    "url" : "/training-guide/en/co_pixel_vector/",
-    "title" : "What are vector graphics and pixel images?"
-  },{
-    "url" : "/training-guide/en/co_p_section/",
+    "url" : "/training-guide/en/co_p_section.html",
     "title" : "Paragraphs and sections"
   },{
-    "url" : "/training-guide/en/co_opt_file/",
+    "url" : "/training-guide/en/co_pixel_vector.html",
+    "title" : "What are vector graphics and pixel images?"
+  },{
+    "url" : "/training-guide/en/co_opt_file.html",
     "title" : "What is a template descriptor file?"
   },{
-    "url" : "/training-guide/en/co_multichannel_publishing/",
+    "url" : "/training-guide/en/co_multichannel_publishing.html",
     "title" : "What is multi-channel publishing?"
   },{
-    "url" : "/training-guide/en/co_map_views/",
+    "url" : "/training-guide/en/co_map_views.html",
     "title" : "Which map views are available?"
   },{
-    "url" : "/training-guide/en/co_main_components_ditamap/",
+    "url" : "/training-guide/en/co_main_components_ditamap.html",
     "title" : "What are the main components of a DITA map?"
   },{
-    "url" : "/training-guide/en/co_linking_attribute/",
+    "url" : "/training-guide/en/co_linking_attribute.html",
     "title" : "What does @linking do?"
   },{
-    "url" : "/training-guide/en/co_light_fullon_dita/",
+    "url" : "/training-guide/en/co_light_fullon_dita.html",
     "title" : "About DITA light and full-on DITA"
   },{
-    "url" : "/training-guide/en/co_levels_content_reuse/",
+    "url" : "/training-guide/en/co_levels_content_reuse.html",
     "title" : "Different levels of content re-use"
   },{
-    "url" : "/training-guide/en/co_including_reltable/",
+    "url" : "/training-guide/en/co_including_reltable.html",
     "title" : "Relationship tables"
   },{
-    "url" : "/training-guide/en/co_including_metadata/",
+    "url" : "/training-guide/en/co_including_metadata.html",
     "title" : "Bookmap metadata"
   },{
-    "url" : "/training-guide/en/co_including_a_ditaval/",
+    "url" : "/training-guide/en/co_including_a_ditaval.html",
     "title" : "Which ditaval elements are available?"
   },{
-    "url" : "/training-guide/en/co_how_does_conditional_processing_work/",
+    "url" : "/training-guide/en/co_how_does_conditional_processing_work.html",
     "title" : "How does conditional processing work?"
   },{
-    "url" : "/training-guide/en/co_folder_structure/",
+    "url" : "/training-guide/en/co_folder_structure.html",
     "title" : "What is the Flow custom framework?"
   },{
-    "url" : "/training-guide/en/co_flow_custom_framework/",
+    "url" : "/training-guide/en/co_flow_custom_framework.html",
     "title" : "How is the Flow custom framework built?"
   },{
-    "url" : "/training-guide/en/co_fig_image/",
+    "url" : "/training-guide/en/co_fig_image.html",
     "title" : "Figures and images"
   },{
-    "url" : "/training-guide/en/co_ditaval_filtering_logic/",
+    "url" : "/training-guide/en/co_ditaval_filtering_logic.html",
     "title" : "Ditaval filtering logic"
   },{
-    "url" : "/training-guide/en/co_ditamap_attributes/",
+    "url" : "/training-guide/en/co_ditamap_attributes.html",
     "title" : "Ditamap attributes"
   },{
-    "url" : "/training-guide/en/co_different_ways_to_create_related_links/",
+    "url" : "/training-guide/en/co_different_ways_to_create_related_links.html",
     "title" : "Different ways to create related links"
   },{
-    "url" : "/training-guide/en/co_custom_css_file/",
+    "url" : "/training-guide/en/co_custom_css_file.html",
     "title" : "What is a CSS file?"
   },{
-    "url" : "/training-guide/en/co_creating_map/",
+    "url" : "/training-guide/en/co_creating_map.html",
     "title" : "Map elements"
   },{
-    "url" : "/training-guide/en/co_context/",
+    "url" : "/training-guide/en/co_context.html",
     "title" : "Introductory task information"
   },{
-    "url" : "/training-guide/en/co_conref_spaghetti/",
+    "url" : "/training-guide/en/co_conref_spaghetti.html",
     "title" : "The risk: creating conref spaghetti"
   },{
-    "url" : "/training-guide/en/co_conref_library/",
+    "url" : "/training-guide/en/co_conref_library.html",
     "title" : "The solution: a conref library"
   },{
-    "url" : "/training-guide/en/co_collection_type/",
+    "url" : "/training-guide/en/co_collection_type.html",
     "title" : "What does collection-type do?"
   },{
-    "url" : "/training-guide/en/co_bookmap_main_components/",
+    "url" : "/training-guide/en/co_bookmap_main_components.html",
     "title" : "What are the main components of a bookmap?"
   },{
-    "url" : "/training-guide/en/adding_properties/",
+    "url" : "/training-guide/en/adding_properties.html",
     "title" : "Properties table"
+  },{
+    "url" : "/training-guide/toc.html",
+    "title" : ""
   },{
     "url" : "/",
     "title" : "Hello world"
@@ -468,3 +512,11 @@
 
 
 
+
+    </div>
+    </div>
+    </article>
+    </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship tables</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+        <article>
+    <div id="content" class="container">
+            <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_images.html">DITA graphics</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">DITA links</a><ul class="nav nav-list"><li><a href="../en/to_about_creating_links.html">About links</a><ul class="nav nav-list"><li><a href="../en/co_why_create_links.html">Why create links?</a></li><li><a href="../en/co_types_links.html">Different types of links</a></li><li><a href="../en/co_what_are_inline_links.html">Inline links</a></li><li><a href="../en/co_what_are_hierarchical_links.html">Hierarchical links</a></li><li class="active"><a href="../en/co_including_reltable.html">Relationship tables</a></li><li><a href="../en/re_guidelines_creating_links.html">Guidelines for creating links</a></li><li><a href="../en/co_collection_type.html">What does collection-type do?</a></li><li><a href="../en/co_role_of_IDs.html">What is the role of IDs?</a></li></ul></li><li><a href="../en/to_creating_inline_links.html#topic-10">Creating inline links</a></li><li><a href="../en/to_creating_related_links.html">Creating related links</a></li><li><a href="../en/to_managing_links.html#untitled2">Managing links</a></li></ul></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a></li><li><a href="../en/to_publishing.html">DITA publishing</a></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Relationship tables</h1>
+   
+   <div class="body conbody">
+      <p class="p" id="co_including_reltable__p_idg_qnx_cpb">Next to <code class="keyword markupname xmlelement">&lt;related-links&gt;</code>, you can also create links by using a relationship table. Instead of adding individual references in a topic, you centralize the relevant links in one location, the relationship table. This way you further increase the ease of use and navigation of your information. The <code class="keyword markupname xmlelement">&lt;reltable&gt;</code> element specifies relationships among topics, based on the familiar table model of rows, columns, and cells:</p>
+      <table class="table" id="co_including_reltable__table_hhs_5zt_kpb"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><thead class="thead">
+               <tr class="row">
+                  <th class="entry" id="co_including_reltable__table_hhs_5zt_kpb__entry__1">Element</th>
+                  <th class="entry" id="co_including_reltable__table_hhs_5zt_kpb__entry__2">Description</th>
+               </tr>
+            </thead><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" headers="co_including_reltable__table_hhs_5zt_kpb__entry__1">
+                     <code class="keyword markupname xmlelement">&lt;relrow&gt;</code>
+                  </td>
+                  <td class="entry" headers="co_including_reltable__table_hhs_5zt_kpb__entry__2">
+                     <p class="p">Defines a row in a relationship table and contains <code class="keyword markupname xmlelement">&lt;relcell&gt;</code> elements which contain related <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements.</p>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry" headers="co_including_reltable__table_hhs_5zt_kpb__entry__1">
+                     <code class="keyword markupname xmlelement">&lt;relcell&gt;</code>
+                  </td>
+                  <td class="entry" headers="co_including_reltable__table_hhs_5zt_kpb__entry__2">
+                     <p class="p">Defines a cell in a relationship table and contains <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements which are related to other <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements in the same row (although not necessarily in the same cell).</p>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry" headers="co_including_reltable__table_hhs_5zt_kpb__entry__1">
+                     <code class="keyword markupname xmlelement">&lt;relheader&gt;</code>
+                  </td>
+                  <td class="entry" headers="co_including_reltable__table_hhs_5zt_kpb__entry__2">
+                     <p class="p">Defines a row of column definitions (<code class="keyword markupname xmlelement">&lt;relcolspec&gt;</code> elements) in a relationship table.</p>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry" headers="co_including_reltable__table_hhs_5zt_kpb__entry__1">
+                     <code class="keyword markupname xmlelement">&lt;relcolspec&gt;</code>
+                  </td>
+                  <td class="entry" headers="co_including_reltable__table_hhs_5zt_kpb__entry__2">
+                     <p class="p">Defines a column in a relationship table by setting default values for the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements in the column. For example, you can set the <code class="keyword markupname xmlatt">@type</code> attribute to "concept" and all <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements in the column (with no attribute specified) are treated as concepts. You can also add:</p>
+                     <ul class="ul" id="co_including_reltable__ul_l5n_xb5_kpb">
+                        <li class="li">A <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element: defines a relationship between this topic and the topics that are referenced in the column</li>
+                        <li class="li">A <code class="keyword markupname xmlelement">&lt;title&gt;</code> element: used as a label for the related links that are defined by the column</li>
+                     </ul>
+                  </td>
+               </tr>
+            </tbody></table>
+      <p class="p">By default, the contents of a <code class="keyword markupname xmlelement">&lt;reltable&gt;</code> element are not output for navigation or TOC purposes, and are used only to define relationships that can be expressed as topic-to-topic links. Relationship tables can be used in conjunction with hierarchies and groups to manage all the related links in an information set.</p>
+      <figure class="fig fignone" id="co_including_reltable__fig_fy4_lk3_jn">
+         <img class="image fmdpi:250" id="co_including_reltable__image_ont_kbv_3n" src="../_media/graphics/relationship_table.PNG">
+      </figure>
+      <p class="p" id="co_including_reltable__p_ljs_qnx_cpb">Using such a table presents the following advantages:</p>
+      <ul class="ul" id="co_including_reltable__ul_jsq_522_fn">
+         <li class="li">Centralization: as opposed to inline links which can be found in individual topics, relationship tables can only be placed in DITA map files. This means they are easy to find when you need to adjust something.</li>
+         <li class="li">Reduced maintenance: as the links can all be found in one location, this makes it easier to adjust what you need in one go, rather than having to hunt through topics to find the link you need.</li>
+         <li class="li">Improved re-usability: relationship tables make topics less dependent on other files than inline links do. This means there will be less trouble when you try to re-use the linked topics.</li>
+      </ul>
+      <div class="note tip note_tip" id="co_including_reltable__note_mjs_qnx_cpb"><span class="note__title">Tip:</span> When you are working with particularly large documents, DITA maps can become heavy and full of topic references. As such, adding a relationship table to this can make it even more difficult to navigate. In this case, it can be useful to centralize the relationship table even more by adding it to a new DITA map nested within the main map. It should only contain the relationship table(s) and no other references outside of that table.</div>
+   </div>
+   <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_about_creating_links.html">About links</a></div></div><div class="linklist reltasks"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="ta_to_create_a_reltable.html">To create a relationship table</a></li></ul></div></nav>
+</article></main>
+
+    </div>
+    </div>
+    </article>
+    </article>
+    </main>
+  </body>
+</html>

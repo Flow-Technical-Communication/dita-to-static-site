@@ -1,8 +1,14 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 
 module.exports = function (eleventyConfig) {
+
     //slugify filter
     const slugify = eleventyConfig.getFilter('slugify');
+    
+    //export to named html files (instead of named folders containing index.html files)
+    eleventyConfig.addGlobalData("permalink", () => {
+      return (data) => `${data.page.filePathStem}.${data.page.outputFileExtension}`;
+    });
 
     // Copy the `css` directory to the output
     eleventyConfig.addPassthroughCopy("css");
@@ -13,7 +19,7 @@ module.exports = function (eleventyConfig) {
     // Copy the `assets` directory to the output
     eleventyConfig.addPassthroughCopy("assets");
 
-    // Copy the `assets` directory to the output
+    // Copy the `_media` directory to the output
     eleventyConfig.addPassthroughCopy("src/training-guide/_media");
 
     // Watch the `assets` directory for changes

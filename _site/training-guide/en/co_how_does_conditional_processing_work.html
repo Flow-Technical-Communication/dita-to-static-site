@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How does conditional processing work?</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+        <article>
+    <div id="content" class="container">
+            <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_images.html">DITA graphics</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">DITA links</a></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a><ul class="nav nav-list"><li><a href="../en/to_about_conditional_processing.html">About conditional processing</a><ul class="nav nav-list"><li><a href="../en/co_what_is_conditional_processing.html">What is conditional processing?</a></li><li><a href="../en/co_why_use_conditional_processing.html">What is the purpose and advantage of conditional processing?</a></li><li class="active"><a href="../en/co_how_does_conditional_processing_work.html">How does conditional processing work?</a></li><li><a href="../en/re_overview_conditional_attributes.html">Conditional attributes</a></li><li><a href="../en/re_guidelines_conditional_processing.html">Guidelines for conditional processing</a></li><li><a href="../en/co_including_a_ditaval.html">Which ditaval elements are available?</a></li></ul></li><li><a href="../en/to_assigning_conditional_attributes_and_vlues.html">Assigning conditional attributes and values</a></li><li><a href="../en/to_working_with_ditavals.html">Working with ditavals</a></li></ul></li><li><a href="../en/to_publishing.html">DITA publishing</a></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">How does conditional processing work?</h1>
+	
+	<div class="body conbody">
+		<section class="section" id="conceptId15__section_qcj_kry_vnb"> <p class="p">Conditional processing means you apply attribute values to certain elements of your text. These values are then entered into a separate DITAVAL (or a "conditional processing profile"<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a>) file in which you write rules that specify whether elements with those values need to be included, excluded (filtering) or flagged (highlighting). A DITAVAL file is used to filter your DITA content depending on the type of:</p> <ul class="ul" id="conceptId15__ul_ogz_byq_vjb">
+			<li class="li">Audience that your content is addressing, for example a novice audience, an expert audience ...</li>
+			<li class="li">Product that your content is about, for example iPhone X, iPhone 11, iPhone 11 Pro ...</li>
+			<li class="li">Platform that your audience is working with, for example iOS 12.4, iOS 13 ...</li>
+			<li class="li">...</li>
+			</ul>While generating output, the rules in this DITAVAL file are applied to the end-result. Below, the three main steps in conditional processing are described.</section>
+		<section class="section" id="conceptId15__section_rcj_kry_vnb"><h2 class="title sectiontitle">Planning an attribute scheme</h2>  <p class="p" id="conceptId15__p_scj_kry_vnb">Before worrying about applying conditions, you should first establish a scheme and define exactly what you need to create conditions for. This way you can plan out which attributes you need and which values to assign to each of them. To do this:</p> <ol class="ol" id="conceptId15__ol_bhs_kng_gn">
+			<li class="li">Define your audience: who will use your product and what specific information do they need?</li>
+			<li class="li">Define your platform: which operating systems, platforms and other environments are used with your product?</li>
+			<li class="li">Define your product: which models/versions are you planning and how do they differ?</li>
+			</ol> <div class="note important note_important" id="conceptId15__note_tcj_kry_vnb"><span class="note__title">Important:</span> Each of the items you define should receive a unique value in an attribute. Do not reuse value names in different attributes as this will lead to confusion for your writers.</div> </section>
+		<div class="example">For example, you want to teach your users how to save their files using Microsoft Word, but you know there are several versions of Word on the market. As your documents only deal with Word 2007 and Word 2010, you plan your conditional attributes and values accordingly:<table class="table frame-all" id="conceptId15__table_rtw_4fd_mn"><caption></caption><colgroup><col style="width:33.33333333333333%"><col style="width:33.33333333333333%"><col style="width:33.33333333333333%"></colgroup><thead class="thead">
+					<tr class="row">
+						<th class="entry" id="conceptId15__table_rtw_4fd_mn__entry__1">Purpose</th>
+						<th class="entry" id="conceptId15__table_rtw_4fd_mn__entry__2">Attribute</th>
+						<th class="entry" id="conceptId15__table_rtw_4fd_mn__entry__3">Value</th>
+					</tr>
+				</thead><tbody class="tbody">
+					<tr class="row">
+						<td class="entry" headers="conceptId15__table_rtw_4fd_mn__entry__1">Only for Word 2007</td>
+						<td class="entry" headers="conceptId15__table_rtw_4fd_mn__entry__2">@platform</td>
+						<td class="entry" headers="conceptId15__table_rtw_4fd_mn__entry__3">2007</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="conceptId15__table_rtw_4fd_mn__entry__1">Only for Word 2010</td>
+						<td class="entry" headers="conceptId15__table_rtw_4fd_mn__entry__2">@platform</td>
+						<td class="entry" headers="conceptId15__table_rtw_4fd_mn__entry__3">2010</td>
+					</tr>
+				</tbody></table> </div>
+		<section class="section" id="conceptId15__section_ucj_kry_vnb"><h2 class="title sectiontitle">Applying attributes</h2>  <p class="p" id="conceptId15__p_vcj_kry_vnb">Once you have specified which values you need and in which circumstances you will need them, you can start applying them as you write. Applying them while writing is far easier than having to hunt through your documentation afterwards to find the elements that are product or audience specific.</p> <p class="p" id="conceptId15__p_wcj_kry_vnb">You can apply conditional attribute values in:</p>  <table class="table frame-all" id="conceptId15__table_xlt_yrf_5n"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+					<tr class="row">
+						<th class="entry" id="conceptId15__table_xlt_yrf_5n__entry__1">Element</th>
+						<th class="entry" id="conceptId15__table_xlt_yrf_5n__entry__2">Purpose</th>
+					</tr>
+				</thead><tbody class="tbody">
+					<tr class="row">
+						<td class="entry" headers="conceptId15__table_xlt_yrf_5n__entry__1">Topics</td>
+						<td class="entry" headers="conceptId15__table_xlt_yrf_5n__entry__2">Include, exclude or flag specific elements</td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="conceptId15__table_xlt_yrf_5n__entry__1">DITA maps</td>
+						<td class="entry" headers="conceptId15__table_xlt_yrf_5n__entry__2">Include or exclude whole topics.<div class="note note note_note" id="conceptId15__note_xcj_kry_vnb"><span class="note__title">Note:</span> It is recommended to apply attributes to the topic references in the DITA map, and not to the <code class="keyword markupname xmlelement">&lt;topic&gt;</code> element within the topic in question.</div> </td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="conceptId15__table_xlt_yrf_5n__entry__1">Relationship tables</td>
+						<td class="entry" headers="conceptId15__table_xlt_yrf_5n__entry__2">Include or exclude topic references.<div class="note important note_important" id="conceptId15__note_ycj_kry_vnb"><span class="note__title">Important:</span> Do not forget to exclude links to the files which you have excluded in the DITA map. </div> </td>
+					</tr>
+				</tbody></table> <p class="p" id="conceptId15__p_zcj_kry_vnb">You can also include multiple attribute values separated by a space. The DITA-OT's default behavior is to include all content which has conditional attributes. So only if all exclude conditions are satisfied, will the element be excluded from the output. So if a paragraph is marked with both values <kbd class="ph userinput">admin manager</kbd>, and the DITAVAL specifies that <kbd class="ph userinput">admin</kbd> should be excluded, but <kbd class="ph userinput">manager</kbd> included, the paragraph would be included.</p> <div class="note tip note_tip" id="conceptId15__note_p2v_h4d_qqb"><span class="note__title">Tip:</span> You can change the DITA-OT's default behaviour by including <code class="ph codeph"> &lt;prop action="exclude"&gt;&lt;/prop&gt;</code> in your ditaval file. <span class="ph">See also <a class="xref" href="co_ditaval_filtering_logic.html">Ditaval filtering logic</a> </span> </div> </section>
+		<div class="example"> <p class="p" id="conceptId15__p_adj_kry_vnb">You write the different steps for the different Word editions and apply the relevant attribute to each of them.</p> <figure class="fig fignone" id="conceptId15__fig_md5_r1d_mn">
+			<img class="image fmdpi:250" id="conceptId15__image_vgv_r1d_mn" src="../_media/graphics/attributes_platform.PNG">
+			</figure> </div>
+		<section class="section" id="conceptId15__section_bdj_kry_vnb"><h2 class="title sectiontitle">Specifying a DITAVAL for filtering and highlighting</h2>  <p class="p" id="conceptId15__p_o1z_1ds_vnb">In order to filter and highlight certain elements from your generated output, you need to specify the 'rules' for what needs to happen to which values. You specify these rules in a DITAVAL file, which is applied when generating output.</p> <p class="p" id="conceptId15__p_cdj_kry_vnb">If you want to filter content, you add strings of text to the DITAVAL file, for example: <code class="ph codeph">&lt;prop att="audience" val="expert" action="exclude"&gt;</code>. During publication, this element will be excluded in the output.</p> <p class="p" id="conceptId15__p_trl_bds_vnb">By flagging content, you highlight certain elements with a graphic style or give them icons to represent that they only apply for one appliance model, software version or operating system. These attributes are also logged in a DITAVAL file where you specify a flag to highlight the content. You can do this with one of the following actions:</p> <ul class="ul" id="conceptId15__ul_dsd_nhh_gn">
+			<li class="li">Set the action to <kbd class="ph userinput" id="conceptId15__userinput_xgv_yqv_spb">flag</kbd> instead of <kbd class="ph userinput" id="conceptId15__userinput_ygv_yqv_spb">exclude</kbd>.</li>
+			<li class="li">Use the <code class="keyword markupname xmlelement">&lt;startflag&gt;</code> element to insert an image to highlight the conditional content.</li>
+			<li class="li">Use the <code class="keyword markupname xmlelement">&lt;alt-text&gt;</code> element to provide alternative text for the image.</li>
+			</ul> </section>
+		<div class="example"> <p class="p" id="conceptId15__p_kqp_bds_vnb">You create a DITAVAL file and you specify strings for each Word value:</p> <pre class="pre codeblock"><code>&lt;val&gt;
+&lt;prop att="platform" val="2003" action="flag"&gt;
+&lt;startflag imageref="Word_2003_Icon.jpg"&gt;
+&lt;/startflag&gt;
+&lt;/prop&gt;
+&lt;prop att="platform" val="2007" action="flag"&gt;
+&lt;startflag imageref="Word_2007_Icon.jpg"&gt;
+&lt;/startflag&gt;
+&lt;/prop&gt;
+&lt;/val&gt;</code></pre> <p class="p" id="conceptId15__p_vhv_mnv_spb">When you generate your content based on this DITAVAL file, the steps are flagged accordingly with a logo:</p> <figure class="fig fignone" id="conceptId15__fig_qpn_z2d_mn">
+			<img class="image fmdpi:100" id="conceptId15__image_ss5_1fd_mn" src="../_media/graphics/flagged_output.PNG">
+			</figure> </div>
+	</div>
+	<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_about_conditional_processing.html">About conditional processing</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_what_is_conditional_processing.html">What is conditional processing?</a></li><li class="linklist"><a class="link" href="co_including_a_ditaval.html">Which ditaval elements are available?</a></li></ul></div></nav>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>   <a class="xref" href="https://www.oxygenxml.com/dita/1.3/specs/langRef/containers/ditaval-elements.html" target="_blank" rel="external noopener">https://www.oxygenxml.com/dita/1.3/specs/langRef/containers/ditaval-elements.html</a> </div></article></main>
+
+    </div>
+    </div>
+    </article>
+    </article>
+    </main>
+  </body>
+</html>

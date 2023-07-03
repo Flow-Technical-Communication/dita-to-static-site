@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties table</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+        <article>
+    <div id="content" class="container">
+            <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a><ul class="nav nav-list"><li><a href="../en/to_elements_reference_topics.html">Reference topic elements</a><ul class="nav nav-list"><li><a href="../en/co_title_reference.html">Reference title</a></li><li><a href="../en/co_tables.html">General, simple and property tables</a></li><li class="active"><a href="../en/adding_properties.html">Properties table</a></li></ul></li></ul></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_images.html">DITA graphics</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">DITA links</a></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a></li><li><a href="../en/to_publishing.html">DITA publishing</a></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Properties table</h1>
+   
+   <div class="body conbody">
+      <section class="section" id="adding_properties__section_yvx_fr5_r4b"><h2 class="title sectiontitle">
+            <code class="keyword markupname xmlelement">&lt;properties&gt;</code>
+         </h2>
+         
+         <p class="p">The <code class="keyword markupname xmlelement">&lt;properties&gt;</code> element gives a list of properties for the subject of the current topic, for example whether a class is public or protected. Each property contains a type, value, and description. To represent multiple values for a single type, create additional property elements and use only the <code class="keyword markupname xmlelement">&lt;propvalue&gt;</code> element for each value.</p>
+         <div class="p">The following elements can be added to the <code class="keyword markupname xmlelement">&lt;properties&gt;</code> element:<ul class="ul" id="adding_properties__ul_tjm_5v5_r4b">
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;prophead&gt;</code>: headings for the properties element</li>
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;proptypehd&gt;</code>: headings for the type column of a properties table</li>
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;propvaluehd&gt;</code>: headings for the value column of a properties table</li>
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;propdeschd&gt;</code>: headings for the description column of a properties table</li>
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;property&gt;</code>: represents a single property of the current topic's subject</li>
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;proptype&gt;</code>: type of the property</li>
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;propvalue&gt;</code>: one or more values for the current property type</li>
+               <li class="li">
+                  <code class="keyword markupname xmlelement">&lt;propdesc&gt;</code>: short description of the property type and its listed values</li>
+            </ul>
+         </div>
+         <p class="p">The following figure shows an example of a properties table:</p>
+         <figure class="fig fignone" id="adding_properties__fig_erl_yx5_r4b">
+            <img class="image" id="adding_properties__image_ecw_zx5_r4b" src="../_media/graphics/properties_example.png">
+         </figure>
+      </section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_elements_reference_topics.html">Reference topic elements</a></div></div></nav></article></main>
+
+    </div>
+    </div>
+    </article>
+    </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To refer to a figure in text</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+        <article>
+    <div id="content" class="container">
+            <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_images.html">DITA graphics</a><ul class="nav nav-list"><li><a href="../en/co_pixel_vector.html">What are vector graphics and pixel images?</a></li><li><a href="../en/re_guidelines_images.html">Guidelines for working with graphics</a></li><li><a href="../en/ta_inserting_images.html">Inserting media objects in a topic</a><ul class="nav nav-list"><li><a href="../en/ta_using_dita_elements.html">To insert images using DITA elements</a></li><li><a href="../en/ta_dragging_images.html">To insert images by dragging</a></li><li><a href="../en/ta_using_reusable_components.html">To insert images using the Reusable Components pane</a></li><li class="active"><a href="../en/to_refer_to_a_figure_in_dita.html">To refer to a figure in text</a></li></ul></li></ul></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">DITA links</a></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a></li><li><a href="../en/to_publishing.html">DITA publishing</a></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">To refer to a figure in text</h1>
+   
+   <div class="body taskbody">
+      <section class="section context">
+         <p class="p">Sometimes, you may want to refer to a figure number in your text, for example "see fig. 4". All you need to do in that case, is insert a cross-reference to the figure title and set up your stylesheet to display the figure number. How you set this up in your stylesheet depends on:</p>
+         <ul class="ul" id="to_refer_to_a_figure_in_dita__ul_eqp_xm2_14b">
+            <li class="li">The output format to which you publish, for example PDF or an HTML-based format such as webhelp</li>
+            <li class="li">The technology you use to create your stylesheets, for example CSS, XSL-FO, MiramoPDF</li>
+         </ul>
+         <p class="p">In web output, you will just want to display the figure number and maybe the caption text, for example "see fig. 4". In a PDF, you may also want to include the page number, for example "see fig. 4 on page 9". </p>
+      </section>
+      <section><ol class="ol steps"><li class="li step stepexpand">
+            <span class="ph cmd">In your text, insert the <code class="keyword markupname xmlnsname">xref (cross-reference)</code> element.</span>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">In the <span class="keyword wintitle">Cross reference (xref)</span> window, select the file which has the image to which you want to refer.</span>
+            <div class="itemgroup info">
+               <figure class="fig fignone" id="to_refer_to_a_figure_in_dita__fig_cbf_mk2_14b">
+                  <img class="image fmdpi:144" id="to_refer_to_a_figure_in_dita__image_pgp_nk2_14b" src="../_media/graphics/insert_xref.png">
+               </figure>
+            </div>
+            <div class="itemgroup stepresult">You will see a list of elements which have an ID.</div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Select the <code class="keyword markupname xmlelement">&lt;fig&gt;</code> element to which you want to refer.</span>
+            <div class="itemgroup info">
+               <div class="note notice note_notice"><span class="note__title">Notice:</span> Select the <code class="keyword markupname xmlelement">&lt;fig&gt;</code> element, not the <code class="keyword markupname xmlelement">&lt;image&gt;</code> element.</div>
+            </div>
+            <div class="itemgroup stepxmp">See <a class="xref" href="co_fig_image.html">Figures and images</a>.</div>
+         </li><li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Insert and close</span>.</span>
+         </li></ol></section>
+      <section class="section result" id="to_refer_to_a_figure_in_dita__result_cph_vk2_14b">That's all you need to do in your DITA topics. Next, you set up your stylesheets to display the text you wish to see for your cross-references to figure numbers.</section>
+   </div>
+   <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/ta_inserting_images.html">Inserting media objects in a topic</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_fig_image.html">Figures and images</a></li></ul></div><div class="linklist relref"><strong>Related reference</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="re_guidelines_images.html">Guidelines for working with graphics</a></li></ul></div><div class="linklist relinfo"><strong>Related information</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="ta_inserting_images.html">Inserting media objects in a topic</a></li></ul></div></nav>
+</article></main>
+
+    </div>
+    </div>
+    </article>
+    </article>
+    </main>
+  </body>
+</html>

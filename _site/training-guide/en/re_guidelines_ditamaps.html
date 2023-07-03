@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidelines for creating DITA maps and bookmaps</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+        <article>
+    <div id="content" class="container">
+            <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_images.html">DITA graphics</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a><ul class="nav nav-list"><li><a href="../en/to_about_ditamaps_bookmaps.html">About DITA maps and bookmaps</a><ul class="nav nav-list"><li><a href="../en/co_what_is_a_ditamap.html">What is a DITA map?</a></li><li><a href="../en/co_why_use_ditamaps.html">Why use DITA maps?</a></li><li><a href="../en/co_main_components_ditamap.html">What are the main components of a DITA map?</a></li><li><a href="../en/co_what_is_a_bookmap.html">What is a bookmap?</a></li><li><a href="../en/co_why_use_bookmaps.html">Why use bookmaps?</a></li><li><a href="../en/co_bookmap_main_components.html">What are the main components of a bookmap?</a></li><li><a href="../en/co_map_views.html">Which map views are available?</a></li><li><a href="../en/co_what_is_metadata.html">What is metadata?</a></li><li><a href="../en/co_including_metadata.html">Bookmap metadata</a></li><li class="active"><a href="../en/re_guidelines_ditamaps.html">Guidelines for creating DITA maps and bookmaps</a></li></ul></li><li><a href="../en/to_working_with_ditamaps.html">Working with DITA maps</a></li><li><a href="../en/to_working_with_bookmaps.html">Working with DITA bookmaps</a></li></ul></li><li><a href="../en/to_creating_links.html">DITA links</a></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a></li><li><a href="../en/to_publishing.html">DITA publishing</a></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">Guidelines for creating DITA maps and bookmaps</h1>
+	
+	<div class="body refbody">
+		<section class="section" id="reference_tb3_hl5_gn__section_x3w_j3r_xnb">It is useful to take some time to structure your information in your DITA map. A well-organized structure can go a long way in helping your reader find and understand information. As such, it is useful to keep in mind the following guidelines.</section>
+		<section class="section" id="reference_tb3_hl5_gn__section_y3w_j3r_xnb"><h2 class="title sectiontitle">Mind Miller's law (7 ± 2)</h2>  <p lang="en-us" class="p" id="reference_tb3_hl5_gn__p_z3w_j3r_xnb">As much as it applies to creating sections within topics, Miller's law (an average person can only hold 7 ± 2 objects in his working memory) applies to creating structure in your DITA map. As such, it is advised to create a parent topic with around 7 child topics.</p> <p class="p" id="reference_tb3_hl5_gn__p_ajw_j3r_xnb">Additionally, the human mind can process about 4 concepts at a time, which means that when you start nesting topics, you should take care to create no more than four generations of topic families. The more you start nesting, the higher the chance the reader might start to lose track and forget how everything fits together.</p> </section>
+		<section class="section"><h2 class="title sectiontitle">Use stub topics</h2>  <p class="p">When you are organizing your topics into groups, avoid using topic headings (<code class="keyword markupname xmlelement">&lt;topichead&gt;</code>). Instead, use stub or summary topics: these are general topics that contain only a title.</p> <p class="p">This type of topic is automatically filled in with links to its child topics in output. If you want it to display content instead, you can use the <code class="keyword markupname xmlatt">@chunk</code> attribute on this stub topic and enter the value 'to-content'. This way all information from the child topics will be added to the stub topic in the output.</p> <p class="p">A stub topic as it appears in DITA:</p> <figure class="fig fignone" id="reference_tb3_hl5_gn__fig_ikp_bps_kn">
+			<img class="image fmdpi:200" id="reference_tb3_hl5_gn__image_sqf_cps_kn" src="../_media/graphics/stub_topics_dita.PNG">
+			</figure> <p class="p">The same stub topic as it appears in webhelp. It only includes links to its child topics:</p> <figure class="fig fignone" id="reference_tb3_hl5_gn__fig_xjx_dps_kn">
+			<img class="image fmdpi:200" id="reference_tb3_hl5_gn__image_gxh_2ps_kn" src="../_media/graphics/stub_topics_webhelp.PNG">
+			</figure> <p class="p">The same stub topic with the attribute <code class="keyword markupname xmlatt">@chunk</code> and the value 'to-content' added to it. The stub topic is automatically filled in with the information from the child topics:</p> <figure class="fig fignone" id="reference_tb3_hl5_gn__fig_tc5_gps_kn">
+			<img class="image fmdpi:200" id="reference_tb3_hl5_gn__image_lbv_gps_kn" src="../_media/graphics/stub_topics_chunk_web.PNG">
+			</figure> </section>
+		<section class="section"><h2 class="title sectiontitle">Nest DITA maps</h2>  <p class="p">To further enhance your structure, you can also use DITA maps nested within other DITA maps. This can help you organize your content more clearly by separating complex collections of topics into a number of smaller, simpler collections. You can, for instance:</p> <ul class="ul" id="reference_tb3_hl5_gn__ul_sdz_dx2_dn">
+			<li class="li">Organize your topics in separate DITA maps which represent different chapters. This way you enhance your structure to make it easier to navigate.</li>
+			<li class="li">Re-use sets of topics. It is far easier to re-use a whole DITA map than it is to re-use every topic individually.</li>
+			<li class="li">Divide your work load between colleagues. If everyone works in their designated DITA map, you decrease the risks of different writers working on the same file.</li>
+			</ul> <div class="note notice note_notice"><span class="note__title">Notice:</span> Avoid nesting bookmaps within DITA maps as the structure will cause confusion for both processing software and documentation authors. Bookmaps should only be used at the top level.</div> </section>
+	</div>
+	<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_about_ditamaps_bookmaps.html">About DITA maps and bookmaps</a></div></div><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="co_what_is_a_ditamap.html" title="A DITA map is a collection of topics assembled into a sequence and hierarchy.">What is a DITA map?</a></li><li class="linklist"><a class="link" href="co_what_is_a_bookmap.html">What is a bookmap?</a></li></ul></div></nav>
+</article></main>
+
+    </div>
+    </div>
+    </article>
+    </article>
+    </main>
+  </body>
+</html>

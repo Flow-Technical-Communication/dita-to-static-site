@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What does DITA2PDF do?</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+        <article>
+    <div id="content" class="container">
+            <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_images.html">DITA graphics</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">DITA links</a></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a></li><li><a href="../en/to_publishing.html">DITA publishing</a><ul class="nav nav-list"><li><a href="../en/co_multichannel_publishing.html">What is multi-channel publishing?</a></li><li><a href="../en/to_dita_ot.html">DITA Open Toolkit (DITA-OT)</a></li><li><a href="../en/to_dita_2_pdf.html">DITA2PDF</a><ul class="nav nav-list"><li><a href="../en/co_what_is_dita2pdf.html">What is DITA2PDF?</a></li><li class="active"><a href="../en/co_what_does_dita2pdf_do.html">What does DITA2PDF do?</a></li><li><a href="../en/re_guidelines_dita2pdf.html">Guidelines for using DITA2PDF</a></li><li><a href="../en/ta_generate_book_from_map.html">To generate a book from a DITA map</a></li><li><a href="../en/ta_generate_pdf_from_bookfile.html">To generate a PDF from a bookfile</a></li></ul></li></ul></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">What does DITA2PDF do?</h1>
+   
+   <div class="body conbody">
+      <section class="section">
+         <div class="p">Simply put, DITA2PDF follows these steps:<figure class="fig fignone" id="concept_ddg_nv5_3n__fig_kly_y53_jn">
+               <img class="image fmdpi:500" id="concept_ddg_nv5_3n__image_q1z_y53_jn" src="../_media/graphics/dita2pdf.PNG">
+            </figure>
+         </div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">DITA-FMx</h2>
+         
+         <p class="p">Once you have written your documentation in Oxygen, you can import it into Adobe FrameMaker. You do this with the DITA-FMx plugin that you can buy and download from <a class="xref" href="http://leximation.com/dita-fmx/" target="_blank" rel="external noopener">http://leximation.com/dita-fmx/</a>. This plugin allows you to create and edit DITA files in FrameMaker and provides many enhancements and features beyond those available with FrameMaker's standard DITA functionality.</p>
+         <p class="p">Essentially, DITA-FMx is similar to a transformation scenario but it is located within FrameMaker instead of Oxygen. It works by generating a FrameMaker bookfile from your DITA (book)map. It does not generate FM files for every topic you have, but groups all of your nested topics in one file per stub topic/topic head.</p>
+         <p class="p">The lay-out of your bookfile is specified according to a default ditafmx-bookbuild.ini file. This default file is automatically created by the plugin. In order to make it use your templates instead, you can customize this default file and direct it to use the FrameMaker templates you have developed for your documentation. </p>
+         <div class="note tip note_tip"><span class="note__title">Tip:</span> As you cannot adjust the filename of the bookbuild file, you instead save these customized files in separate folders. This way, you can create a separate template for every type of documentation.</div>
+      </section>
+      <section class="section"><h2 class="title sectiontitle">FrameMaker</h2>
+         
+         <div class="p">Once DITA-FMx has generated a bookfile in FrameMaker, you get to see what your documentation will look like when you publish it to PDF. While you can adjust this lay-out straight away in FrameMaker, DITA2PDF allows for easier, global lay-out strategies. This means you can change lay-out once and ensure the plugin generates a bookfile in which those changes are automatically applied every time:<ul class="ul" id="concept_ddg_nv5_3n__ul_abf_r2z_4n">
+               <li class="li">Template: Any changes you make that should happen on a global level can usually be specified in the templates. When you generate your file, the template automatically applies the correct type of lay-out everywhere. For example: adjust colours, fonts, line spacing ...</li>
+               <li class="li">Oxygen: For more specific changes you can often make adjustments in the original DITA files in Oxygen. You can adjust the files in FrameMaker and then you can enter the adjusted values into Oxygen so they will be used each time you generate your bookfile. For instance, you can adjust the dimensions of your table, or set the dpi of your images in an attribute, directly in Oxygen.</li>
+            </ul>
+         </div>
+         <p class="p">When you are happy with the lay-out of your documentation, save the bookfile as PDF.</p>
+      </section>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_dita_2_pdf.html">DITA2PDF</a></div></div></nav></article></main>
+
+    </div>
+    </div>
+    </article>
+    </article>
+    </main>
+  </body>
+</html>

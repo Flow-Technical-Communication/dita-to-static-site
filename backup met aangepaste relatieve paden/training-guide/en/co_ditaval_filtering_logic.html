@@ -1,0 +1,47 @@
+---
+# Generated from DITA source
+layout: 'base'
+title: 'Ditaval filtering logic'
+index: '../toc/'
+src: 'en/co_ditaval_filtering_logic.dita'
+---
+
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../to_topics_information_types/">DITA topics and information types</a></li><li><a href="../to_creating_task_topic/#topic-1">DITA elements</a></li><li><a href="../to_task_topics/">Task topics</a></li><li><a href="../to_creating_concept_topic/">Concept topics</a></li><li><a href="../to_reference_topics/">Reference topics</a></li><li><a href="../to_working_with_tables/">DITA tables</a></li><li><a href="../to_light_fullon/">DITA light and full-on DITA</a></li><li><a href="../to_images/">DITA graphics</a></li><li><a href="../to_ditamaps_bookmaps/">DITA maps and bookmaps</a></li><li><a href="../to_creating_links/">DITA links</a></li><li><a href="../to_reusing_content/">DITA content reuse</a></li><li><a href="../to_conditional_processing/">DITA conditional processing</a><ul class="nav nav-list"><li><a href="../to_about_conditional_processing/">About conditional processing</a></li><li><a href="../to_assigning_conditional_attributes_and_vlues/">Assigning conditional attributes and values</a></li><li><a href="../to_working_with_ditavals/">Working with ditavals</a><ul class="nav nav-list"><li><a href="../co_what_are_ditavals/">What are ditaval filters?</a></li><li><a href="../ta_create_ditaval/">To create a ditaval</a></li><li><a href="../ta_apply_ditaval/">To apply a ditaval or a profiling condition set during publishing</a></li><li class="active"><a href="../co_ditaval_filtering_logic/">Ditaval filtering logic</a></li></ul></li></ul></li><li><a href="../to_publishing/">DITA publishing</a></li><li><a href="../oxygenxml_specific_features/">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">Ditaval filtering logic</h1>
+	
+	<div class="body conbody">
+		<section class="section" id="co_ditaval_filtering_logic__section_rs2_z53_qqb"> <p class="p">Suppose you have a simple user guide like this one:</p> <figure class="fig fignone" id="co_ditaval_filtering_logic__fig_tbn_3pd_qqb">
+			<img class="image" id="co_ditaval_filtering_logic__image_gnl_qpd_qqb" src="../../_media/graphics/simple_ditamap.png">
+			</figure> <p class="p">It describes the configuration of two different products, "a" and "b" and it contains content for various target audiences: users, administrators and managers. So you have used DITA's conditional attributes <code class="keyword markupname xmlatt">@audience</code> and <code class="keyword markupname xmlatt">@product</code> to mark up the content accordingly.</p> <p class="p">Now, you want to generate output for a user guide for product "a" with content for administrators only, so you need to create a ditaval filter. You have two options:</p> <ul class="ul" id="co_ditaval_filtering_logic__ul_rdq_v53_qqb">
+			<li class="li"><a class="xref" href="co_ditaval_filtering_logic/#co_ditaval_filtering_logic__section_sk5_z53_qqb">Ditaval option A: include all and list the "excludes"</a></li>
+			<li class="li"><a class="xref" href="co_ditaval_filtering_logic/#co_ditaval_filtering_logic__section_ktm_1v3_qqb">Ditaval option B: exclude all and list the "includes"</a></li>
+			</ul> </section>
+		<section class="section" id="co_ditaval_filtering_logic__section_sk5_z53_qqb"><h2 class="title sectiontitle">Ditaval option A: include all and list the "excludes"</h2>  <p class="p">The standard behavior of the DITA-OT is to <strong class="ph b">include</strong> all content which has been marked up with one or more conditional attributes. Consequently, you explicitly have to mention the content which needs to be excluded. Using a "standard" ditaval filter, you would need to <strong class="ph b">exclude</strong>: </p> <ul class="ul" id="co_ditaval_filtering_logic__ul_t54_k1j_qqb">
+			<li class="li">All content about product "b"</li>
+			<li class="li">All content which has been marked up with the <code class="keyword markupname xmlatt">@audience</code> attribute and which has an attribute value other than "admin", so <code class="keyword markupname xmlatt">@audience="manager"</code> and <code class="keyword markupname xmlatt">@audience="user"</code> in this case.</li>
+			</ul> <p class="p">Your ditaval filter would then have to look as follows:</p> <pre class="pre codeblock" id="co_ditaval_filtering_logic__codeblock_p52_tpd_qqb"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;val&gt;
+&lt;prop action="exclude" att="audience" val="manager" /&gt;
+&lt;prop action="exclude" att="audience" val="user" /&gt;
+&lt;prop action="exclude" att="product" val="b" /&gt;
+&lt;/val&gt;</code></pre> </section>
+		<section class="section" id="co_ditaval_filtering_logic__section_ktm_1v3_qqb"><h2 class="title sectiontitle">Ditaval option B: exclude all and list the "includes"</h2>  <p class="p">You can also reverse the default behavior of the DITA-OT by putting the following in the ditaval filter:</p> <pre class="pre codeblock" id="co_ditaval_filtering_logic__codeblock_rtm_1v3_qqb"><code>&lt;prop action="exclude" /&gt;</code></pre> <p class="p">In this case, all content which has been marked up with one or more conditional attributes will be <strong class="ph b">excluded</strong> from the output, unless you explicitly mention the content which needs to be <strong class="ph b">included</strong> in the output. In our case, this is all content about product "a" for administrators.</p> <p class="p">Your ditaval filter would then have to look as follows:</p> <pre class="pre codeblock" id="co_ditaval_filtering_logic__codeblock_ppz_wpd_qqb"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;val&gt;
+&lt;prop action="exclude" /&gt;
+&lt;prop action="include" att="audience" val="admin" /&gt;
+&lt;prop action="include" att="product" val="a" /&gt;
+&lt;/val&gt;</code></pre> </section>
+		<section class="section" id="co_ditaval_filtering_logic__section_bdb_bv3_qqb"><h2 class="title sectiontitle">Question: which ditaval do you find the most logical?</h2>  <p class="p"><a class="xref" href="co_ditaval_filtering_logic/#co_ditaval_filtering_logic__section_sk5_z53_qqb">Answer A</a>: the default ditaval, in which you mention all content which needs to be excluded</p> <pre class="pre codeblock" id="co_ditaval_filtering_logic__pre_bfb_hpd_qqb"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;val&gt;
+&lt;prop action="exclude" att="audience" val="manager" /&gt;
+&lt;prop action="exclude" att="audience" val="user" /&gt;
+&lt;prop action="exclude" att="product" val="b" /&gt;
+&lt;/val&gt;</code></pre> <p class="p"><a class="xref" href="co_ditaval_filtering_logic/#co_ditaval_filtering_logic__section_ktm_1v3_qqb">Answer B</a>: the reverse ditaval, in which you mention all content which needs to be included</p> <pre class="pre codeblock" id="co_ditaval_filtering_logic__pre_cfb_hpd_qqb"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;val&gt;
+&lt;prop action="exclude" /&gt;
+&lt;prop action="include" att="audience" val="admin" /&gt;
+&lt;prop action="include" att="product" val="a" /&gt;
+&lt;/val&gt;</code></pre> </section>
+		<section class="section" id="co_ditaval_filtering_logic__section_wzh_wgj_qqb"><h2 class="title sectiontitle">Want to see how this works?</h2>  <p class="p">If you want to play with both ditaval options a bit to find out the most logical option for you, feel free to copy or clone the files in <a class="xref" href="https://github.com/Flow-Technical-Communication/DITA/tree/dev/conditional_processing_ditaval" target="_blank" rel="external noopener">https://github.com/Flow-Technical-Communication/DITA/tree/dev/conditional_processing_ditaval</a> and give it a whirl. Let me know what you think.</p> </section>
+	</div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../to_working_with_ditavals/">Working with ditavals</a></div></div></nav></article></main>

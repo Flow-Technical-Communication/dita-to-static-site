@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="toc/" rel="index">
+  </head>
+  <body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary flex-column flex-md-row">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" width="40px" height="40px" id=logo alt="Logo image" style="margin-left: 10px;" />
+          <span>Flow portal</span>
+        </a>
+        
+        <ul class="navbar-nav mr-auto flex-row">
+          
+        </ul>
+        <div class="search-container">
+          <form>
+          <div class="search-field">
+            <input class="input-search" type="text" id="search" autocomplete="off" placeholder="Search" select="outline: none;"/>
+            <button class="reset-button" id="reset-button" type="reset" onClick="myReset()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></button>
+          </div>
+          <div class="result-box">
+          <div id="results" class="results"></div>
+          <div id="sec-results" class="results"></div>
+          </div>
+          <script src="/assets/search.js" async defer></script>
+          </form>
+        </div> 
+      </div>
+    </nav>
+    </header>
+    <main>
+        <article>
+    <div id="content" class="container">
+            <div class="row">
+        
+<nav role="navigation" class="col-lg-3 toc"><ul><li><a href="../en/to_topics_information_types.html">DITA topics and information types</a><ul class="nav nav-list"><li class="active"><a href="../en/to_about_topics_and_information_types.html#topic_mmy_41n_5n">About DITA topics and information types</a><ul class="nav nav-list"><li><a href="../en/to_about_topics_and_information_types.html#conceptId2">What is a topic?</a></li><li><a href="../en/to_about_topics_and_information_types.html#co_what_is_an_information_type">What is an information type?</a></li><li><a href="../en/to_about_topics_and_information_types.html#concept_axv_vcn_5n">Information types examples</a></li><li><a href="../en/to_about_topics_and_information_types.html#conceptId3">Information types common structure</a></li><li><a href="../en/to_about_topics_and_information_types.html#conceptId">Which elements make up the information types?</a></li></ul></li><li><a href="../en/to_guidelines_topics.html#topic-1">Guidelines for topic-based authoring</a></li><li><a href="../en/to_creating_new_topic_general.html">Working with DITA topics</a></li></ul></li><li><a href="../en/to_creating_task_topic.html#topic-1">DITA elements</a></li><li><a href="../en/to_task_topics.html">Task topics</a></li><li><a href="../en/to_creating_concept_topic.html">Concept topics</a></li><li><a href="../en/to_reference_topics.html">Reference topics</a></li><li><a href="../en/to_working_with_tables.html">DITA tables</a></li><li><a href="../en/to_light_fullon.html">DITA light and full-on DITA</a></li><li><a href="../en/to_images.html">DITA graphics</a></li><li><a href="../en/to_ditamaps_bookmaps.html">DITA maps and bookmaps</a></li><li><a href="../en/to_creating_links.html">DITA links</a></li><li><a href="../en/to_reusing_content.html">DITA content reuse</a></li><li><a href="../en/to_conditional_processing.html">DITA conditional processing</a></li><li><a href="../en/to_publishing.html">DITA publishing</a></li><li><a href="../en/oxygenxml_specific_features.html">OxygenXML-specific features</a></li></ul></nav><main role="main" class="col-lg-9"><article role="article" aria-labelledby="ariaid-title1"><article class="nested0" aria-labelledby="ariaid-title1" id="topic_mmy_41n_5n">
+   <h1 class="title topictitle1" id="ariaid-title1">About DITA topics and information types</h1>
+   <div class="body">
+      <p class="p">An information model is a framework that represents the structure of the information to be stored. In DITA, an information model is implemented as information types or topics.</p>
+   </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../en/to_topics_information_types.html">DITA topics and information types</a></div></div></nav><article class="topic concept nested1" aria-labelledby="ariaid-title2" lang="en-us" id="conceptId2">
+	<h2 class="title topictitle2" id="ariaid-title2">What is a topic?</h2>
+	
+	<div class="body conbody">
+		<p class="p">In DITA, all content is chunked into topics. Topics are discrete units of information, organized around a single subject or answering a single question. Each topic makes sense on its own and can be authored as a stand-alone piece.</p>
+		<p class="p">A topic is traditionally composed of a title and some "content". That content can include:</p>
+		<ul class="ul" id="conceptId2__ul_swt_2w2_bn">
+			<li class="li">One or more sentences</li>
+			<li class="li">Tables</li>
+			<li class="li">Lists (bulleted lists, numbered steps...)</li>
+			<li class="li">Illustrations</li>
+		</ul>
+		<div class="example"> <p class="p">This topic, for example, answers the question "How do I take pictures in auto-adjustment mode?" It is composed of a title, some introductory sentences and a list of numbered steps.</p> <figure class="fig fignone" id="conceptId2__fig_ky1_1lg_gn">
+			<img class="image fmdpi:175" id="conceptId2__image_dpf_blg_gn" src="../_media/graphics/example_what_is_a_topic.png">
+			</figure> </div>
+	</div>
+	<nav role="navigation" class="related-links"><div class="linklist reltasks" lang="en-us"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_creating_topics.html#task_z3r_qpp_spb">To create a new topic</a></li></ul></div></nav>
+</article><article class="topic concept nested1" aria-labelledby="ariaid-title3" lang="en-US" id="co_what_is_an_information_type">
+<h2 class="title topictitle2" id="ariaid-title3">What is an information type?</h2>
+
+<div class="body conbody">
+<p class="p">An information type is a category in which all information can be placed, based on the purpose or function of that information for the reader. Information typing is the practice of organizing or classifying your information according to its type.</p>
+<figure class="fig fignone" id="co_what_is_an_information_type__fig_plr_fpt_5jb">
+<img class="image fmdpi:175" id="co_what_is_an_information_type__image_srh_gpt_5jb" src="../_media/graphics/Topic_templates_flow.png">
+</figure>
+<p class="p" id="co_what_is_an_information_type__p_mvs_s3q_tjb">The three core information types in DITA are the following:</p>
+
+<table class="table frame-all" id="co_what_is_an_information_type__table_brf_4qt_5jb"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+<tr class="row">
+<th class="entry" id="co_what_is_an_information_type__table_brf_4qt_5jb__entry__1">Information type</th>
+<th class="entry" id="co_what_is_an_information_type__table_brf_4qt_5jb__entry__2">Description</th>
+</tr>
+</thead><tbody class="tbody">
+<tr class="row">
+<td class="entry" headers="co_what_is_an_information_type__table_brf_4qt_5jb__entry__1">
+<span class="ph uicontrol" id="co_what_is_an_information_type__uicontrol_c25_d4v_spb">Task</span>
+</td>
+<td class="entry" headers="co_what_is_an_information_type__table_brf_4qt_5jb__entry__2">Task topics include the steps of a particular task or procedure. They answer the question “How to…?”.</td>
+</tr>
+<tr class="row">
+<td class="entry" headers="co_what_is_an_information_type__table_brf_4qt_5jb__entry__1">
+<span class="ph uicontrol" id="co_what_is_an_information_type__uicontrol_d25_d4v_spb">Concept</span>
+</td>
+<td class="entry" headers="co_what_is_an_information_type__table_brf_4qt_5jb__entry__2">Concept topics include background information that users must know (For example, definitions or examples) before executing a particular task or procedure. They answer the question “What is…?” or "What does a certain term mean?".</td>
+</tr>
+<tr class="row">
+<td class="entry" headers="co_what_is_an_information_type__table_brf_4qt_5jb__entry__1">
+<span class="ph uicontrol" id="co_what_is_an_information_type__uicontrol_e25_d4v_spb">Reference</span>
+</td>
+<td class="entry" headers="co_what_is_an_information_type__table_brf_4qt_5jb__entry__2">Reference topics provide quick access to reference information that is relevant to the subject at hand. Reference information is often presented as a list or a table (For example, an overview of error codes or a bibliography). Reference topics contain "facts without explanation".</td>
+</tr>
+</tbody></table>
+<p class="p" id="co_what_is_an_information_type__p_kxx_nqt_5jb">Generic topics (<span class="ph uicontrol">topic</span>) and <span class="ph uicontrol">troubleshooting</span> topics should only be used for specific purposes:</p>
+<table class="table frame-all" id="co_what_is_an_information_type__table_brk_x3q_tjb"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+<tr class="row">
+<th class="entry" id="co_what_is_an_information_type__table_brk_x3q_tjb__entry__1">Information type</th>
+<th class="entry" id="co_what_is_an_information_type__table_brk_x3q_tjb__entry__2">Description</th>
+</tr>
+</thead><tbody class="tbody">
+<tr class="row">
+<td class="entry" headers="co_what_is_an_information_type__table_brk_x3q_tjb__entry__1">
+<span class="ph uicontrol">Topic</span>
+</td>
+<td class="entry" headers="co_what_is_an_information_type__table_brk_x3q_tjb__entry__2">Generic topics are designed as a starting point for specialization. We use them, however, to create title-only topics when composing a DITA map.</td>
+</tr>
+<tr class="row">
+<td class="entry" headers="co_what_is_an_information_type__table_brk_x3q_tjb__entry__1">
+<span class="ph uicontrol">Troubleshooting</span>
+</td>
+<td class="entry" headers="co_what_is_an_information_type__table_brk_x3q_tjb__entry__2">Troubleshooting topics are designed to explain specific conditions. They contain a cause and remedy part for users to understand and solve their problems.</td>
+</tr>
+</tbody></table>
+<p class="p" id="co_what_is_an_information_type__p_v2z_3bx_tjb">Technical writers split up texts depending on the kind of information they want to present to the reader. By using information types to filter and structure the information, the reader will no longer have to spend energy on this when reading the text.</p>
+<p class="p" id="co_what_is_an_information_type__p_w2z_3bx_tjb">The components in an information type and their structure and hierarchy are defined in the information model the writer uses.</p>
+</div>
+<nav role="navigation" class="related-links"><div class="linklist relconcepts" lang="en-US"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_about_topics_and_information_types.html#concept_axv_vcn_5n">Information types examples</a></li><li class="linklist"><a class="link" href="to_about_topics_and_information_types.html#conceptId3">Information types common structure</a></li></ul></div></nav>
+</article><article class="topic concept nested1" aria-labelledby="ariaid-title4" id="concept_axv_vcn_5n">
+	<h2 class="title topictitle2" id="ariaid-title4">Information types examples</h2>
+	
+	<div class="body conbody">
+		<section class="section"><h3 class="title sectiontitle">Task topic</h3>  <p class="p">This task topic answers the question "How do I insert batteries in my camera?" It includes all the steps the user has to execute to complete that task.</p> <figure class="fig fignone" id="concept_axv_vcn_5n__fig_gjv_z4g_gn">
+			<img class="image fmdpi:175" id="concept_axv_vcn_5n__image_ykx_1pg_gn" src="../_media/graphics/example_task_topic.png">
+			</figure> </section>
+		<section class="section"><h3 class="title sectiontitle">Concept topic</h3>  <p class="p">This concept topic answers the question "What is white balance?" This background information can help users to properly set the white balance of their camera.</p> <figure class="fig fignone" id="concept_axv_vcn_5n__fig_mqy_lrg_gn">
+			<img class="image fmdpi:175" id="concept_axv_vcn_5n__image_kss_hsg_gn" src="../_media/graphics/example_concept_topic.png">
+			</figure> </section>
+		<section class="section"><h3 class="title sectiontitle">Reference topic</h3>  <p class="p">This reference topic gives an overview of the battery icons that can be displayed on a camera. It allows users to quickly look up the meaning of a particular icon.</p> <figure class="fig fignone" id="concept_axv_vcn_5n__fig_tx1_1vg_gn">
+			<img class="image fmdpi:175" id="concept_axv_vcn_5n__image_pqt_1vg_gn" src="../_media/graphics/example_reference_topic.png">
+			</figure> </section>
+	</div>
+	<nav role="navigation" class="related-links"><div class="linklist relconcepts"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_about_topics_and_information_types.html#co_what_is_an_information_type">What is an information type?</a></li></ul></div></nav>
+</article><article class="topic concept nested1" aria-labelledby="ariaid-title5" lang="en-us" id="conceptId3">
+	<h2 class="title topictitle2" id="ariaid-title5">Information types common structure</h2>
+	<div class="body conbody">
+		<p class="p">Task topics, concept topics and reference topics are all composed of a header and a body part. These parts contain the DITA elements. In all information types, the header contains the same elements, but the elements of the body part are specific for each information type:</p>
+		<table class="table" id="conceptId3__table_jpl_thb_n4b"><caption><span class="table--title-label">Table 1. </span><span class="title">Information type elements</span></caption><colgroup><col><col><col><col></colgroup><thead class="thead">
+					<tr class="row">
+						<th class="entry" id="conceptId3__table_jpl_thb_n4b__entry__1"></th>
+						<th class="entry" id="conceptId3__table_jpl_thb_n4b__entry__2">Task topic</th>
+						<th class="entry" id="conceptId3__table_jpl_thb_n4b__entry__3">Concept topic</th>
+						<th class="entry" id="conceptId3__table_jpl_thb_n4b__entry__4">Reference topic</th>
+					</tr>
+				</thead><tbody class="tbody">
+					<tr class="row">
+						<td class="entry" headers="conceptId3__table_jpl_thb_n4b__entry__1">Header</td>
+						<td class="entry" headers="conceptId3__table_jpl_thb_n4b__entry__2"> <code class="keyword markupname xmlelement">&lt;title&gt;</code>, <code class="keyword markupname xmlelement">&lt;prolog&gt;</code> </td>
+						<td class="entry" headers="conceptId3__table_jpl_thb_n4b__entry__3"> <code class="keyword markupname xmlelement">&lt;title&gt;</code>, <code class="keyword markupname xmlelement">&lt;prolog&gt;</code> </td>
+						<td class="entry" headers="conceptId3__table_jpl_thb_n4b__entry__4"> <code class="keyword markupname xmlelement">&lt;title&gt;</code>, <code class="keyword markupname xmlelement">&lt;prolog&gt;</code> </td>
+					</tr>
+					<tr class="row">
+						<td class="entry" headers="conceptId3__table_jpl_thb_n4b__entry__1">Body</td>
+						<td class="entry" headers="conceptId3__table_jpl_thb_n4b__entry__2"> <code class="keyword markupname xmlelement">&lt;taskbody&gt;</code>containing <code class="keyword markupname xmlelement">&lt;context&gt;</code> and <code class="keyword markupname xmlelement">&lt;steps&gt;</code> </td>
+						<td class="entry" headers="conceptId3__table_jpl_thb_n4b__entry__3"> <code class="keyword markupname xmlelement">&lt;conbody&gt;</code> </td>
+						<td class="entry" headers="conceptId3__table_jpl_thb_n4b__entry__4"> <code class="keyword markupname xmlelement">&lt;refbody&gt;</code> containing <code class="keyword markupname xmlelement">&lt;section&gt;</code> </td>
+					</tr>
+				</tbody></table>
+		<table class="table" id="conceptId3__table_lmn_pgb_n4b"><caption><span class="table--title-label">Table 2. </span><span class="title">Template images</span></caption><colgroup><col style="width:33.33333333333333%"><col style="width:33.33333333333333%"><col style="width:33.33333333333333%"></colgroup><thead class="thead">
+					<tr class="row">
+						<th class="entry" id="conceptId3__table_lmn_pgb_n4b__entry__1">Task template</th>
+						<th class="entry" id="conceptId3__table_lmn_pgb_n4b__entry__2">Concept template</th>
+						<th class="entry" id="conceptId3__table_lmn_pgb_n4b__entry__3">Reference template</th>
+					</tr>
+				</thead><tbody class="tbody">
+					<tr class="row">
+						<td class="entry" headers="conceptId3__table_lmn_pgb_n4b__entry__1"> <figure class="fig fignone" id="conceptId3__fig_a35_pgb_n4b">
+							<img class="image" id="conceptId3__image_cqm_qgb_n4b" src="../_media/graphics/Task_template.png">
+							</figure> </td>
+						<td class="entry" headers="conceptId3__table_lmn_pgb_n4b__entry__2"> <img class="image" id="conceptId3__image_ibm_sgb_n4b" src="../_media/graphics/Concept_template.png"> </td>
+						<td class="entry" headers="conceptId3__table_lmn_pgb_n4b__entry__3"> <img class="image" id="conceptId3__image_xkr_sgb_n4b" src="../_media/graphics/Reference_template.png"> </td>
+					</tr>
+				</tbody></table>
+		<p class="p">Directly after the title, a <code class="keyword markupname xmlelement">&lt;shortdesc&gt;</code> can be inserted, which is an optional but recommended element. It gives a preview of the topic. At the end of each information type template a <code class="keyword markupname xmlelement">&lt;related-links&gt;</code> can be inserted. This element is recommended as you should avoid inserting links in the body.</p>
+	</div>
+	<nav role="navigation" class="related-links"><div class="linklist relconcepts" lang="en-us"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_about_topics_and_information_types.html#co_what_is_an_information_type">What is an information type?</a></li></ul></div></nav>
+</article><article class="topic concept nested1" aria-labelledby="ariaid-title6" lang="en-us" id="conceptId">
+	<h2 class="title topictitle2" id="ariaid-title6">Which elements make up the information types?</h2>
+	<div class="body conbody">
+		<p class="p">Task topics, concept topics and reference topics each have specific XML elements in their body part:</p>
+		<table class="table frame-all" id="conceptId__table_bpd_gg3_cn"><caption></caption><colgroup><col style="width:33.33333333333333%"><col style="width:33.33333333333333%"><col style="width:33.33333333333333%"></colgroup><thead class="thead">
+					<tr class="row rowsep-1">
+						<th class="entry colsep-1 rowsep-1" id="conceptId__table_bpd_gg3_cn__entry__1">Task topic</th>
+						<th class="entry colsep-1 rowsep-1" id="conceptId__table_bpd_gg3_cn__entry__2">Concept topic</th>
+						<th class="entry colsep-1 rowsep-1" id="conceptId__table_bpd_gg3_cn__entry__3">Reference topic</th>
+					</tr>
+				</thead><tbody class="tbody">
+					<tr class="row rowsep-1">
+						<td class="entry colsep-1 rowsep-1" headers="conceptId__table_bpd_gg3_cn__entry__1">In <code class="keyword markupname xmlelement">&lt;taskbody&gt;</code>:<ul class="ul" id="conceptId__ul_bq3_hk3_cn">
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;context&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;prereq&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;steps&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;steps-unordered&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;step&gt;</code> </li>
+							</ul>In <code class="keyword markupname xmlelement">&lt;steps&gt;</code>:<ul class="ul" id="conceptId__ul_djm_fmb_n4b">
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;cmd&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;substeps&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;choices&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;choicetable&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;stepxmp&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;stepresult&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;info&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;note&gt;</code> </li>
+							</ul>On their own:<ul class="ul" id="conceptId__ul_w5h_nnb_n4b">
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;example&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;result&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;postreq&gt;</code> </li>
+							</ul> </td>
+						<td class="entry colsep-1 rowsep-1" headers="conceptId__table_bpd_gg3_cn__entry__2">In <code class="keyword markupname xmlelement">&lt;conbody&gt;</code>:<ul class="ul" id="conceptId__ul_iwt_5k3_cn">
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;section&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;p&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;ul&gt;</code>, <code class="keyword markupname xmlelement">&lt;li&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;ol&gt;</code>, <code class="keyword markupname xmlelement">&lt;li&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;table&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;fig&gt;</code>, <code class="keyword markupname xmlelement">&lt;image&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;example&gt;</code> </li>
+							</ul> </td>
+						<td class="entry colsep-1 rowsep-1" headers="conceptId__table_bpd_gg3_cn__entry__3">In <code class="keyword markupname xmlelement">&lt;refbody&gt;</code>:<ul class="ul" id="conceptId__ul_yd4_fl3_cn">
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;section&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;p&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;properties&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;ul&gt;</code>, <code class="keyword markupname xmlelement">&lt;li&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;ol&gt;</code>, <code class="keyword markupname xmlelement">&lt;li&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;table&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;fig&gt;</code>, <code class="keyword markupname xmlelement">&lt;image&gt;</code> </li>
+							<li class="li"> <code class="keyword markupname xmlelement">&lt;example&gt;</code> </li>
+							</ul> </td>
+					</tr>
+				</tbody></table>
+	</div>
+	<nav role="navigation" class="related-links"><div class="linklist relconcepts" lang="en-us"><strong>Related concepts</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="to_about_topics_and_information_types.html#conceptId2">What is a topic?</a></li><li class="linklist"><a class="link" href="to_creating_task_topic.html#co_what_is_an_element">What is an element?</a></li><li class="linklist"><a class="link" href="to_about_topics_and_information_types.html#co_what_is_an_information_type">What is an information type?</a></li><li class="linklist"><a class="link" href="to_about_topics_and_information_types.html#conceptId3">Information types common structure</a></li></ul></div></nav>
+</article></article></article></main>
+
+    </div>
+    </div>
+    </article>
+    </article>
+    </main>
+  </body>
+</html>
